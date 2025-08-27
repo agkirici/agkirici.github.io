@@ -1,0 +1,10 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Örnek özelleştirmeler */
+body { line-height: 1.7; }
+h1, h2, h3 { letter-spacing: .3px; }
+img { border-radius: 8px; }
+a { text-decoration: none; }
