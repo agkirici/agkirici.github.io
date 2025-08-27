@@ -1,9 +1,11 @@
-remote_theme: mmistakes/minimal-mistakes
-title: "Arzu Kirici"
-description: "Bioinformatics • Spatial/Single-cell • Software"
-plugins:
-  - jekyll-include-cache
-  - jekyll-remote-theme
-markdown: kramdown
-kramdown:
-  input: GFM
+theme: jekyll-theme-minimal
+title: Arzu Kirici
+description: Molecular Biologist → Bioinformatician/Software Developer
+
+nav:
+  - name: "About"
+    link: /
+  - name: "Projects"
+    link: /projects
+  - name: "Blog"
+    link: /blog
