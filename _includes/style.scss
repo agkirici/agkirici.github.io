@@ -24,14 +24,31 @@
 @import "components/spoiler";
 
 
-/* === custom overrides (en sonda kalsın) === */
+/* === custom overrides === */
+
+/* Arkaplan bej */
 body { 
-  background-color: #f7cc68 !important;  /* istediğin bej */
-  color: #111 !important;
+  background-color: #f7cc68 !important;
+  color: #000 !important;   /* tüm yazılar siyah */
 }
-.page, .page__content, .wrapper { 
-  background: transparent !important; 
+
+/* Genel metin siyah */
+.page, .page__content, .wrapper {
+  color: #000 !important;
+  background: transparent !important;
 }
-.description { 
-  color: #3b3b3b !important;            /* alt başlık rengi */
+
+/* Alt açıklama metni (bio) */
+.description {
+  color: #000 !important;
+}
+
+/* Linkler de siyah */
+a, a:visited, a:active {
+  color: #000 !important;
+  text-decoration: none;   /* alt çizgiyi kaldırır, istersen sil */
+}
+
+a:hover {
+  color: #444 !important;  /* üzerine gelince hafif gri olabilir */
 }
