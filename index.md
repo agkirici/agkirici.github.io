@@ -1,8 +1,10 @@
 ---
 layout: single
+classes: wide
 title: "Arzu Kirici, MSc"
 author_profile: false
 ---
+
 
 📧 <a href="mailto:arzukirici@gmail.com">arzukirici@gmail.com</a>  
 [CV](Arzu_Kirici_CV) • [LinkedIn](https://www.linkedin.com/in/arzu-kirici) • [GitHub](https://github.com/agkirici)
