@@ -12,7 +12,7 @@ layout: page
 alongside programming skills in <strong>Python, R, Seurat, Scanpy, HTML/CSS/JS</strong>. 
 I’m passionate about combining a strong biology foundation with computational tools to turn complex datasets into actionable insights.</p>
 
-<p>💡 I’m <strong>actively seeking opportunities</strong> in Canada, and I’m equally open to <strong>remote roles worldwide</strong> where I can contribute my interdisciplinary expertise.</p>
+<p>I'm <strong>actively seeking opportunities</strong> in Canada, and I’m equally open to <strong>remote roles worldwide</strong> where I can contribute my interdisciplinary expertise.</p>
 
  <details markdown="1">
   <summary>My Background</summary>
