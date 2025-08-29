@@ -1,7 +1,11 @@
 remote_theme: mmistakes/minimal-mistakes
 title: "Arzu Kirici"
 description: "Molecular Biologist → Bioinformatics / Software"
+minimal_mistakes_skin: "default"   # istersen "air", "dark", "dirt" vb. deneyebilirsin
+
 plugins:
   - jekyll-remote-theme
+  - jekyll-include-cache
+
 url: "https://agkirici.github.io"
-baseurl: ""   # user site olduğu için boş kalmalı
+baseurl: ""    # user site olduğu için boş bırak
