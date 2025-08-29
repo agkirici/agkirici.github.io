@@ -17,6 +17,9 @@ linkedin: arzu-kirici
 github: agkirici
 email: arzukirici@gmail.com
 
+about: true
+projects: true
+
 authors:
   arzu:
     name: Arzu Kirici
