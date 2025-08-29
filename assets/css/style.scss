@@ -26,3 +26,24 @@ a:hover { color: #800080; }
 body, p, li, span, div {
   color: #000 !important;
 }
+
+.social-inline {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 12px 0 22px !important;
+  display: flex !important;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-inline a svg {
+  width: 28px;
+  height: 28px;
+  fill: #000; /* bej zeminde siyah */
+  transition: fill 0.2s ease-in-out;
+}
+
+.social-inline a:hover svg {
+  fill: #4b0082; /* hover rengi (mor) */
+}
