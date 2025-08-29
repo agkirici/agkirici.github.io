@@ -1,0 +1,13 @@
+/* Açık bej arka plan */
+html, body { height: 100%; }
+body {
+  background-color: #f5f5dc !important; /* beige */
+  color: #000 !important;
+}
+
+.wrapper, .container, .page, .page__content, .site, .content {
+  background: transparent !important;
+}
+
+a { color: #4b0082; }
+a:hover { color: #800080; }
