@@ -28,7 +28,6 @@ I’m passionate about combining a strong biology foundation with computational 
   </ul>
 </details>
 
-
  <details markdown="1">
   <summary>Skills</summary>
   <ul>
@@ -38,7 +37,6 @@ I’m passionate about combining a strong biology foundation with computational 
     <li>HTML, CSS, JavaScript, Object-oriented programming</li>
   </ul>
 </details>
-
 
  <details markdown="1">
   <summary>Projects</summary>
