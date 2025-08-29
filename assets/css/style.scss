@@ -20,3 +20,24 @@ body {
 /* Linkler okunur olsun */
 a { color: #4b0082; }
 a:hover { color: #800080; }
+/* Tüm yazılar siyah olsun */
+body, p, li, span, div {
+  color: #000 !important;
+}
+
+/* Kalın yazılar daha belirgin */
+strong, b {
+  font-weight: 700;
+  color: #000 !important;
+}
+
+/* Linkler de siyah */
+a {
+  color: #000 !important;
+  text-decoration: underline; /* İstersen çizgi de ekler */
+}
+
+a:hover {
+  color: #333 !important; /* hover olunca koyu gri */
+}
+
