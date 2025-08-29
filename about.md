@@ -14,26 +14,36 @@ I’m passionate about combining a strong biology foundation with computational 
 
 <p>💡 I’m <strong>actively seeking opportunities</strong> in Canada, and I’m equally open to <strong>remote roles worldwide</strong> where I can contribute my interdisciplinary expertise.</p>
 
+<details>
+  <summary>🧬 My Background</summary>
+  <ul>
+    <li>I began my academic path with a <b>BSc in Biological Sciences at Ankara University</b>, where I built my foundation in molecular biology and genetics.</li>
+    <li>I then pursued a <b>Master’s in Biology (Biotechnology, Ankara University)</b>, focusing on transcription factors (<i>YABBY</i> and <i>DOF</i>) under drought stress in <i>Phaseolus vulgaris</i>. During this time, I also supervised undergraduate thesis projects and presented award-winning posters at international conferences in Paris.</li>
+    <li>My first international research experience was at <b>Wageningen University (Netherlands)</b>, where I worked on <b>plant physiology and seed dormancy</b>, contributing to a publication in <i>Journal of Experimental Botany</i> (2018).</li>
+    <li>After moving into the health sciences, I joined <b>Mikrogen Genetic Disease Diagnostic Center (Turkey)</b> as a <b>Senior Biologist</b>, leading workflows for <b>whole-exome, whole-genome, and targeted genetic testing</b> in oncology, prenatal, and rare disease diagnostics.</li>
+    <li>In <b>2021</b>, I moved to Canada to study <b>Computer Programming at Seneca College</b>, which gave me the opportunity to combine my strong molecular biology background with <b>technology and data-driven approaches</b>. This transition opened the path toward bioinformatics and software development.</li>
+    <li>During the challenging times of the COVID-19 pandemic, I contributed as a <b>healthcare worker at Tikkle Scientific (Canada)</b>, performing large-scale <b>RT-PCR testing</b> for both clinical and film industry clients at the <b>CBS stage</b>.</li>
+    <li>More recently, I transitioned into the bioinformatics side, working as a <b>Project Analyst at Astraea Bio</b>, where I combine my wet lab expertise with computational tools to analyze <b>spatial omics datasets (Stomics, MSI, COMET)</b> and streamline project operations.</li>
+    <li>I also serve as an <b>Executive Member at Panoramics – A Vision</b>, contributing as a computational creative and software developer.</li>
+  </ul>
+</details>
 
 
-
-<h2>Skills</h2> 
-<ul class="skill-list">
-<li>Python</li>
-<li>C</li>
-<li>NGS workflows (WES/WGS), qPCR</li>
-<li>Spatial omics (Stomics, MSI, COMET)</li>
-<li>Linux / Bash</li>
-<li>HTML & CSS</li> 
-<li>Git</li> 
-<li>SQL</li> 
-<li>Docker</li> 
-<li>Object Oriented Programming</li> 
-<li>C++</li> 
-
-</ul> 
+<details>
+  <summary>🛠 Skills</summary>
+  <ul>
+    <li>Python, R, Seurat, Scanpy</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>NGS, scRNA-seq, Spatial Omics</li>
+    <li>Data Analysis & Visualization</li>
+  </ul>
+</details>
 
 
-
-<h2>Projects</h2>
-<p><em>Work in progress 🚧</em></p>
+<details>
+  <summary>📂 Projects</summary>
+  <ul>
+    <li>Work in progress 🚧</li>
+    <li><a href="https://github.com/agkirici">GitHub profile (all repositories)</a></li>
+  </ul>
+</details>
