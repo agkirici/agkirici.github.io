@@ -1,3 +1,5 @@
+/* ==== Custom CSS (Arzu) ==== */
+
 /* Açık bej arka plan */
 html, body { height: 100%; }
 body {
@@ -5,9 +7,38 @@ body {
   color: #000 !important;
 }
 
+/* Tema kapsayıcıları transparan olsun */
 .wrapper, .container, .page, .page__content, .site, .content {
   background: transparent !important;
 }
 
-a { color: #03060a; }  /* siyah link */
-a:hover { color:#03060a; } /* siyah hover */
+/* Link renkleri (şu an siyah) */
+a { color: #03060a; }
+a:hover { color:#03060a; }
+
+/* --- Bio metni --- */
+.description {
+  color: #3b3b3b !important;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+/* --- Sosyal ikonlar --- */
+.social-links a {
+  color: #000 !important;      /* normal siyah */
+  font-size: 1.5rem;           /* ikon boyutu */
+  margin: 0 8px;               /* aralık */
+}
+
+.social-links a:hover {
+  color: #4b0082 !important;   /* hover mor */
+}
+
+.social-links {
+  list-style: none;
+  padding-left: 0;
+  margin: .75rem 0 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
