@@ -3,15 +3,10 @@ title: About
 layout: page 
 --- 
 
-![Profile Image]<img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" alt="Profile Image" width="200" style="border-radius: 50%;" />
+<img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" 
+     alt="Profile Image" width="200" style="border-radius: 50%;" />
 
-
-
-<p>Hi there! I am a <strong>biologist and bioinformatician/software developer</strong>, 
-currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support 
-spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to 
-cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, 
-helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
+<p>Hi there! I am a <strong>biologist and bioinformatician/software developer</strong>, currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
 
 <p>My expertise includes <strong>spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology</strong>, 
 alongside programming skills in <strong>Python, R, Seurat, Scanpy, HTML/CSS/JS</strong>. 
