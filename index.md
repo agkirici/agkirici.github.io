@@ -1,4 +1,6 @@
-# Arzu Kirici, MSc
+---
+layout: single
+title: "Arzu Kirici, MSc"
 
 📧 arzukirici@gmail.com  
 [CV](Arzu_Kirici_CV) • [LinkedIn](https://www.linkedin.com/in/arzu-kirici) • [GitHub](https://github.com/agkirici)
