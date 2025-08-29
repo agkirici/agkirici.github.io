@@ -3,6 +3,7 @@ layout: single
 title: "Arzu Kirici, MSc"
 ---
 
+
 📧 arzukirici@gmail.com  
 [CV](cv.pdf) • [LinkedIn](https://www.linkedin.com/in/arzu-kirici) • [GitHub](https://github.com/agkirici)
 
