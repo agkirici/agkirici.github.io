@@ -33,9 +33,9 @@ I’m passionate about combining a strong biology foundation with computational 
   <summary>🛠 Skills</summary>
   <ul>
     <li>Python, R, Seurat, Scanpy</li>
-    <li>HTML, CSS, JavaScript</li>
     <li>NGS, scRNA-seq, Spatial Omics</li>
     <li>Data Analysis & Visualization</li>
+    <li>HTML, CSS, JavaScript, Object-oriented programming</li>
   </ul>
 </details>
 
