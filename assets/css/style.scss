@@ -1,0 +1,10 @@
+/* Sayfa arka planını yarı beyaz yarı siyah yap */
+body {
+  background: linear-gradient(to right, white 50%, black 50%);
+  color: #fff; /* yazılar için kontrast */
+}
+
+/* Ortadaki içerik okunabilir olsun diye */
+.page__content {
+  background: transparent;
+}
