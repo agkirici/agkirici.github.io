@@ -1,49 +1,58 @@
-/* Tüm sayfalarda açık bej arka plan */
-html, body { height: 100%; }
-body {
- body {
-  background-color: #ebd3a9 !important; /* beige */
-}
-  color: #000 !important;
-}
+/* =========================
+   Arzu kişisel tema düzeltmeleri (temiz)
+   ========================= */
 
-/* Tema kapsayıcıları koyu zemin basıyorsa şeffafla */
-.wrapper, .container, .page, .page__content, .site, .content {
-  background: transparent !important;
-}
+/* (İSTEĞE BAĞLI) Arka plan bej olsun istersen yorumdan çıkar.
+   Varsayılana dönmek için bunu yorumlu bırak. */
+/* body { background-color: #ebd3a9 !important; } */
 
-/* Bio yazısının rengini özelleştir */
-.description {
-  color: #3b3b3b !important;  /* koyu gri – okunaklı */
-  font-size: 1.1em;           /* biraz daha büyük yazı */
-  font-weight: 400;           /* normal ama şık */
-}
-
-/* Linkler okunur olsun */
+/* Link renkleri (mor ton) */
 a { color: #4b0082; }
 a:hover { color: #800080; }
-/* Tüm yazılar siyah olsun */
-body, p, li, span, div {
-  color: #000 !important;
+
+/* Bio/açıklama metni tonunu biraz koyulaştır */
+.description {
+  color: #3b3b3b !important;
+  font-size: 1.1em;
+  font-weight: 400;
 }
 
-.social-inline {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 12px 0 22px !important;
-  display: flex !important;
-  gap: 18px;
+/* --- Sosyal ikonları görünür yap (temanın hazır ikonları) --- */
+/* Indigo teması sosyal ikonları genelde .social-links / .icons / .social sınıflarıyla basar. */
+.social-links a,
+.icons a,
+.social a {
+  color: #000 !important;              /* ikon rengi (bej zeminde görünür) */
+}
+
+.social-links a svg,
+.icons a svg,
+.social a svg {
+  fill: currentColor !important;       /* SVG ikonlar aynı rengi alsın */
+}
+
+/* Hover rengi */
+.social-links a:hover,
+.icons a:hover,
+.social a:hover {
+  color: #4b0082 !important;
+}
+
+/* Bazı temalarda liste noktaları çıkabilir; güvence için: */
+.social-links,
+.icons,
+.social {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0 1.25rem;
+}
+
+/* (Temada gerekirse ikonlar zaten ortalıdır; değilse bu satırlar yardımcı olur.)
+.social-links,
+.icons,
+.social {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 18px;
 }
-
-.social-inline a svg {
-  width: 28px;
-  height: 28px;
-  fill: #000; /* bej zeminde siyah */
-  transition: fill 0.2s ease-in-out;
-}
-
-.social-inline a:hover svg {
-  fill: #4b0082; /* hover rengi (mor) */
-}
+*/
