@@ -1,7 +1,6 @@
 ---
 layout: single
 classes: wide
-title: "Arzu Kirici, MSc"
 author_profile: false
 ---
 
