@@ -1,10 +1,10 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
 
-/* Örnek özelleştirmeler */
-body { line-height: 1.7; }
-h1, h2, h3 { letter-spacing: .3px; }
-img { border-radius: 8px; }
-a { text-decoration: none; }
+/* İçerik genişliği */
+.page__content {
+  max-width: 1200px;   /* default 800px civarıdır */
+}
