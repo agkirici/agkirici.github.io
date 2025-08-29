@@ -26,28 +26,3 @@ a:hover { color: #800080; }
 body, p, li, span, div {
   color: #000 !important;
 }
-
-/* Sosyal ikonlar bloğu */
-.social-block { margin: 10px 0 22px; }
-
-/* Liste noktalarını kaldır, yatay sırala ve ortala */
-.social-inline {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-}
-
-/* İkon görünsün (bej zeminde siyah) */
-.social-inline a {
-  text-decoration: none;
-  color: #000 !important;
-  font-size: 22px;       /* ikon boyutu */
-  line-height: 1;
-}
-
-/* Hover rengi (mor) */
-.social-inline a:hover { color: #4b0082 !important; }
