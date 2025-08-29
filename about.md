@@ -28,7 +28,6 @@ I’m **actively seeking opportunities** in Canada, and I’m equally open to **
 
 </details>
 <ul class="skill-list">
-ul class="skill-list">
   <li>Python</li>
   <li>R</li>
   <li>Seurat / Scanpy</li>
