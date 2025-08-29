@@ -6,7 +6,7 @@ layout: page
 <img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" 
      alt="Profile Image" width="200" style="border-radius: 50%;" />
 
-<p>Hi there! I am a <strong>biologist and bioinformatician/software developer</strong>, currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
+<p>Hi there! I am a <strong>biologist with a background of bioinformatics and developing software</strong>, currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
 
 <p>My expertise includes <strong>spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology</strong>, 
 alongside programming skills in <strong>Python, R, Seurat, Scanpy, HTML/CSS/JS</strong>. 
@@ -14,7 +14,7 @@ I’m passionate about combining a strong biology foundation with computational 
 
 <p>💡 I’m <strong>actively seeking opportunities</strong> in Canada, and I’m equally open to <strong>remote roles worldwide</strong> where I can contribute my interdisciplinary expertise.</p>
 
-<details>
+ <details markdown="1">
   <summary>🧬 My Background</summary>
   <ul>
     <li>I began my academic path with a <b>BSc in Biological Sciences at Ankara University</b>, where I built my foundation in molecular biology and genetics.</li>
@@ -29,7 +29,7 @@ I’m passionate about combining a strong biology foundation with computational 
 </details>
 
 
-<details>
+ <details markdown="1">
   <summary>🛠 Skills</summary>
   <ul>
     <li>Python, R, Seurat, Scanpy</li>
@@ -40,8 +40,8 @@ I’m passionate about combining a strong biology foundation with computational 
 </details>
 
 
-<details>
-  <summary>📂 Projects</summary>
+ <details markdown="1">
+  <summary>Projects</summary>
   <ul>
     <li>Work in progress 🚧</li>
     <li><a href="https://github.com/agkirici">GitHub profile (all repositories)</a></li>
