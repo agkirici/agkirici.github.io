@@ -1,10 +1,13 @@
-/* Sayfa arka planını yarı beyaz yarı siyah yap */
+/* Custom background color */
 body {
-  background: linear-gradient(to right, white 50%, black 50%);
-  color: #fff; /* yazılar için kontrast */
+  background-color: #f5f5dc !important;  /* Beige */
+  color: #000000;  /* Yazılar siyah olsun */
 }
 
-/* Ortadaki içerik okunabilir olsun diye */
-.page__content {
-  background: transparent;
+/* Linkler okunabilir olsun diye */
+a {
+  color: #4b0082;  /* Mor ton */
+}
+a:hover {
+  color: #800080;  /* Daha koyu mor hover */
 }
