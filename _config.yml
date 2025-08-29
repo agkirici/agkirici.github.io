@@ -1,6 +1,7 @@
-theme: jekyll-theme-minimal
+remote_theme: mmistakes/minimal-mistakes
 title: Arzu Kirici
-description: Molecular Biologist → Bioinformatician/Software Developer
+description: Biologist/Bioinformatics/Software Developer
+
 
 nav:
   - name: "About"
