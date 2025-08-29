@@ -3,15 +3,14 @@ title: Arzu Kirici, MSc
 bio: Scientist passionate about spatial biology, data analysis, computational tools, and developing software.
 
 external-image: false
-picture: assets/images/profilee.png
-
+picture: "/assets/images/profile.png" 
 dark-theme: auto
 
 resume: true
 resume-external: true
 resume-url: https://agkirici.github.io/Arzu_Kirici_CV.pdf  # sondaki /'ı kaldır
 
-url: https://agkirici.github.io
+url: "https://agkirici.github.io"
 baseurl: ""   # user site için boş; project site ise "/<repo-adi>"
 
 linkedin: arzu-kirici
