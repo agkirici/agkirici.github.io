@@ -15,14 +15,14 @@ My expertise includes **spatial biology, single-cell transcriptomics, Next-Gener
 
 <details>
   <summary>🧬 My background</summary>
-
-- I began my academic path with a **BSc in Biological Sciences at Ankara University**, where I built my foundation in molecular biology and genetics. 
-- I then pursued a **Master’s in Biology (Biotechnology, Ankara University)**, focusing on transcription factors (*YABBY* and *DOF*) under drought stress in *Phaseolus vulgaris*. During this time, I also supervised undergraduate thesis projects and presented award-winning posters at international conferences in Paris. 
-- My first international research experience was at **Wageningen University (Netherlands)**, where I worked on **plant physiology and seed dormancy**, contributing to a publication in *Journal of Experimental Botany* (2018). 
-- After moving into the health sciences, I joined **Mikrogen Genetic Disease Diagnostic Center (Turkey)** as a **Senior Biologist**, leading workflows for **whole-exome, whole-genome, and targeted genetic testing** in oncology, prenatal, and rare disease diagnostics. 
-- In **2021, I moved to Canada to study Computer Programming at Seneca College**, which gave me the opportunity to combine my strong moleculer biology background with **technology and data-driven approaches**. This transition opened the path toward bioinformatics and software development. 
-- During the challenging times of the COVID-19 pandemic, I contributed as a **healthcare worker at Tikkle Scientific (Canada)**, performing large-scale **RT-PCR testing** for both clinical and film industry clients at the **CBS stage**. My role involved nucleic acid extraction, qPCR setup, QC interpretation, and ensuring reliable results under strict timelines and safety standards. 
-- More recently, I transitioned into the bioinformatics side, working as a **Project Analyst at Astraea Bio**, where I combine my wet lab expertise with computational tools to analyze **spatial omics datasets (Stomics, MSI, COMET)** and streamline project operations. 
-- I also serve as an **Executive Member at Panoramics – A Vision**, contributing as a computational creative and software developer, helping to develop digital platforms, analyze multi-omics data, and engage the scientific community.
-
+  <ul>
+    <li>I began my academic path with a <strong>BSc in Biological Sciences at Ankara University</strong>, where I built my foundation in molecular biology and genetics.</li>
+    <li>I then pursued a <strong>Master’s in Biology (Biotechnology, Ankara University)</strong>, focusing on transcription factors (<em>YABBY</em> and <em>DOF</em>) under drought stress in <em>Phaseolus vulgaris</em>. During this time, I also supervised undergraduate thesis projects and presented award-winning posters at international conferences in Paris.</li>
+    <li>My first international research experience was at <strong>Wageningen University (Netherlands)</strong>, where I worked on <strong>plant physiology and seed dormancy</strong>, contributing to a publication in <em>Journal of Experimental Botany</em> (2018).</li>
+    <li>After moving into the health sciences, I joined <strong>Mikrogen Genetic Disease Diagnostic Center (Turkey)</strong> as a <strong>Senior Biologist</strong>, leading workflows for <strong>whole-exome, whole-genome, and targeted genetic testing</strong> in oncology, prenatal, and rare disease diagnostics.</li>
+    <li>In <strong>2021, I moved to Canada to study Computer Programming at Seneca College</strong>, which gave me the opportunity to combine my strong molecular biology background with <strong>technology and data-driven approaches</strong>. This transition opened the path toward bioinformatics and software development.</li>
+    <li>During the challenging times of the COVID-19 pandemic, I contributed as a <strong>healthcare worker at Tikkle Scientific (Canada)</strong>, performing large-scale <strong>RT-PCR testing</strong> for both clinical and film industry clients at the <strong>CBS stage</strong>. My role involved nucleic acid extraction, qPCR setup, QC interpretation, and ensuring reliable results under strict timelines and safety standards.</li>
+    <li>More recently, I transitioned into the bioinformatics side, working as a <strong>Project Analyst at Astraea Bio</strong>, where I combine my wet lab expertise with computational tools to analyze <strong>spatial omics datasets (Stomics, MSI, COMET)</strong> and streamline project operations.</li>
+    <li>I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, contributing as a computational creative and software developer, helping to develop digital platforms, analyze multi-omics data, and engage the scientific community.</li>
+  </ul>
 </details>
