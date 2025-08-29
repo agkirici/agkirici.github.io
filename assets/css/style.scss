@@ -1,13 +1,15 @@
-/* Custom background color */
+/* Tüm sayfalarda açık bej arka plan */
+html, body { height: 100%; }
 body {
-  background-color: #f5f5dc !important;  /* Beige */
-  color: #000000;  /* Yazılar siyah olsun */
+  background-color: #f5f5dc !important; /* beige */
+  color: #000 !important;
 }
 
-/* Linkler okunabilir olsun diye */
-a {
-  color: #4b0082;  /* Mor ton */
+/* Tema kapsayıcıları koyu zemin basıyorsa şeffafla */
+.wrapper, .container, .page, .page__content, .site, .content {
+  background: transparent !important;
 }
-a:hover {
-  color: #800080;  /* Daha koyu mor hover */
-}
+
+/* Linkler okunur olsun */
+a { color: #4b0082; }
+a:hover { color: #800080; }
