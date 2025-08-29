@@ -26,7 +26,7 @@ a:hover { color:#03060a; }
 /* --- Sosyal ikonlar --- */
 .social-links a {
   color: #000 !important;      /* normal siyah */
-  font-size: 2.2rem;           /* ikon boyutu */
+  font-size: 2rem;           /* ikon boyutu */
   margin: 0 8px;               /* aralık */
 }
 
