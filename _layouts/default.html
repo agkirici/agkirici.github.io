@@ -13,8 +13,6 @@ layout: compress
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name=author content="{{ site.title }}">
     <meta name="author" content="{{ site.title }}">
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
 
     {% seo %}
 
@@ -26,7 +24,6 @@ layout: compress
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
 
     <style>
-    
     {% if site.dark-theme == "auto" %}
         {% capture scss_sheet %}
             {% include style.scss %}
@@ -43,6 +40,8 @@ layout: compress
     {{ scss_sheet | scssify }}
     </style>
 
+    <!-- Bizim override CSS en sonda, mutlaka en son yüklenmeli -->
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
 <body>
     <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
