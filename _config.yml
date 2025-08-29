@@ -1,7 +1,7 @@
 remote_theme: mmistakes/minimal-mistakes
-title: Arzu Kirici
-description: Molecular Biologist → Bioinformatics/Software
+title: "Arzu Kirici"
+description: "Molecular Biologist → Bioinformatics / Software"
 plugins:
   - jekyll-remote-theme
-url: https://agkirici.github.io
-baseurl: ""
+url: "https://agkirici.github.io"
+baseurl: ""   # user site olduğu için boş kalmalı
