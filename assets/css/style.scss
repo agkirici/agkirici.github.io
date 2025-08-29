@@ -10,6 +10,13 @@ body {
   background: transparent !important;
 }
 
+/* Bio yazısının rengini özelleştir */
+.description {
+  color: #3b3b3b !important;  /* koyu gri – okunaklı */
+  font-size: 1.1em;           /* biraz daha büyük yazı */
+  font-weight: 400;           /* normal ama şık */
+}
+
 /* Linkler okunur olsun */
 a { color: #4b0082; }
 a:hover { color: #800080; }
