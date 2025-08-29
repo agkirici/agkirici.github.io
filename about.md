@@ -15,7 +15,7 @@ I’m passionate about combining a strong biology foundation with computational 
 <p>💡 I’m <strong>actively seeking opportunities</strong> in Canada, and I’m equally open to <strong>remote roles worldwide</strong> where I can contribute my interdisciplinary expertise.</p>
 
  <details markdown="1">
-  <summary>🧬 My Background</summary>
+  <summary>My Background</summary>
   <ul>
     <li>I began my academic path with a <b>BSc in Biological Sciences at Ankara University</b>, where I built my foundation in molecular biology and genetics.</li>
     <li>I then pursued a <b>Master’s in Biology (Biotechnology, Ankara University)</b>, focusing on transcription factors (<i>YABBY</i> and <i>DOF</i>) under drought stress in <i>Phaseolus vulgaris</i>. During this time, I also supervised undergraduate thesis projects and presented award-winning posters at international conferences in Paris.</li>
@@ -30,7 +30,7 @@ I’m passionate about combining a strong biology foundation with computational 
 
 
  <details markdown="1">
-  <summary>🛠 Skills</summary>
+  <summary>Skills</summary>
   <ul>
     <li>Python, R, Seurat, Scanpy</li>
     <li>NGS, scRNA-seq, Spatial Omics</li>
