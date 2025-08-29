@@ -1,7 +1,7 @@
 /* Açık bej arka plan */
 html, body { height: 100%; }
 body {
-  background-color: #f5f5dc !important; /* beige */
+  background-color: #b3a282 !important; /* beige */
   color: #000 !important;
 }
 
@@ -9,5 +9,5 @@ body {
   background: transparent !important;
 }
 
-a { color: #4b0082; }
-a:hover { color: #800080; }
+a { color: #03060a; }  /* siyah link */
+a:hover { color:#03060a; } /* siyah hover */
