@@ -4,7 +4,7 @@ bio: Scientist passionate about spatial biology, data analysis, computational to
 
 external-image: false
 picture: "/assets/images/profile.png" 
-dark-theme: auto
+dark-theme: false
 
 resume: true
 resume-external: true
