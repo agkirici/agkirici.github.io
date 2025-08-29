@@ -22,3 +22,16 @@
 @import "components/side-by-side";
 @import "components/social-links";
 @import "components/spoiler";
+
+
+/* === custom overrides (en sonda kalsın) === */
+body { 
+  background-color: #f7cc68 !important;  /* istediğin bej */
+  color: #111 !important;
+}
+.page, .page__content, .wrapper { 
+  background: transparent !important; 
+}
+.description { 
+  color: #3b3b3b !important;            /* alt başlık rengi */
+}
