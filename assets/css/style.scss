@@ -27,32 +27,27 @@ body, p, li, span, div {
   color: #000 !important;
 }
 
-/* Sosyal ikonlar görünür olsun */
-.social a,
-.social-icons a,
-.icons a,
-a.icon {
-  color: #000 !important;   /* Siyah yapar */
+/* Sosyal ikonlar bloğu */
+.social-block { margin: 10px 0 22px; }
+
+/* Liste noktalarını kaldır, yatay sırala ve ortala */
+.social-inline {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
-.social a svg,
-.social-icons a svg,
-.icons a svg,
-a.icon svg {
-  fill: #000 !important;    /* SVG ikonlar için */
+/* İkon görünsün (bej zeminde siyah) */
+.social-inline a {
+  text-decoration: none;
+  color: #000 !important;
+  font-size: 22px;       /* ikon boyutu */
+  line-height: 1;
 }
 
-/* Hover efekti için (mor ton istersen) */
-.social a:hover,
-.social-icons a:hover,
-.icons a:hover,
-a.icon:hover {
-  color: #4b0082 !important;
-}
-
-.social a:hover svg,
-.social-icons a:hover svg,
-.icons a:hover svg,
-a.icon:hover svg {
-  fill: #4b0082 !important;
-}
+/* Hover rengi (mor) */
+.social-inline a:hover { color: #4b0082 !important; }
