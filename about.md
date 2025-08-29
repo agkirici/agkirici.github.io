@@ -4,7 +4,7 @@ layout: page
 --- 
 
 <img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" 
-     alt="Profile Image" width="150" style="border-radius: 70%;" />
+     alt="Profile Image" width="100" style="border-radius: 80%;" />
 
 <p>Hi there! I am a <strong>biologist with a background of bioinformatics and developing software</strong>, currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
 
