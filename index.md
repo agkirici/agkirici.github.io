@@ -1,46 +1,31 @@
 # Arzu Kirici, MSc
 
 📧 arzukirici@gmail.com  
-[CV](cv.pdf) • [LinkedIn](https://www.linkedin.com/in/arzu-kirici) • [GitHub](https://github.com/agkirici)
+[CV](Arzu_Kirici_CV) • [LinkedIn](https://www.linkedin.com/in/arzu-kirici) • [GitHub](https://github.com/agkirici)
 
 ---
 
-Hi there! I am a **biologist specializing in genomics, bioinformatics, and spatial biology**, with over **10 years of research experience** across biological, life, and health sciences. I hold BSc and MSc degrees in Biology as well as a Graduate Diploma in Computer Programming, bringing a unique interdisciplinary perspective that bridges molecular biology and computational analysis.  
+Hi there! I am a **biologist and bioinformatician/software developer**, currently working as a **Project Analyst at Astraea Bio**, where I support spatial omics projects, build bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an **Executive Member at Panoramics – A Vision**, helping to design digital platforms, analyze multi-omics datasets, and engage the scientific community.  
 
-My expertise includes **spatial omics (Stomics, MSI, COMET), Next-Generation Sequencing (NGS), single-cell transcriptomics, molecular diagnostics, and data-driven cancer research**. I am passionate about transforming complex biological data into meaningful insights through computational tools, automation, and statistical methods.  
-
-I am skilled in both **wet lab techniques** (DNA/RNA extraction, qPCR, NGS workflows) and **computational tools** (Python, R, Seurat, Scanpy, HTML/CSS/JS, WordPress). I thrive in collaborative research environments where problem-solving, data curation, and scientific rigor drive innovation.  
+My expertise includes **spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology**, alongside programming skills in **Python, R, Seurat, Scanpy, HTML/CSS/JS etc. I am passionate about combining my strong biology foundation with computational tools to turn complex datasets into actionable insights.  
 
 ---
 
-Currently, I work as a **Project Analyst at Astraea Bio**, where I support spatial omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also volunteer as a **Computational Creative at Panoramics – A Vision**, developing dashboards, cleaning datasets, and designing digital platforms to support the scientific community.  
-
-In addition, I contributed as a **Public Curator for the CReSCENT platform**, integrating and annotating 145+ single-cell RNA-seq datasets (~938,000 cells) focused on neurological diseases and brain cancers to support Brain Canada research initiatives.  
+💡 I am **actively seeking opportunities** in Canada, and I am equally open to **remote roles** worldwide where I can contribute my interdisciplinary expertise.
 
 ---
 
 <details>
-  <summary>📂 My background</summary>
+  <summary>🧬 My background</summary>
 
-- **Education**:  
-  - MSc Biology (Ankara University, Turkey)  
-  - Graduate Diploma in Computer Programming (Seneca College, Canada)  
-  - BSc Biological Sciences (Ankara University, Turkey)  
-
-- **Research Experience**:  
-  - Project Analyst @ Astraea Bio (Spatial Omics & Bioinformatics)  
-  - Senior Biologist @ Mikrogen (WES/WGS, clinical diagnostics)  
-  - Laboratory Technician @ Tikkle Scientific (RT-PCR COVID-19 testing)  
-  - Research Assistant @ Wageningen University (plant physiology & genetics)  
-
-- **Publications**:  
-  - *Journal of Experimental Botany* (2018): Seed dormancy release & DOG loci    
-  - SciTechnol Proceedings: YABBY & DOF transcription factors in drought stress  
-
-- **Skills**:  
-  - Bioinformatics: Python, R, Seurat, Scanpy  
-  - Wet Lab: PCR/qPCR, RNA-seq, CRISPR-Cas9, microscopy  
-  - Data Handling: LIMS, SOP documentation, QC/QA  
-  - Web/Digital: HTML, CSS, JavaScript, WordPress  
+- I began my academic path with a **BSc in Biological Sciences at Ankara University**, where I built my foundation in molecular biology and genetics.  
+- I then pursued a **Master’s in Biology (Biotechnology, Ankara University)**, focusing on transcription factors (*YABBY* and *DOF*) under drought stress in *Phaseolus vulgaris*. During this time, I also supervised undergraduate thesis projects and presented award-winning posters at international conferences in Paris.  
+- My first international research experience was at **Wageningen University (Netherlands)**, where I worked on **plant physiology and seed dormancy**, contributing to a publication in *Journal of Experimental Botany* (2018).  
+- After moving into the health sciences, I joined **Mikrogen Genetic Disease Diagnostic Center (Turkey)** as a **Senior Biologist**, leading workflows for **whole-exome, whole-genome, and targeted genetic testing** in oncology, prenatal, and rare disease diagnostics.  
+- In **2021, I moved to Canada to study Computer Programming at Seneca College**, which gave me the opportunity to combine my strong moleculer biology background with **technology and data-driven approaches**. This transition opened the path toward bioinformatics and software development.  
+- During the challenging times of the COVID-19 pandemic, I contributed as a **healthcare worker at Tikkle Scientific (Canada)**, performing large-scale **RT-PCR testing** for both clinical and film industry clients at the **CBS stage**. My role involved nucleic acid extraction, qPCR setup, QC interpretation, and ensuring reliable results under strict timelines and safety standards.  
+- More recently, I transitioned into the bioinformatics side, working as a **Project Analyst at Astraea Bio**, where I combine my wet lab expertise with computational tools to analyze **spatial omics datasets (Stomics, MSI, COMET)** and streamline project operations.  
+- I also serve as an **Executive Member at Panoramics – A Vision**, contributing as a computational creative and software developer, helping to develop digital platforms, analyze multi-omics data, and engage the scientific community.  
 
 </details>
+
