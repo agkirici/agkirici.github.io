@@ -41,3 +41,27 @@ a:hover {
   color: #333 !important; /* hover olunca koyu gri */
 }
 
+/* About sayfasındaki tüm yazılar siyah olsun */
+.page, .page-content, .content, .wrapper, body {
+  color: #000 !important;
+}
+
+.page p, .page li, .page span, .page div {
+  color: #000 !important;
+}
+
+/* Kalın olanlar belirgin */
+.page strong, .page b {
+  font-weight: 700;
+  color: #000 !important;
+}
+
+/* Linkler de siyah görünsün */
+.page a {
+  color: #000 !important;
+  text-decoration: underline;
+}
+
+.page a:hover {
+  color: #333 !important;
+}
