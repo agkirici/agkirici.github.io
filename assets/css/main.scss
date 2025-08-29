@@ -1,0 +1,59 @@
+---
+---
+
+@import "minimal-mistakes/skins/default"; // dilersen "air", "dark" vb.
+@import "minimal-mistakes";
+
+/* Daha ferah, ama daha küçük tipografi — David Novak tarzına yakın */
+html { font-size: 16px; }                    /* varsayılan 16–18px arasıdır */
+.page__content { line-height: 1.75; }
+
+/* Başlıkları küçült ve daha sade yap */
+.page__title { 
+  font-size: 1.8rem;       /* sayfa başlığı (H1) */
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+.page__content h1 { font-size: 1.45rem; margin: 1.25rem 0 .5rem; }
+.page__content h2 { font-size: 1.25rem; margin: 1rem 0 .5rem; }
+.page__content h3 { font-size: 1.1rem;  margin: .9rem 0 .45rem; }
+.page__content strong { font-weight: 600; }  /* kalınları biraz yumuşat */
+
+/* Paragraf ve liste okunabilirliği */
+.page__content p { margin: .6rem 0; }
+.page__content ul, 
+.page__content ol { 
+  margin: .4rem 0 .9rem 1.25rem; 
+}
+.page__content li { margin: .25rem 0; }
+
+/* About bloğunu daraltıp metni toplu gösterme */
+.page__content > p:first-of-type { 
+  max-width: 58ch;          /* ilk paragraf satır uzunluğu */
+}
+
+/* “My background” details + bullets düzgün görünsün */
+details[open] { margin-bottom: .75rem; }
+details summary { 
+  cursor: pointer; 
+  list-style: none; 
+}
+details summary::-webkit-details-marker { display: none; } /* default üçgeni kaldır */
+details summary::before { 
+  content: "▸ ";
+  display: inline-block; 
+  transform: translateY(-1px);
+  opacity: .75;
+}
+details[open] summary::before { content: "▾ "; }
+details ul { list-style: disc; margin-left: 1.25rem; }
+
+/* İçerik genişliği (daha ferah) */
+.page, .page__inner, .page__content, .archive { 
+  max-width: 980px !important;   /* istersen 1040 veya 1100 yapabilirsin */
+}
+
+/* Link davranışı (David sayfasına yakın) */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
