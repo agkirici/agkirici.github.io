@@ -1,12 +1,7 @@
 remote_theme: mmistakes/minimal-mistakes
 title: Arzu Kirici
-description: Biologist/Bioinformatics/Software Developer
-
-
-nav:
-  - name: "About"
-    link: /
-  - name: "Projects"
-    link: /projects
-  - name: "Blog"
-    link: /blog
+description: Molecular Biologist → Bioinformatics/Software
+plugins:
+  - jekyll-remote-theme
+url: https://agkirici.github.io
+baseurl: ""
