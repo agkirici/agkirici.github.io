@@ -1,45 +1,21 @@
----
-title: About
-layout: page
----
-<img src="{{ '/assets/images/profile.png' | relative_url }}" alt="Profile Image" width="180" height="180" style="border-radius:50%;">
+"--- 
+title: About 
+layout: page 
+--- 
+
+![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}) 
+
 
 <p>Hi there! I am a **biologist and bioinformatician/software developer**, currently working as a **Project Analyst at Astraea Bio**, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an **Executive Member at Panoramics – A Vision**, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.
 
 My expertise includes **spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology**, alongside programming skills in **Python, R, Seurat, Scanpy, HTML/CSS/JS**. I’m passionate about combining a strong biology foundation with computational tools to turn complex datasets into actionable insights.
 
-I’m **actively seeking opportunities** in Canada, and I’m equally open to **remote roles worldwide** where I can contribute my interdisciplinary expertise.
-</p>
+💡 I’m **actively seeking opportunities** in Canada, and I’m equally open to **remote roles worldwide** where I can contribute my interdisciplinary expertise. </p>
 
 
-<h2>My background</h2>
 
-<details markdown="1">
-<summary>🧬 Click to expand</summary>
+<h2>Skills</h2> <ul class="skill-list"> <li>Python</li> <li>C</li> <li>Bash</li> <li>Kali Linux</li> <li>Parrot OS</li> <li>Arch Linux</li> <li>Solidity</li> <li>HTML & CSS</li> <li>PHP</li> <li>Golang</li> <li>Git</li> <li>SQL</li> <li>MarkDown</li> <li>LaTex</li> <li>Virtual Box, VmWare</li> <li>Docker</li> <li>Object Oriented Programming</li> <li>C++</li> <li>Rust</li> <li>Java</li> </ul> 
 
-- I began my academic path with a **BSc in Biological Sciences at Ankara University**, where I built my foundation in molecular biology and genetics.  
-- I then pursued a **Master’s in Biology (Biotechnology, Ankara University)**, focusing on transcription factors (*YABBY* and *DOF*) under drought stress in *Phaseolus vulgaris*. During this time, I also supervised undergraduate thesis projects and presented award-winning posters at international conferences in Paris.  
-- My first international research experience was at **Wageningen University (Netherlands)**, where I worked on **plant physiology and seed dormancy**, contributing to a publication in *Journal of Experimental Botany* (2018).  
-- After moving into the health sciences, I joined **Mikrogen Genetic Disease Diagnostic Center (Turkey)** as a **Senior Biologist**, leading workflows for **whole-exome, whole-genome, and targeted genetic testing** in oncology, prenatal, and rare disease diagnostics.  
-- In **2021, I moved to Canada to study Computer Programming at Seneca College**, which gave me the opportunity to combine my strong molecular biology background with **technology and data-driven approaches**. This transition opened the path toward bioinformatics and software development.  
-- During the challenging times of the COVID-19 pandemic, I contributed as a **healthcare worker at Tikkle Scientific (Canada)**, performing large-scale **RT-PCR testing** for both clinical and film industry clients at the **CBS stage**.  
-- More recently, I transitioned into the bioinformatics side, working as a **Project Analyst at Astraea Bio**, where I combine my wet-lab expertise with computational tools to analyze **spatial omics datasets (Stomics, MSI, COMET)** and streamline project operations.  
-- I also serve as an **Executive Member at Panoramics – A Vision**, contributing as a computational creative and software developer, helping to develop digital platforms, analyze multi-omics data, and engage the scientific community.  
 
-</details>
-<ul class="skill-list">
-  <li>Python</li>
-  <li>R</li>
-  <li>Seurat / Scanpy</li>
-  <li>NGS workflows (WES/WGS), qPCR</li>
-  <li>Spatial omics (Stomics, MSI, COMET)</li>
-  <li>HTML / CSS / JavaScript</li>
-  <li>Linux / Bash</li>
 
-</ul>
-
-<h2>Projects</h2>
-
-<ul>
-
-</ul>
+<h2>Projects</h2> <ul> <li><a href="https://github.com/Aviksaikat/LinGhost">LinGhost</a></li> <li><a href="https://github.com/Aviksaikat/Bug-bounty-essentials">Bug Bounty Tools</a></li> <li><a href="https://github.com/Aviksaikat/eJPT">eJPT Notes</a></li> <li><a href="https://github.com/Aviksaikat/Markdown-to-pdf">Markdown To PDF</a></li> <li><a href="https://github.com/Aviksaikat/">More About my tools & utility scripts</a></li> </ul>"
