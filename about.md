@@ -1,16 +1,24 @@
-"--- 
+--- 
 title: About 
 layout: page 
 --- 
 
-![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}) 
+![Profile Image]<img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" alt="Profile Image" width="200" style="border-radius: 50%;" />
 
 
-<p>Hi there! I am a **biologist and bioinformatician/software developer**, currently working as a **Project Analyst at Astraea Bio**, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an **Executive Member at Panoramics – A Vision**, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community. </p>
 
-</p>My expertise includes **spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology**, alongside programming skills in **Python, R, Seurat, Scanpy, HTML/CSS/JS**. I’m passionate about combining a strong biology foundation with computational tools to turn complex datasets into actionable insights.</p>
+<p>Hi there! I am a <strong>biologist and bioinformatician/software developer</strong>, 
+currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support 
+spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to 
+cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, 
+helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
 
-</p>💡 I’m **actively seeking opportunities** in Canada, and I’m equally open to **remote roles worldwide** where I can contribute my interdisciplinary expertise. </p>
+<p>My expertise includes <strong>spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology</strong>, 
+alongside programming skills in <strong>Python, R, Seurat, Scanpy, HTML/CSS/JS</strong>. 
+I’m passionate about combining a strong biology foundation with computational tools to turn complex datasets into actionable insights.</p>
+
+<p>💡 I’m <strong>actively seeking opportunities</strong> in Canada, and I’m equally open to <strong>remote roles worldwide</strong> where I can contribute my interdisciplinary expertise.</p>
+
 
 
 
@@ -22,14 +30,15 @@ layout: page
 <li>Spatial omics (Stomics, MSI, COMET)</li>
 <li>Linux / Bash</li>
 <li>HTML & CSS</li> 
-<li>PHP</li> 
 <li>Git</li> 
 <li>SQL</li> 
-<li>Docker</li> <li>Object Oriented Programming</li> 
+<li>Docker</li> 
+<li>Object Oriented Programming</li> 
 <li>C++</li> 
 
 </ul> 
 
 
 
-<h2>Projects</h2> <ul> <li><a href="https://github.com/Aviksaikat/LinGhost">LinGhost</a></li> <li><a href="https://github.com/Aviksaikat/Bug-bounty-essentials">Bug Bounty Tools</a></li> <li><a href="https://github.com/Aviksaikat/eJPT">eJPT Notes</a></li> <li><a href="https://github.com/Aviksaikat/Markdown-to-pdf">Markdown To PDF</a></li> <li><a href="https://github.com/Aviksaikat/">More About my tools & utility scripts</a></li> </ul>"
+<h2>Projects</h2>
+<p><em>Work in progress 🚧</em></p>
