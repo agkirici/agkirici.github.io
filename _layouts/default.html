@@ -45,6 +45,10 @@ layout: compress
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
 <body>
+
+  {# <-- HEADER BURADA OLMALI --> #}
+  {% include header.html %}
+
   <div class="wrapper-{% if site.width == 'normal' %}normal{% elsif site.width == 'large' %}large{% endif %}">
 
     {% if page.layout == "post" %}
