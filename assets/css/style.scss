@@ -46,46 +46,7 @@ a:hover { color: #800080; }
   padding-left: 0;
   margin: 0.75rem 0 1.25rem;
 }
-/* --- Header & Navi düzeltmesi: menü fotoğrafın üstüne binmesin --- */
-.header-home {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  position: relative !important;
-  margin-bottom: 40px !important;
-}
 
-.header-home nav,
-.header-home .site-nav,
-.header-home .navigation,
-.header-home .menu {
-  position: relative !important;   /* absolute ise ez */
-  top: 0 !important;
-  margin-bottom: 20px !important;  /* menü ile foto arası boşluk */
-  display: flex !important;
-  gap: 16px;
-  justify-content: center;
-  z-index: 2;
-}
-
-.header-home .selfie,
-img.selfie {
-  display: block;
-  margin: 12px auto 0 !important;  /* üstten biraz boşluk */
-  z-index: 1;
-}
-
-/* Küçük ekranlarda daha fazla boşluk ver */
-@media (max-width: 768px) {
-  .header-home nav,
-  .header-home .site-nav,
-  .header-home .navigation,
-  .header-home .menu {
-    margin-bottom: 24px !important;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-}
 /* (Temada gerekirse ikonlar zaten ortalıdır; değilse bu satırlar yardımcı olur.)
 .social-links,
 .icons,
@@ -95,3 +56,98 @@ img.selfie {
   gap: 18px;
 }
 */
+
+
+/* ===========================================
+   NAV / HEADER OVERLAP FİX — EN KRİTİK KISIM
+   =========================================== */
+
+/* Header kapsayıcıyı güvenli hale getir (resim ve menü ayrı katmanda olsun) */
+.header-home,
+.site-header,
+header[role="banner"],
+header.header,
+.header {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin-bottom: 40px !important;   /* header’dan sonra boşluk */
+}
+
+/* Menü elemanlarını mutlak/ sabit konumdan çıkar, alta boşluk bırak */
+.header-home nav,
+.header-home .site-nav,
+.header-home .navigation,
+.header-home .menu,
+.site-header nav,
+.site-nav,
+.navigation,
+.menu,
+.topnav,
+header[role="banner"] nav,
+header .nav,
+nav {
+  position: static !important;       /* absolute/fixed ise iptal et */
+  float: none !important;
+  clear: both !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 0 20px 0 !important;     /* menü ile foto arasında boşluk */
+  z-index: 2 !important;
+}
+
+/* Selfie/fotoğraf menünün altında kalsın, üstte boşluk olsun */
+.header-home .selfie,
+img.selfie,
+.header-home img[alt="{{ site.title }}"],
+.header img.selfie {
+  display: block !important;
+  margin: 12px auto 0 !important;
+  z-index: 1 !important;
+}
+
+/* Eğer tema menüyü sayfanın en tepesine fixed yapmışsa, header’a üstten padding ver */
+body.has-fixed-nav .header-home,
+body.nav-fixed .header-home,
+body.fixed-nav .header-home {
+  padding-top: 64px !important;
+}
+
+/* Küçük ekranlarda menü satır atabilsin ve aralıklar daralsın */
+@media (max-width: 768px) {
+  .header-home nav,
+  .header-home .site-nav,
+  .header-home .navigation,
+  .header-home .menu,
+  .site-nav,
+  .navigation,
+  .menu,
+  .topnav,
+  nav {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+/* Bazı temalarda img’in üstüne zorlama bind eden global kuralı kırmak için: */
+header img,
+.header-home img {
+  position: static !important;
+}
+
+/* Temada .header-home içindeki nav’a absolute veren bir kural varsa kesin ezmek için: */
+.header-home > nav,
+.header-home > .site-nav,
+.header-home > .navigation,
+.header-home > .menu {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
