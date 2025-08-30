@@ -46,7 +46,46 @@ a:hover { color: #800080; }
   padding-left: 0;
   margin: 0.75rem 0 1.25rem;
 }
+/* --- Header & Navi düzeltmesi: menü fotoğrafın üstüne binmesin --- */
+.header-home {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  margin-bottom: 40px !important;
+}
 
+.header-home nav,
+.header-home .site-nav,
+.header-home .navigation,
+.header-home .menu {
+  position: relative !important;   /* absolute ise ez */
+  top: 0 !important;
+  margin-bottom: 20px !important;  /* menü ile foto arası boşluk */
+  display: flex !important;
+  gap: 16px;
+  justify-content: center;
+  z-index: 2;
+}
+
+.header-home .selfie,
+img.selfie {
+  display: block;
+  margin: 12px auto 0 !important;  /* üstten biraz boşluk */
+  z-index: 1;
+}
+
+/* Küçük ekranlarda daha fazla boşluk ver */
+@media (max-width: 768px) {
+  .header-home nav,
+  .header-home .site-nav,
+  .header-home .navigation,
+  .header-home .menu {
+    margin-bottom: 24px !important;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
 /* (Temada gerekirse ikonlar zaten ortalıdır; değilse bu satırlar yardımcı olur.)
 .social-links,
 .icons,
