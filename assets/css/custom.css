@@ -42,3 +42,28 @@ a:hover { color:#03060a; }
   justify-content: center;
   gap: 18px;
 }
+/* Sosyal ikonları her varyasyonda görünür yap */
+.social, .social-links, .icons, .links {
+  display: inline-flex !important;
+  gap: 18px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  margin: .75rem 0 1.25rem !important;
+}
+
+.social a, .social-links a, .icons a, .links a {
+  color: #000 !important;     /* ikon rengi */
+  opacity: 1 !important;
+  text-decoration: none;
+}
+
+.social i, .social-links i, .icons i, .links i,
+.social svg, .social-links svg, .icons svg, .links svg {
+  color: #000 !important;      /* FA <i> */
+  fill: #000 !important;       /* SVG ikonlar */
+  stroke: #000 !important;     /* stroke tabanlı SVG varsa */
+  opacity: 1 !important;
+  display: inline-block !important;
+}
