@@ -57,97 +57,57 @@ a:hover { color: #800080; }
 }
 */
 
-
 /* ===========================================
-   NAV / HEADER OVERLAP FİX — EN KRİTİK KISIM
+   NAV / HEADER OVERLAP FİX — GÜNCEL
    =========================================== */
 
-/* Header kapsayıcıyı güvenli hale getir (resim ve menü ayrı katmanda olsun) */
-.header-home,
-.site-header,
-header[role="banner"],
-header.header,
-.header {
-  position: relative !important;
-  z-index: 1 !important;
+.header-home {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  margin-bottom: 40px !important;   /* header’dan sonra boşluk */
+  position: relative !important;
+  margin-bottom: 40px !important;
 }
 
-/* Menü elemanlarını mutlak/ sabit konumdan çıkar, alta boşluk bırak */
+/* Menü mutlaka fotoğrafın üstünde gelsin */
 .header-home nav,
 .header-home .site-nav,
 .header-home .navigation,
-.header-home .menu,
-.site-header nav,
-.site-nav,
-.navigation,
-.menu,
-.topnav,
-header[role="banner"] nav,
-header .nav,
-nav {
-  position: static !important;       /* absolute/fixed ise iptal et */
-  float: none !important;
-  clear: both !important;
+.header-home .menu {
+  order: 0 !important;
+  position: static !important;     /* absolute/fixed iptal */
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin: 0 0 20px 0 !important;
   display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
   gap: 16px !important;
-  margin: 0 0 20px 0 !important;     /* menü ile foto arasında boşluk */
+  justify-content: center !important;
   z-index: 2 !important;
 }
 
-/* Selfie/fotoğraf menünün altında kalsın, üstte boşluk olsun */
+/* Fotoğraf menünün altında dursun */
+.header-home .link,
 .header-home .selfie,
-img.selfie,
-.header-home img[alt="{{ site.title }}"],
-.header img.selfie {
+img.selfie {
+  order: 1 !important;
   display: block !important;
   margin: 12px auto 0 !important;
+  position: static !important;
   z-index: 1 !important;
 }
 
-/* Eğer tema menüyü sayfanın en tepesine fixed yapmışsa, header’a üstten padding ver */
-body.has-fixed-nav .header-home,
-body.nav-fixed .header-home,
-body.fixed-nav .header-home {
-  padding-top: 64px !important;
-}
-
-/* Küçük ekranlarda menü satır atabilsin ve aralıklar daralsın */
+/* Küçük ekranlarda nav satır atabilsin */
 @media (max-width: 768px) {
   .header-home nav,
   .header-home .site-nav,
   .header-home .navigation,
-  .header-home .menu,
-  .site-nav,
-  .navigation,
-  .menu,
-  .topnav,
-  nav {
+  .header-home .menu {
     flex-wrap: wrap !important;
     gap: 12px !important;
     margin-bottom: 24px !important;
   }
 }
 
-/* Bazı temalarda img’in üstüne zorlama bind eden global kuralı kırmak için: */
-header img,
-.header-home img {
-  position: static !important;
-}
 
-/* Temada .header-home içindeki nav’a absolute veren bir kural varsa kesin ezmek için: */
-.header-home > nav,
-.header-home > .site-nav,
-.header-home > .navigation,
-.header-home > .menu {
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-}
