@@ -1,7 +1,6 @@
 --- 
 title: About 
 layout: page 
-showHeader: true
 --- 
 
 <img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" 
