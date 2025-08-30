@@ -42,3 +42,19 @@ a:hover { color:#03060a; }
   justify-content: center;
   gap: 18px;
 }
+
+.header, .header-home, .header-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .menu, .header-home .menu, .header-page .menu {
+  margin-left: auto;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.header .menu a, .header-home .menu a {
+  white-space: nowrap;
+}
