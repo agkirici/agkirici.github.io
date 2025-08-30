@@ -56,3 +56,46 @@ a:hover { color: #800080; }
   gap: 18px;
 }
 */
+
+/* Pin nav to the top-right corner of the header */
+.header-home { 
+  position: relative !important; 
+  padding-top: 56px !important;   /* creates space so it doesn't overlap the photo */
+}
+
+.header-home nav,
+.header-home .site-nav,
+.header-home .navigation,
+.header-home .menu {
+  position: absolute !important;
+  top: 12px !important;
+  right: 16px !important;
+  left: auto !important; 
+  bottom: auto !important;
+  display: flex !important;
+  gap: 16px !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  z-index: 10 !important;
+}
+
+/* Keep the selfie clear below */
+.header-home .selfie { 
+  display: block; 
+  margin: 0 auto; 
+}
+
+/* Mobile: drop the nav above the photo and center it */
+@media (max-width: 480px) {
+  .header-home { padding-top: 72px !important; }
+  .header-home nav,
+  .header-home .site-nav,
+  .header-home .navigation,
+  .header-home .menu {
+    position: absolute !important;
+    top: 8px !important;
+    right: 12px !important;
+    gap: 12px !important;
+    font-size: 0.95rem;
+  }
+}
