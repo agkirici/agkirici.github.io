@@ -6,7 +6,7 @@ layout: page
 <img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" 
      alt="Profile Image" width="100" style="border-radius: 80%;" />
 
-<p>Hi there! I am a <strong>biologist with a background in bioinformatics and developing software</strong>, currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an <strong>Executive Member at Panoramics – A Vision</strong>, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
+<p>Hi there! I am a <strong>biologist with a background in bioinformatics and developing software</strong>, currently working as a <strong>Project Analyst at Astraea Bio</strong>, where I support spatial-omics projects, build lightweight bioinformatics pipelines, and contribute to cross-functional operations. I also serve as an <strong>Computational Biologist and Executive Member at Panoramics – A Vision</strong>, helping design digital platforms, analyze multi-omics datasets, and engage the scientific community.</p>
 
 <p>My expertise includes <strong>spatial biology, single-cell transcriptomics, Next-Generation Sequencing (NGS), molecular diagnostics, and computational biology</strong>, 
 alongside programming skills in <strong>Python, R, Seurat, Scanpy, HTML/CSS/JS</strong>. 
