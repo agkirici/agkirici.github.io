@@ -75,6 +75,20 @@ export default function ContactPage() {
                 View my LinkedIn profile
               </a>
             </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                GitHub
+              </p>
+              <a
+                href="https://github.com/agkirici"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
+              >
+                View my GitHub profile
+              </a>
+            </div>
           </div>
 
           <div className="space-y-2 text-xs text-neutral-400">
