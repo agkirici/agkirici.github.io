@@ -60,13 +60,13 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
       </Link>
 
       {/* Action buttons */}
-      <div className="mt-4 flex flex-wrap gap-2 pt-4 border-t border-neutral-800">
+      <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-neutral-800">
         {link && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded-md border border-neutral-700 px-3 py-1.5 text-xs font-medium text-neutral-300 hover:bg-neutral-800"
+            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             <span>DevPost</span>
@@ -77,7 +77,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 rounded-md border border-neutral-700 px-3 py-1.5 text-xs font-medium text-neutral-300 hover:bg-neutral-800"
+            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             <span>GitHub</span>
@@ -88,7 +88,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Share on LinkedIn"
-          className="inline-flex items-center gap-1 rounded-md border border-[#0a66c2] px-3 py-1.5 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/10"
+          className="inline-flex items-center gap-1.5 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-4 py-2 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
           onClick={(e) => e.stopPropagation()}
         >
           <LinkedInIcon className="h-4 w-4" />
