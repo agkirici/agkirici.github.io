@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import Navbar from "@/components/Navbar";
+
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
@@ -17,7 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-neutral-100 antialiased">
-        {children}
+        {/* Üstte sabit navbar */}
+        <Navbar />
+
+        {/* Navbar'ın altında içerik; çakışmaması için biraz padding-top */}
+        <main className="pt-16">
+          {children}
+        </main>
+
+        {/* Her sayfada görünen scroll-to-top butonu */}
         <ScrollToTop />
       </body>
     </html>
