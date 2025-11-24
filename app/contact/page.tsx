@@ -3,8 +3,7 @@
 import { FormEvent, useState } from "react";
 
 const EMAIL = "arzukirici@gmail.com";
-// TODO: Replace with your real LinkedIn profile URL
-const LINKEDIN_URL = "https://www.linkedin.com/in/your-linkedin-handle";
+const LINKEDIN_URL = "https://www.linkedin.com/in/arzu-kirici";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
