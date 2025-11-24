@@ -51,6 +51,17 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/example/genome-annotator',
     featured: false,
   },
+  {
+    id: 'spatioscript',
+    title: 'SpatioScript: LLM-Powered Spatial Biology Query Tool',
+    description: 'SpatioScript is an LLM-powered spatial biology query tool that lets users ask natural language questions about spatial and single-cell datasets. The system connects preprocessed data, cell type annotations, spatial graphs and image views to answer biologically meaningful questions.',
+    longDescription: 'SpatioScript is an LLM-powered spatial biology query tool that lets users ask natural language questions about spatial and single-cell datasets. The system connects preprocessed data, cell type annotations, spatial graphs and image views to answer biologically meaningful questions. Built an end-to-end prototype that turns English questions into queries over spatial biology data. Combined Scanpy/anndata workflows with Neo4j graphs and OpenCV-based image handling. Integrated OpenAI\'s API to interpret questions and route them to the right data structures. Focused on use cases such as neighborhood enrichment, tumor microenvironment questions and marker discovery. Developed for PANORAMICS – A Vision · Toronto Bioinformatics Hackathon 2025.',
+    tags: ['Python', 'Scanpy', 'anndata', 'Neo4j', 'OpenCV', 'OpenAI API', 'Spatial Transcriptomics', 'LLMs'],
+    technologies: ['Python', 'Scanpy', 'anndata', 'Neo4j', 'OpenCV', 'OpenAI API', 'Spatial Transcriptomics', 'LLMs'],
+    githubUrl: 'https://github.com/hackbio-ca/spatioscript-llm-spatial-biology',
+    liveUrl: 'https://devpost.com/software/spatioscript-llm-powered-spatial-biology-query-tool',
+    featured: true,
+  },
 ];
 
 export function getProjectsByTag(tag?: string): Project[] {
