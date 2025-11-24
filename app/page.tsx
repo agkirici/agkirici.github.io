@@ -1,26 +1,43 @@
+import Image from 'next/image';
+
 export default function HomePage() {
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
       <div className="mx-auto max-w-3xl space-y-12">
         {/* Hero */}
-        <section className="space-y-4">
-          <p className="text-sm font-medium text-sky-500">Welcome</p>
+        <section className="flex flex-col md:flex-row gap-8 items-start">
+          {/* Profile Picture - Left Side */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/profile.jpg"
+              alt="Arzu Kirici"
+              width={200}
+              height={200}
+              className="rounded-full object-cover border-2 border-neutral-700"
+              priority
+            />
+          </div>
 
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Hi, I&apos;m <span className="text-sky-500">Arzu Kirici</span>
-          </h1>
+          {/* Text Content - Right Side */}
+          <div className="flex-1 space-y-4">
+            <p className="text-sm font-medium text-sky-500">Welcome</p>
 
-          <h2 className="text-xl font-semibold text-neutral-200">
-            I&apos;m a scientist building web applications for healthcare industries and biotech companies.
-          </h2>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Hi, I&apos;m <span className="text-sky-500">Arzu Kirici</span>
+            </h1>
 
-          <p className="text-neutral-300 leading-relaxed">
-            I started my career in genetic disease diagnostics and molecular biology
-            wet-lab. Later, I moved into cancer research where I worked as a data
-            analyst on multiple research projects. Today I combine biology, data
-            analysis and software development to create tools that people in healthcare
-            and biotech actually use.
-          </p>
+            <h2 className="text-xl font-semibold text-neutral-200">
+              I&apos;m a scientist building web applications for healthcare industries and biotech companies.
+            </h2>
+
+            <p className="text-neutral-300 leading-relaxed">
+              I started my career in genetic disease diagnostics and molecular biology
+              wet-lab. Later, I moved into cancer research where I worked as a data
+              analyst on multiple research projects. Today I combine biology, data
+              analysis and software development to create tools that people in healthcare
+              and biotech actually use.
+            </p>
+          </div>
         </section>
 
         {/* Where I'm heading */}
