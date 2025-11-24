@@ -89,6 +89,20 @@ export default function ContactPage() {
                 View my GitHub profile
               </a>
             </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                Upwork
+              </p>
+              <a
+                href="https://www.upwork.com/freelancers/~0135d7c36f12a8eba8?mp_source=share"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
+              >
+                View my Upwork profile
+              </a>
+            </div>
           </div>
 
           <div className="space-y-2 text-xs text-neutral-400">
