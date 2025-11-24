@@ -71,30 +71,27 @@ export default function HomePage() {
           </ul>
         </section>
 
-        {/* Data and LLM */}
+        {/* Data & tooling */}
         <section className="space-y-4">
-          <h3 className="text-lg font-semibold">Data, graphs and language models</h3>
+          <h3 className="text-lg font-semibold">Working with complex research data</h3>
 
           <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">
-              Data management and knowledge graphs
-            </h4>
+            <h4 className="font-semibold text-neutral-100">Connecting datasets</h4>
             <p className="leading-relaxed">
-              Some teams work with many sources of information such as genes, drugs,
-              pathways, protein interactions, diseases and clinical metadata. I&apos;m
-              interested in connecting these layers with knowledge graphs so that
-              relationships become easier to explore and understand. Neo4j is one of the
-              tools I use for this type of work.
+              Many projects combine assay results, annotations, clinical fields and public
+              resources. I work on structuring these datasets so that they can be joined and
+              queried reliably, sometimes using graph databases such as Neo4j when relationships
+              matter more than individual tables.
             </p>
           </div>
 
           <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Language model integration</h4>
+            <h4 className="font-semibold text-neutral-100">Querying data with language models</h4>
             <p className="leading-relaxed">
-              I also explore how large language models can help researchers interact with
-              complex data. A common idea is converting an English question into a query
-              language such as Cypher so that anyone can ask meaningful questions without
-              writing code. This makes graphs and structured data easier to work with.
+              I also experiment with using large language models as an interface to data.
+              A common pattern is to translate plain English questions into a query language
+              like Cypher or SQL so that biologists can explore their data without writing
+              code, while still keeping the underlying schemas and constraints explicit.
             </p>
           </div>
         </section>
