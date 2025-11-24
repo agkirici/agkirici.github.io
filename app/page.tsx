@@ -7,7 +7,7 @@ export default function HomePage() {
           <p className="text-sm font-medium text-sky-500">Welcome</p>
 
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Hi, I&apos;m <span className="text-sky-500">Arzu Kirici</span>.
+            Hi, I&apos;m <span className="text-sky-500">Arzu Kirici</span>, a Bioinformatics Software Engineer.
           </h1>
 
           <h2 className="text-xl font-semibold text-neutral-200">
