@@ -10,12 +10,11 @@ export default function ProjectsPage() {
 
         {/* Header */}
         <header className="space-y-2">
-          <p className="text-sm font-medium text-sky-500">Projects</p>
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Selected work
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
+            Projects
           </h1>
           <p className="text-neutral-300 text-sm md:text-base">
-            A project at the intersection of spatial biology, LLMs and software engineering.
+            A collection of bioinformatics tools and software projects I've worked on.
           </p>
         </header>
 
