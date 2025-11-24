@@ -11,7 +11,7 @@ export default function HomePage() {
           </h1>
 
           <h2 className="text-xl font-semibold text-neutral-200">
-            I&apos;m a scientist building web applications for healthcare and biotech.
+            I&apos;m a scientist building web applications for healthcare industries and biotech companies.
           </h2>
 
           <p className="text-neutral-300 leading-relaxed">
