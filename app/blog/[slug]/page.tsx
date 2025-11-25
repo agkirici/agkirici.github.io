@@ -1,10 +1,12 @@
 import { notFound } from 'next/navigation';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { getBlogPostBySlug, getBlogPostSlugs } from '@/lib/blog';
+import { getBlogPostBySlug, getBlogPostSlugs } from '@/lib/sanity/blog';
 import BlogLayout from '@/components/BlogLayout';
+import PortableText from '@/components/PortableText';
+import { urlFor } from '@/lib/sanity/image';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
-  const slugs = getBlogPostSlugs();
+  const slugs = await getBlogPostSlugs();
   return slugs.map((slug) => ({
     slug,
   }));
@@ -16,20 +18,36 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
+
+  // Use reading time from query or calculate fallback
+  const readingTimeMinutes = post.readingTime || 5;
+  const readingTimeText = `${readingTimeMinutes} min read`;
 
   return (
     <BlogLayout
       title={post.title}
       author={post.author}
       date={post.date}
-      content={post.content}
+      readingTime={readingTimeText}
     >
-      <MDXRemote source={post.content} />
+      {post.coverImage && (
+        <div className="mb-8 -mx-4 md:-mx-0">
+          <Image
+            src={urlFor(post.coverImage).width(1200).height(600).url()}
+            alt={post.coverImage.alt || post.title}
+            width={1200}
+            height={600}
+            className="w-full h-auto rounded-lg"
+            priority
+          />
+        </div>
+      )}
+      {post.content && <PortableText value={post.content} />}
     </BlogLayout>
   );
 }

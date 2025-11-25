@@ -1,8 +1,8 @@
-import { getAllBlogPosts } from '@/lib/blog';
+import { getAllBlogPosts } from '@/lib/sanity/blog';
 import BlogCard from '@/components/BlogCard';
 
-export default function BlogPage() {
-  const posts = getAllBlogPosts();
+export default async function BlogPage() {
+  const posts = await getAllBlogPosts();
 
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
@@ -24,11 +24,11 @@ export default function BlogPage() {
           <div className="space-y-6">
             {posts.map((post) => (
               <BlogCard
-                key={post.slug}
+                key={post._id}
                 title={post.title}
                 excerpt={post.excerpt || ''}
                 date={post.date}
-                slug={post.slug}
+                slug={post.slug.current}
               />
             ))}
           </div>

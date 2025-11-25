@@ -1,10 +1,8 @@
-import { getReadingTime } from '@/lib/reading-time';
-
 interface BlogLayoutProps {
   title: string;
   author: string;
   date: string;
-  content: string;
+  readingTime: string;
   children: React.ReactNode;
 }
 
@@ -12,10 +10,9 @@ export default function BlogLayout({
   title,
   author,
   date,
-  content,
+  readingTime,
   children,
 }: BlogLayoutProps) {
-  const readingTime = getReadingTime(content);
 
   return (
     <article className="mx-auto max-w-[700px] px-4 py-12 md:py-16">
