@@ -1,4 +1,27 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Arzu Kirici | Portfolio",
+  description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+  openGraph: {
+    title: "Arzu Kirici | Portfolio",
+    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    url: "https://arzukirici.com",
+    siteName: "Arzu Kirici Portfolio",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arzu Kirici | Portfolio",
+    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    site: "https://arzukirici.com",
+  },
+  alternates: {
+    canonical: "https://arzukirici.com",
+  },
+};
 
 export default function HomePage() {
   return (

@@ -8,7 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arzukirici.com"),
-  title: "Arzu Kirici | Projects",
+  title: "Arzu Kirici | Portfolio",
   description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
   keywords: [
     "Arzu Kirici",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Arzu Kirici" }],
   creator: "Arzu Kirici",
   openGraph: {
-    title: "Arzu Kirici | Projects",
+    title: "Arzu Kirici | Portfolio",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     url: "https://arzukirici.com",
     siteName: "Arzu Kirici Portfolio",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arzu Kirici | Projects",
+    title: "Arzu Kirici | Portfolio",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     site: "https://arzukirici.com",
   },
