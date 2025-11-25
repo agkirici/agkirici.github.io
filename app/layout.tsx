@@ -73,7 +73,6 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Arzu Kirici",
-              jobTitle: "Bioinformatics Software Engineer",
               description: "Building web applications for healthcare and biotech. Specializing in spatial biology, single-cell analysis, and LLMs.",
               url: "https://agkirici.github.io",
               sameAs: [
