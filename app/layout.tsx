@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Arzu Kirici" }],
   creator: "Arzu Kirici",
   openGraph: {
-    title: "Arzu Kirici | Bioinformatics Software Engineer",
+    title: "Arzu Kirici | Portfolio",
     description: "Building web applications for healthcare and biotech. Specializing in spatial biology, single-cell analysis, and LLMs.",
     url: "https://agkirici.github.io",
     siteName: "Arzu Kirici Portfolio",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arzu Kirici | Bioinformatics Software Engineer",
+    title: "Arzu Kirici | Portfolio",
     description: "Building web applications for healthcare and biotech.",
   },
   robots: {
