@@ -56,7 +56,9 @@ const components: PortableTextComponents = {
 
     ),
 
-    link: ({ children, value }) => {
+    link: (props) => {
+
+      const { children, value } = props;
 
       const href = (value as any)?.href || "#";
 
