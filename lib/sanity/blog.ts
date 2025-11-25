@@ -1,6 +1,5 @@
-import { client, getClient } from './client';
+import { getClient } from './client';
 import { blogPostsQuery, blogPostBySlugQuery, blogPostSlugsQuery } from './queries';
-import { readingTime } from 'reading-time';
 
 export interface BlogPost {
   _id: string;
@@ -55,6 +54,7 @@ export async function getBlogPostBySlug(
 }
 
 export async function getBlogPostSlugs(): Promise<string[]> {
+  const client = getClient();
   const posts = await client.fetch<{ slug: string }[]>(blogPostSlugsQuery);
   return posts.map((post) => post.slug);
 }

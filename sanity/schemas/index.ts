@@ -1,4 +1,4 @@
-import { blogPost } from './blogPost';
+import {post} from './post';
 
-export const schemaTypes = [blogPost];
+export const schemaTypes = [post];
 

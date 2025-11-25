@@ -1,8 +1,14 @@
-import { getAllBlogPosts } from '@/lib/sanity/blog';
+import { getAllBlogPosts, BlogPost } from '@/lib/sanity/blog';
 import BlogCard from '@/components/BlogCard';
 
 export default async function BlogPage() {
-  const posts = await getAllBlogPosts();
+  let posts: BlogPost[] = [];
+  try {
+    posts = await getAllBlogPosts();
+  } catch (error) {
+    // If Sanity is not configured, show empty state
+    posts = [];
+  }
 
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">

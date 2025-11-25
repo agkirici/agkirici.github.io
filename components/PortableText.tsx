@@ -1,101 +1,173 @@
-import { PortableText as SanityPortableText } from '@portabletext/react';
-import { urlFor } from '@/lib/sanity/image';
-import Image from 'next/image';
+// components/PortableText.tsx
 
-const components = {
+import { PortableText as PortableTextBase, PortableTextComponents } from "@portabletext/react";
+
+import Link from "next/link";
+
+
+
+const components: PortableTextComponents = {
+
   types: {
-    image: ({ value }: { value: any }) => {
-      if (!value?.asset?._ref) {
-        return null;
-      }
-      const imageUrl = urlFor(value).width(800).height(600).url();
+
+    // Eğer ileride image field eklersen kullanırsın, şimdilik null döndürmek de olur.
+
+    image: ({ value }) => {
+
+      if (!value?.asset?._ref && !value?.asset?._id) return null;
+
       return (
-        <div className="my-8">
-          <Image
-            src={imageUrl}
-            alt={value.alt || 'Blog post image'}
-            width={800}
-            height={600}
-            className="rounded-lg"
-          />
-          {value.alt && (
-            <p className="mt-2 text-sm text-neutral-400 text-center">{value.alt}</p>
-          )}
-        </div>
+
+        // Burada kendi Image component'ini kullanmak istersen özelleştirirsin
+
+        // <Image ... />
+
+        <img
+
+          src={value.asset.url || ""}
+
+          alt={value.alt || ""}
+
+          className="my-4 rounded-lg"
+
+        />
+
       );
+
     },
-    code: ({ value }: { value: any }) => {
-      return (
-        <pre className="bg-neutral-900 border border-neutral-800 rounded-lg p-4 overflow-x-auto my-6">
-          <code className={`language-${value.language || 'text'}`}>{value.code}</code>
-        </pre>
-      );
-    },
+
   },
-  block: {
-    h1: ({ children }: { children: React.ReactNode }) => (
-      <h1 className="text-4xl font-bold text-neutral-50 mt-8 mb-4">{children}</h1>
-    ),
-    h2: ({ children }: { children: React.ReactNode }) => (
-      <h2 className="text-3xl font-semibold text-neutral-50 mt-6 mb-3">{children}</h2>
-    ),
-    h3: ({ children }: { children: React.ReactNode }) => (
-      <h3 className="text-2xl font-semibold text-neutral-50 mt-5 mb-2">{children}</h3>
-    ),
-    normal: ({ children }: { children: React.ReactNode }) => (
-      <p className="text-neutral-300 leading-relaxed mb-4">{children}</p>
-    ),
-    blockquote: ({ children }: { children: React.ReactNode }) => (
-      <blockquote className="border-l-4 border-sky-500 pl-4 italic text-neutral-300 my-4">
-        {children}
-      </blockquote>
-    ),
-  },
-  list: {
-    bullet: ({ children }: { children: React.ReactNode }) => (
-      <ul className="list-disc list-inside space-y-2 text-neutral-300 mb-4 ml-4">
-        {children}
-      </ul>
-    ),
-    number: ({ children }: { children: React.ReactNode }) => (
-      <ol className="list-decimal list-inside space-y-2 text-neutral-300 mb-4 ml-4">
-        {children}
-      </ol>
-    ),
-  },
+
+
+
   marks: {
-    strong: ({ children }: { children: React.ReactNode }) => (
-      <strong className="font-semibold text-neutral-100">{children}</strong>
-    ),
-    em: ({ children }: { children: React.ReactNode }) => (
-      <em className="italic">{children}</em>
-    ),
-    code: ({ children }: { children: React.ReactNode }) => (
-      <code className="bg-neutral-800 text-sky-300 px-1.5 py-0.5 rounded text-sm">
+
+    strong: ({ children }) => <strong>{children}</strong>,
+
+    em: ({ children }) => <em>{children}</em>,
+
+    code: ({ children }) => (
+
+      <code className="px-1 py-0.5 rounded bg-neutral-800 text-sm">
+
         {children}
+
       </code>
+
     ),
-    link: ({ value, children }: { value: any; children: React.ReactNode }) => {
-      const target = (value?.href || '').startsWith('http') ? '_blank' : undefined;
+
+    link: ({ children, value }) => {
+
+      const href = (value as any)?.href || "#";
+
+      const isExternal = href.startsWith("http");
+
+
+
+      if (isExternal) {
+
+        return (
+
+          <a
+
+            href={href}
+
+            target="_blank"
+
+            rel="noreferrer"
+
+            className="underline underline-offset-4"
+
+          >
+
+            {children}
+
+          </a>
+
+        );
+
+      }
+
+
+
       return (
-        <a
-          href={value?.href}
-          target={target}
-          rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-          className="text-sky-400 hover:text-sky-300 underline underline-offset-2"
-        >
+
+        <Link href={href} className="underline underline-offset-4">
+
           {children}
-        </a>
+
+        </Link>
+
       );
+
     },
+
   },
+
+
+
+  block: {
+
+    h1: ({ children }) => (
+
+      <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>
+
+    ),
+
+    h2: ({ children }) => (
+
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{children}</h2>
+
+    ),
+
+    h3: ({ children }) => (
+
+      <h3 className="text-xl font-semibold mt-4 mb-2">{children}</h3>
+
+    ),
+
+    normal: ({ children }) => (
+
+      <p className="leading-relaxed mb-4">{children}</p>
+
+    ),
+
+  },
+
+
+
+  list: {
+
+    bullet: ({ children }) => (
+
+      <ul className="list-disc pl-6 mb-4 space-y-1">{children}</ul>
+
+    ),
+
+    number: ({ children }) => (
+
+      <ol className="list-decimal pl-6 mb-4 space-y-1">{children}</ol>
+
+    ),
+
+  },
+
+
+
+  listItem: {
+
+    bullet: ({ children }) => <li>{children}</li>,
+
+    number: ({ children }) => <li>{children}</li>,
+
+  },
+
 };
 
-interface PortableTextProps {
-  value: any;
-}
 
-export default function PortableText({ value }: PortableTextProps) {
-  return <SanityPortableText value={value} components={components} />;
-}
 
+export default function PortableText({ value }: { value: any }) {
+
+  return <PortableTextBase value={value} components={components} />;
+
+}

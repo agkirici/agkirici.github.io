@@ -6,10 +6,15 @@ import { urlFor } from '@/lib/sanity/image';
 import Image from 'next/image';
 
 export async function generateStaticParams() {
-  const slugs = await getBlogPostSlugs();
-  return slugs.map((slug) => ({
-    slug,
-  }));
+  try {
+    const slugs = await getBlogPostSlugs();
+    return slugs.map((slug) => ({
+      slug,
+    }));
+  } catch (error) {
+    // If Sanity is not configured, return empty array
+    return [];
+  }
 }
 
 export default async function BlogPostPage({
@@ -18,7 +23,12 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
+  let post;
+  try {
+    post = await getBlogPostBySlug(slug);
+  } catch (error) {
+    post = null;
+  }
 
   if (!post) {
     notFound();
