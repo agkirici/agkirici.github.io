@@ -107,21 +107,6 @@ const blogPost = defineType({
             },
           ],
         },
-        {
-          type: 'code',
-          options: {
-            language: 'typescript',
-            languageAlternatives: [
-              { title: 'JavaScript', value: 'javascript' },
-              { title: 'TypeScript', value: 'typescript' },
-              { title: 'Python', value: 'python' },
-              { title: 'Bash', value: 'bash' },
-              { title: 'JSON', value: 'json' },
-              { title: 'CSS', value: 'css' },
-              { title: 'HTML', value: 'html' },
-            ],
-          },
-        },
       ],
     }),
   ],
