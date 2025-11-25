@@ -34,7 +34,7 @@ export default async function BlogPage() {
                 title={post.title}
                 excerpt={post.excerpt || ''}
                 date={post.date}
-                slug={post.slug.current}
+                slug={post.slug}
               />
             ))}
           </div>

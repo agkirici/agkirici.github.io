@@ -4,9 +4,7 @@ import { blogPostsQuery, blogPostBySlugQuery, blogPostSlugsQuery } from './queri
 export interface BlogPost {
   _id: string;
   title: string;
-  slug: {
-    current: string;
-  };
+  slug: string;
   author: string;
   date: string;
   excerpt?: string;

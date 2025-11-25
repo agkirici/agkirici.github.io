@@ -1,10 +1,15 @@
 import { groq } from 'next-sanity';
 
 export const blogPostsQuery = groq`
-  *[_type == "blogPost" && defined(slug.current)] | order(date desc) {
+  *[
+    _type == "blogPost" &&
+    defined(slug.current) &&
+    !(_id in path("drafts.**"))
+  ]
+  | order(date desc) {
     _id,
     title,
-    slug,
+    "slug": slug.current,
     author,
     date,
     excerpt,
@@ -14,10 +19,14 @@ export const blogPostsQuery = groq`
 `;
 
 export const blogPostBySlugQuery = groq`
-  *[_type == "blogPost" && slug.current == $slug][0] {
+  *[
+    _type == "blogPost" &&
+    slug.current == $slug &&
+    !(_id in path("drafts.**"))
+  ][0] {
     _id,
     title,
-    slug,
+    "slug": slug.current,
     author,
     date,
     excerpt,
@@ -28,7 +37,11 @@ export const blogPostBySlugQuery = groq`
 `;
 
 export const blogPostSlugsQuery = groq`
-  *[_type == "blogPost" && defined(slug.current)] {
+  *[
+    _type == "blogPost" &&
+    defined(slug.current) &&
+    !(_id in path("drafts.**"))
+  ] {
     "slug": slug.current
   }
 `;
