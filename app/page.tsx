@@ -33,7 +33,7 @@ export default function HomePage() {
             <p className="text-neutral-300 leading-relaxed">
             I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
             I later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations. 
-            Today I combine molecular biology, data analysis, and software development to build practical computational tools—pipelines, 
+            Today I combine molecular biology, data analysis, and software development to build practical computational tools, pipelines, 
             interfaces, and automation modules that integrate directly into research workflows.
             </p>
           </div>
@@ -44,17 +44,16 @@ export default function HomePage() {
           <h3 className="text-lg font-semibold">Where I&apos;m heading?</h3>
 
           <p className="text-neutral-300 leading-relaxed">
-            I&apos;m focusing on bioinformatics software development. I work with Python
-            for data processing, TypeScript and React for full-stack applications, and
-            modern frameworks that let me build clean and reliable interfaces. I use
-            tools like Scanpy for single-cell and spatial workflows and I write both
-            frontend and backend logic depending on what a project needs.
+            I&apos;m on bioinformatics software development, building tools that sit between data analysis and practical research workflows. 
+            I work with Python for data processing, and TypeScript/React for full-stack applications, 
+            using frameworks that let me develop clean, reliable interfaces. I work with tools like Scanpy for single-cell and spatial data, 
+            and I write both backend and frontend logic depending on what a project requires.
           </p>
 
           <ul className="list-disc pl-5 space-y-1 text-neutral-300">
-            <li>Web applications for healthcare and clinical data workflows</li>
-            <li>Tools for single-cell and spatial data analysis</li>
-            <li>Dashboards and internal platforms for small and mid-size biotech teams</li>
+            <li>Software platforms for clinical and healthcare data workflows</li>
+            <li>Analysis tools for single-cell and spatial-omics</li>
+            <li>Dashboards, internal tools, and automation pipelines for biotech teams</li>
           </ul>
         </section>
 
