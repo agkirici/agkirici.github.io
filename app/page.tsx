@@ -27,15 +27,14 @@ export default function HomePage() {
             </h1>
 
             <h2 className="text-xl font-semibold text-neutral-200">
-              I&apos;m a scientist building web applications for healthcare industries and biotech companies.
+              I&apos;m scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and university researchers.
             </h2>
 
             <p className="text-neutral-300 leading-relaxed">
-              I started my career in genetic disease diagnostics and molecular biology
-              wet-lab. Later, I moved into cancer research where I worked as a data
-              analyst on multiple research projects. Today I combine biology, data
-              analysis and software development to create tools that people in healthcare
-              and biotech actually use.
+            I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
+            I later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations. 
+            Today I combine molecular biology, data analysis, and software development to build practical computational tools—pipelines, 
+            interfaces, and automation modules that integrate directly into research workflows.
             </p>
           </div>
         </section>
