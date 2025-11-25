@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "Arzu Kirici | Bioinformatics Software Engineer Portfolio",
+  title: "Arzu Kirici | Portfolio",
   description: "Arzu Kirici is a bioinformatics software engineer building web applications for healthcare and biotech. Specializing in spatial biology, single-cell analysis, LLMs, and data visualization.",
   keywords: [
     "Arzu Kirici",
