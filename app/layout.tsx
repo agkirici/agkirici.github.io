@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "Arzu Kirici | Portfolio",
+  title: "Arzu Kirici | Projects",
   description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
   keywords: [
     "Arzu Kirici",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Arzu Kirici" }],
   creator: "Arzu Kirici",
   openGraph: {
-    title: "Arzu Kirici | Portfolio",
+    title: "Arzu Kirici | Projects",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     url: "https://agkirici.github.io",
     siteName: "Arzu Kirici Portfolio",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arzu Kirici | Portfolio",
+    title: "Arzu Kirici | Projects",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
   },
   robots: {
