@@ -1,6 +1,16 @@
 // components/PortableText.tsx
 
-import { PortableText as PortableTextBase, PortableTextComponents } from "@portabletext/react";
+"use client";
+
+
+
+import {
+
+  PortableText as PortableTextBase,
+
+  type PortableTextComponents,
+
+} from "@portabletext/react";
 
 import Link from "next/link";
 
@@ -10,31 +20,17 @@ const components: PortableTextComponents = {
 
   types: {
 
-    // Eğer ileride image field eklersen kullanırsın, şimdilik null döndürmek de olur.
+    // Şimdilik sadece örnek; istersen kaldırabilirsin
 
-    image: ({ value }) => {
+    code: ({ value }) => (
 
-      if (!value?.asset?._ref && !value?.asset?._id) return null;
+      <pre className="rounded-md bg-neutral-900 text-neutral-100 p-3 text-sm overflow-x-auto">
 
-      return (
+        <code>{(value as any)?.code ?? ""}</code>
 
-        // Burada kendi Image component'ini kullanmak istersen özelleştirirsin
+      </pre>
 
-        // <Image ... />
-
-        <img
-
-          src={value.asset.url || ""}
-
-          alt={value.alt || ""}
-
-          className="my-4 rounded-lg"
-
-        />
-
-      );
-
-    },
+    ),
 
   },
 
@@ -56,11 +52,13 @@ const components: PortableTextComponents = {
 
     ),
 
+    // value burada opsiyonel; bu yüzden props'u "props" diye alıp içinden çekiyoruz
+
     link: (props) => {
 
-      const { children, value } = props;
+      const { children, value } = props as any;
 
-      const href = (value as any)?.href || "#";
+      const href = value?.href || "#";
 
       const isExternal = href.startsWith("http");
 
@@ -168,8 +166,12 @@ const components: PortableTextComponents = {
 
 
 
-export default function PortableText({ value }: { value: any }) {
+export function PortableText({ value }: { value: any }) {
 
   return <PortableTextBase value={value} components={components} />;
 
 }
+
+
+
+export default PortableText;
