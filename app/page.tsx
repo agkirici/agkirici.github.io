@@ -5,9 +5,9 @@ export default function HomePage() {
     <main className="min-h-screen px-4 py-12 md:py-16">
       <div className="mx-auto max-w-3xl space-y-12">
         {/* Hero */}
-        <section className="flex flex-col md:flex-row gap-8 items-start">
+        <section className="flex flex-col md:flex-row gap-8 md:items-center">
           {/* Profile Picture - Left Side */}
-          <div className="flex-shrink-0 space-y-4">
+          <div className="flex-shrink-0 flex flex-col items-center md:items-start space-y-4">
             <Image
               src="/profile.jpg"
               alt="Arzu Kirici"
@@ -18,7 +18,7 @@ export default function HomePage() {
             />
             
             {/* Social Media Icons */}
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="flex gap-4 justify-center">
               {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/arzu-kirici"
