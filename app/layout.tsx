@@ -75,7 +75,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Arzu Kirici",
-              description: "Building web applications for healthcare and biotech. Specializing in spatial biology, single-cell analysis, and LLMs.",
+              description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
               url: "https://arzukirici.com",
               sameAs: [
                 "https://www.linkedin.com/in/arzu-kirici",
