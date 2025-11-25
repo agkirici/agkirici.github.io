@@ -3,31 +3,31 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://agkirici.github.io',
+      url: 'https://arzukirici.com',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://agkirici.github.io/projects',
+      url: 'https://arzukirici.com/projects',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://agkirici.github.io/projects/spatioscript',
+      url: 'https://arzukirici.com/projects/spatioscript',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: 'https://agkirici.github.io/contact',
+      url: 'https://arzukirici.com/contact',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.6,
     },
     {
-      url: 'https://agkirici.github.io/blog',
+      url: 'https://arzukirici.com/blog',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,

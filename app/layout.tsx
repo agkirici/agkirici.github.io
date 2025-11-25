@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arzukirici.com"),
   title: "Arzu Kirici | Projects",
   description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
   keywords: [
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arzu Kirici | Projects",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
-    url: "https://agkirici.github.io",
+    url: "https://arzukirici.com",
     siteName: "Arzu Kirici Portfolio",
     type: "website",
     locale: "en_US",
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Arzu Kirici | Projects",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    site: "https://arzukirici.com",
   },
   robots: {
     index: true,
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://agkirici.github.io",
+    canonical: "https://arzukirici.com",
   },
 };
 
@@ -74,7 +76,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Arzu Kirici",
               description: "Building web applications for healthcare and biotech. Specializing in spatial biology, single-cell analysis, and LLMs.",
-              url: "https://agkirici.github.io",
+              url: "https://arzukirici.com",
               sameAs: [
                 "https://www.linkedin.com/in/arzu-kirici",
                 "https://github.com/agkirici",
