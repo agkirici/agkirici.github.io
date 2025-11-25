@@ -8,7 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Arzu Kirici | Portfolio",
-  description: "Arzu Kirici is a bioinformatics software engineer building user-friendly software applications for healthcare institutions, biotech companies, and university researchers. Specializing in software development for spatial biology, single-cell analysis, LLMs, and data visualization.",
+  description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
   keywords: [
     "Arzu Kirici",
     "bioinformatics",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   creator: "Arzu Kirici",
   openGraph: {
     title: "Arzu Kirici | Portfolio",
-    description: "Building user-friendly software applications for healthcare institutions, biotech companies, and university researchers. Specializing in software development for spatial biology, single-cell analysis, and LLMs.",
+    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     url: "https://agkirici.github.io",
     siteName: "Arzu Kirici Portfolio",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Arzu Kirici | Portfolio",
-    description: "Building user-friendly software applications for healthcare institutions, biotech companies, and university researchers.",
+    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
   },
   robots: {
     index: true,
