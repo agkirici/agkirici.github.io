@@ -24,9 +24,9 @@ function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export default function ProjectCard({ title, description, tags, slug, featured, link, github }: ProjectCardProps) {
-  // Compute the LinkedIn share URL
-  const targetUrl = link || github || "https://agkirici-github-io.vercel.app/projects";
-  const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(targetUrl)}`;
+  // Compute the LinkedIn share URL - use the project's website URL
+  const projectWebsiteUrl = `https://www.arzukirici.com/projects/${slug}`;
+  const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(projectWebsiteUrl)}`;
 
   return (
     <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">

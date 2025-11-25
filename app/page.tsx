@@ -27,7 +27,9 @@ export default function HomePage() {
             </h1>
 
             <h2 className="text-xl font-semibold text-neutral-200">
-              I&apos;m scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and university researchers.
+              I&apos;m scientist building user-friendly software that supports real 
+              research workflows for the healthcare industry, biotech companies, 
+              and academic research groups.
             </h2>
 
             <p className="text-neutral-300 leading-relaxed">
