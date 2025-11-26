@@ -67,16 +67,22 @@ export async function generateMetadata({
     description = description.substring(0, 150) + '...';
   }
 
-  // Get OG image URL
-  const ogImage = post.coverImage
+  // Get OG image URL - ensure it's absolute
+  let ogImage = post.coverImage
     ? urlFor(post.coverImage).width(1200).height(630).url()
     : 'https://arzukirici.com/og-image.png';
+  
+  // Ensure the URL is absolute (Sanity CDN URLs should already be absolute, but double-check)
+  if (ogImage && !ogImage.startsWith('http')) {
+    ogImage = `https:${ogImage}`;
+  }
 
   const url = `https://www.arzukirici.com/blog/${slug}`;
 
   return {
     title: `${post.title} | Arzu Kirici`,
     description: description || 'Blog post by Arzu Kirici',
+    metadataBase: new URL('https://arzukirici.com'),
     openGraph: {
       title: post.title,
       description: description || 'Blog post by Arzu Kirici',
@@ -103,6 +109,10 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
+    },
+    other: {
+      'og:image:secure_url': ogImage,
+      'og:image:type': 'image/jpeg',
     },
   };
 }
