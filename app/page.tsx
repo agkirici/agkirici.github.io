@@ -125,37 +125,12 @@ export default function HomePage() {
               <p className="text-neutral-300 leading-relaxed">
                 I am a scientist building user-friendly software that supports real 
                 research workflows for the healthcare industry, biotech companies, 
-                and academic research groups. I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
-                I later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations. 
-                Today, I combine molecular biology, data analysis, and software development to build practical computational tools, pipelines, 
-                interfaces, and automation modules that integrate directly into research workflows.
+                and academic research groups. I have nearly a decade of experience in biological sciences.
+                I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation 
+                sequencing workflows, and later moved into cancer research, where I supported multi-omics projects as a data analyst and 
+                contributed to data curation, workflow optimization, and research operations.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Data & tooling */}
-        <section className="space-y-4">
-          <h3 className="text-lg font-semibold">Working with complex research data</h3>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Connecting datasets</h4>
-            <p className="leading-relaxed">
-              Many projects combine assay results, annotations, clinical fields and public
-              resources. I work on structuring these datasets so that they can be joined and
-              queried reliably, sometimes using graph databases such as Neo4j when relationships
-              matter more than individual tables.
-            </p>
-          </div>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Querying data with language models</h4>
-            <p className="leading-relaxed">
-              I also experiment with using large language models as an interface to data.
-              A common pattern is to translate plain English questions into a query language
-              like Cypher or SQL so that biologists can explore their data without writing
-              code, while still keeping the underlying schemas and constraints explicit.
-            </p>
           </div>
         </section>
 
@@ -164,17 +139,44 @@ export default function HomePage() {
           {/* Where I'm heading */}
           <Accordion title="Where I'm heading?">
             <p className="leading-relaxed">
-              I&apos;m on bioinformatics software development, building tools that sit between data analysis and practical research workflows. 
-              I work with Python for data processing, and TypeScript/React for full-stack applications, 
-              using frameworks that let me develop clean, reliable interfaces. I work with tools like Scanpy for single-cell and spatial data, 
-              and I write both backend and frontend logic depending on what a project requires.
+              I&apos;m focusing on bioinformatics software development — building tools that sit between experimental biology and practical computation. My goal is to bridge the gap between scientists who understand biological problems and the software that needs to support their workflows.
+            </p>
+
+            <p className="leading-relaxed">
+              Most researchers are not programmers, and they shouldn&apos;t need to be.
+            </p>
+
+            <p className="leading-relaxed">
+              I help by translating biological or clinical questions into tools, pipelines, and interfaces that actually work in real research settings — without requiring scientists to write code, debug scripts, or manage complex data formats.
+            </p>
+
+            <p className="leading-relaxed">
+              I design solutions that allow researchers to:
             </p>
 
             <ul className="list-disc pl-5 space-y-1">
-              <li>Software platforms for clinical and healthcare data workflows</li>
-              <li>Analysis tools for single-cell and spatial-omics</li>
-              <li>Dashboards, internal tools, and automation pipelines for biotech teams</li>
+              <li>organize and clean messy datasets</li>
+              <li>automate repetitive tasks</li>
+              <li>run reproducible single-cell, spatial-omics, or clinical analyses</li>
+              <li>interact with their data through simple, intuitive interfaces</li>
+              <li>offload the computational layer and focus on the science</li>
             </ul>
+
+            <p className="leading-relaxed mt-4">
+              <strong>Technically, here is what I work with:</strong>
+            </p>
+
+            <p className="leading-relaxed">
+              I work on bioinformatics software development, building tools that sit between data analysis and practical research workflows.
+            </p>
+
+            <p className="leading-relaxed">
+              I use Python for data processing and TypeScript/React for full-stack applications, using frameworks that let me develop clean, reliable interfaces.
+            </p>
+
+            <p className="leading-relaxed">
+              I work with tools like Scanpy for single-cell and spatial data, and I write both backend and frontend logic depending on what a project requires.
+            </p>
           </Accordion>
 
           {/* What this website is for */}
