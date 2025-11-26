@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Accordion from '@/components/Accordion';
 
 export const metadata: Metadata = {
   title: "Arzu Kirici | Portfolio",
@@ -133,52 +134,49 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Where I'm heading */}
-        <section className="space-y-3">
-          <h3 className="text-lg font-semibold">Where I&apos;m heading?</h3>
+        {/* Accordion Sections */}
+        <div className="space-y-4">
+          {/* Where I'm heading */}
+          <Accordion title="Where I'm heading?">
+            <p className="leading-relaxed">
+              I&apos;m on bioinformatics software development, building tools that sit between data analysis and practical research workflows. 
+              I work with Python for data processing, and TypeScript/React for full-stack applications, 
+              using frameworks that let me develop clean, reliable interfaces. I work with tools like Scanpy for single-cell and spatial data, 
+              and I write both backend and frontend logic depending on what a project requires.
+            </p>
 
-          <p className="text-neutral-300 leading-relaxed">
-            I&apos;m on bioinformatics software development, building tools that sit between data analysis and practical research workflows. 
-            I work with Python for data processing, and TypeScript/React for full-stack applications, 
-            using frameworks that let me develop clean, reliable interfaces. I work with tools like Scanpy for single-cell and spatial data, 
-            and I write both backend and frontend logic depending on what a project requires.
-          </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Software platforms for clinical and healthcare data workflows</li>
+              <li>Analysis tools for single-cell and spatial-omics</li>
+              <li>Dashboards, internal tools, and automation pipelines for biotech teams</li>
+            </ul>
+          </Accordion>
 
-          <ul className="list-disc pl-5 space-y-1 text-neutral-300">
-            <li>Software platforms for clinical and healthcare data workflows</li>
-            <li>Analysis tools for single-cell and spatial-omics</li>
-            <li>Dashboards, internal tools, and automation pipelines for biotech teams</li>
-          </ul>
-        </section>
+          {/* What this website is for */}
+          <Accordion title="What this website is for?">
+            <p className="leading-relaxed">
+              This website collects the projects I&apos;m building at the intersection of
+              biology, data analysis and software. My goal is to create simple, focused
+              applications that make everyday research workflows easier.
+            </p>
 
-        {/* What this website is for */}
-        <section className="space-y-3">
-          <h3 className="text-lg font-semibold">What this website is for?</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Internal tools and dashboards for biotech and pharma teams</li>
+              <li>Applications for spatial biology and multi-omics data exploration</li>
+              <li>Small applications that simplify lab or analytics tasks</li>
+              <li>Prototypes that test ideas in healthcare and research software</li>
+            </ul>
+          </Accordion>
 
-          <p className="text-neutral-300 leading-relaxed">
-            This website collects the projects I&apos;m building at the intersection of
-            biology, data analysis and software. My goal is to create simple, focused
-            applications that make everyday research workflows easier.
-          </p>
-
-          <ul className="list-disc pl-5 space-y-1 text-neutral-300">
-            <li>Internal tools and dashboards for biotech and pharma teams</li>
-            <li>Applications for spatial biology and multi-omics data exploration</li>
-            <li>Small applications that simplify lab or analytics tasks</li>
-            <li>Prototypes that test ideas in healthcare and research software</li>
-          </ul>
-        </section>
-
-        {/* Who I help */}
-        <section className="space-y-3">
-          <h3 className="text-lg font-semibold">Who I work with?</h3>
-
-          <ul className="list-disc pl-5 space-y-1 text-neutral-300">
-            <li>Companies developing single-cell or spatial technologies</li>
-            <li>Biotech and pharma teams working with single-cell or spatial data</li>
-            <li>Research groups and PIs running single-cell or spatial biology projects</li>
-          </ul>
-        </section>
+          {/* Who I help */}
+          <Accordion title="Who I work with?">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Companies developing single-cell or spatial technologies</li>
+              <li>Biotech and pharma teams working with single-cell or spatial data</li>
+              <li>Research groups and PIs running single-cell or spatial biology projects</li>
+            </ul>
+          </Accordion>
+        </div>
 
         {/* Data & tooling */}
         <section className="space-y-4">
@@ -205,54 +203,53 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* How I help */}
-        <section className="space-y-3">
-          <h3 className="text-lg font-semibold">How I can help?</h3>
+          {/* How I help */}
+          <Accordion title="How I can help?">
+            <div className="space-y-2">
+              <h4 className="font-semibold text-neutral-100">End-to-end development</h4>
+              <p className="leading-relaxed">
+                You explain the biological or clinical problem and I design and build the
+                application from start to finish. This includes data handling, backend
+                logic and the full interface.
+              </p>
+            </div>
 
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">End-to-end development</h4>
-            <p className="leading-relaxed">
-              You explain the biological or clinical problem and I design and build the
-              application from start to finish. This includes data handling, backend
-              logic and the full interface.
-            </p>
-          </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold text-neutral-100">
+                Tool development and handover
+              </h4>
+              <p className="leading-relaxed">
+                I build the pipelines or dashboards you need and I provide clean, documented
+                code that your team can maintain or extend.
+              </p>
+            </div>
 
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">
-              Tool development and handover
-            </h4>
-            <p className="leading-relaxed">
-              I build the pipelines or dashboards you need and I provide clean, documented
-              code that your team can maintain or extend.
-            </p>
-          </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold text-neutral-100">Done for you</h4>
+              <p className="leading-relaxed">
+                I take responsibility for a clearly defined project and deliver a working
+                product that is ready to use.
+              </p>
+            </div>
 
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Done for you</h4>
-            <p className="leading-relaxed">
-              I take responsibility for a clearly defined project and deliver a working
-              product that is ready to use.
-            </p>
-          </div>
+            <div className="space-y-2">
+              <h4 className="font-semibold text-neutral-100">Done with you</h4>
+              <p className="leading-relaxed">
+                We work together on your systems. I help implement the core parts of your
+                infrastructure and make sure it runs smoothly in your environment.
+              </p>
+            </div>
 
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Done with you</h4>
-            <p className="leading-relaxed">
-              We work together on your systems. I help implement the core parts of your
-              infrastructure and make sure it runs smoothly in your environment.
-            </p>
-          </div>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Advisory</h4>
-            <p className="leading-relaxed">
-              I review your workflows and help you make better decisions about tools,
-              pipelines and architecture for projects in healthcare, spatial biology and
-              biotech.
-            </p>
-          </div>
-        </section>
+            <div className="space-y-2">
+              <h4 className="font-semibold text-neutral-100">Advisory</h4>
+              <p className="leading-relaxed">
+                I review your workflows and help you make better decisions about tools,
+                pipelines and architecture for projects in healthcare, spatial biology and
+                biotech.
+              </p>
+            </div>
+          </Accordion>
+        </div>
 
         {/* CTA */}
         <section className="border-t border-neutral-800 pt-6">
