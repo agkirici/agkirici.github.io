@@ -49,11 +49,11 @@ export default async function BlogPostPage({
       {post.coverImage && (
         <div className="mb-8 -mx-4 md:-mx-0">
           <Image
-            src={urlFor(post.coverImage).width(1200).height(600).url()}
+            src={urlFor(post.coverImage).width(1200).url()}
             alt={post.coverImage.alt || post.title}
             width={1200}
-            height={600}
-            className="w-full h-auto rounded-lg"
+            height={0}
+            className="w-full h-auto rounded-lg object-contain"
             priority
           />
         </div>
