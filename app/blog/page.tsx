@@ -37,6 +37,7 @@ export default async function BlogPage() {
                 excerpt={post.excerpt || ''}
                 date={post.date}
                 slug={post.slug}
+                coverImage={post.coverImage}
               />
             ))}
           </div>

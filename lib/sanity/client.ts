@@ -10,10 +10,11 @@ let previewClient: ReturnType<typeof createClient> | null = null;
 function getClientInstance() {
   if (!client) {
     const config = getSanityConfig();
+    // Ensure we're reading from process.env explicitly
     client = createClient({
-      projectId: config.projectId,
-      dataset: config.dataset,
-      apiVersion: config.apiVersion,
+      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || config.projectId,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || config.dataset,
+      apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || config.apiVersion,
       useCdn: true,
     });
   }
@@ -23,12 +24,14 @@ function getClientInstance() {
 function getPreviewClientInstance() {
   if (!previewClient) {
     const config = getSanityConfig();
+    // Support both SANITY_READ_TOKEN and SANITY_API_READ_TOKEN for compatibility
+    const token = process.env.SANITY_READ_TOKEN || process.env.SANITY_API_READ_TOKEN;
     previewClient = createClient({
       projectId: config.projectId,
       dataset: config.dataset,
       apiVersion: config.apiVersion,
       useCdn: false,
-      token: process.env.SANITY_API_READ_TOKEN,
+      token: token,
     });
   }
   return previewClient;
