@@ -122,14 +122,17 @@ export default function HomePage() {
 
             {/* Text Content - Right Side */}
             <div className="flex-1 space-y-4">
-              <p className="text-neutral-300 leading-relaxed">
-                I am a scientist building user-friendly software that supports real 
-                research workflows for the healthcare industry, biotech companies, 
-                and academic research groups. I have nearly a decade of experience in biological sciences.
-                I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation 
-                sequencing workflows, and later moved into cancer research, where I supported multi-omics projects as a data analyst and 
-                contributed to data curation, workflow optimization, and research operations.
-              </p>
+              <div className="space-y-4 text-neutral-300 leading-relaxed">
+                <p>
+                  I am a scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and academic research groups. I have nearly a decade of experience in biological sciences and four years of experience in software development.
+                </p>
+                <p>
+                  I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows, and later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations.
+                </p>
+                <p>
+                  Today, I combine my biology background with software development to build tools, pipelines, and interfaces that make complex research tasks easier for scientists who don&apos;t write code.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -139,7 +142,7 @@ export default function HomePage() {
           {/* Where I'm heading */}
           <Accordion title="Where I'm heading?">
             <p className="leading-relaxed">
-              I&apos;m focusing on bioinformatics software development — building tools that sit between experimental biology and practical computation. My goal is to bridge the gap between scientists who understand biological problems and the software that needs to support their workflows.
+              I&apos;m focusing on bioinformatics software development building tools that sit between experimental biology and practical computation. My goal is to bridge the gap between scientists who understand biological problems and the software that needs to support their workflows.
             </p>
 
             <p className="leading-relaxed">
@@ -147,7 +150,7 @@ export default function HomePage() {
             </p>
 
             <p className="leading-relaxed">
-              I help by translating biological or clinical questions into tools, pipelines, and interfaces that actually work in real research settings — without requiring scientists to write code, debug scripts, or manage complex data formats.
+              I help by translating biological or clinical questions into tools, pipelines, and interfaces that actually work in real research settings without requiring scientists to write code, debug scripts, or manage complex data formats.
             </p>
 
             <p className="leading-relaxed">
