@@ -29,8 +29,8 @@ export default function HomePage() {
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
       <div className="mx-auto max-w-3xl space-y-12">
-        {/* Name Header - Centered */}
-        <header className="text-center">
+        {/* Name Header */}
+        <header>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500">
             Arzu Kirici
           </h1>

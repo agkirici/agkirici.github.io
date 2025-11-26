@@ -6,10 +6,28 @@ import BlogCard from '@/components/BlogCard';
 export default async function BlogPage() {
   let posts: BlogPost[] = [];
   try {
+    // Check if environment variables are available
+    const hasProjectId = !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+    const hasDataset = !!process.env.NEXT_PUBLIC_SANITY_DATASET;
+    
+    if (!hasProjectId || !hasDataset) {
+      console.error('Missing Sanity environment variables:', {
+        hasProjectId,
+        hasDataset,
+        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ? 'set' : 'missing',
+        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ? 'set' : 'missing',
+      });
+    }
+    
     posts = await getAllBlogPosts();
+    console.log('Fetched blog posts:', posts.length);
   } catch (error) {
     // Log error in production for debugging
     console.error('Error fetching blog posts:', error);
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
     // If Sanity is not configured, show empty state
     posts = [];
   }
