@@ -49,7 +49,7 @@ export default async function BlogPage() {
             <p className="text-neutral-400">No blog posts yet. Check back soon!</p>
           </div>
         ) : (
-          <div className="space-y-6">
+          <div className="space-y-4">
             {posts.map((post) => (
               <BlogCard
                 key={post._id}
