@@ -9,14 +9,20 @@ let previewClient: ReturnType<typeof createClient> | null = null;
 
 function getClientInstance() {
   if (!client) {
-    const config = getSanityConfig();
-    // Ensure we're reading from process.env explicitly
-    client = createClient({
-      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || config.projectId,
-      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || config.dataset,
-      apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || config.apiVersion,
-      useCdn: true,
-    });
+    try {
+      const config = getSanityConfig();
+      // Ensure we're reading from process.env explicitly
+      client = createClient({
+        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || config.projectId,
+        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || config.dataset,
+        apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || config.apiVersion,
+        useCdn: true,
+      });
+    } catch (error) {
+      console.error('Failed to create Sanity client:', error);
+      // In production, this will help identify missing env vars
+      throw error;
+    }
   }
   return client;
 }

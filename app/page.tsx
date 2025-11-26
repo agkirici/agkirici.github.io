@@ -38,11 +38,11 @@ export default function HomePage() {
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-neutral-100">About</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-neutral-100 text-center">About</h2>
           
-          <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8 items-center md:items-center">
             {/* Profile Picture and Social Media - Left Side */}
-            <div className="flex-shrink-0 flex flex-col items-start space-y-4">
+            <div className="flex-shrink-0 flex flex-col items-center space-y-4">
               <Image
                 src="/profile.jpg"
                 alt="Arzu Kirici"

@@ -8,6 +8,8 @@ export default async function BlogPage() {
   try {
     posts = await getAllBlogPosts();
   } catch (error) {
+    // Log error in production for debugging
+    console.error('Error fetching blog posts:', error);
     // If Sanity is not configured, show empty state
     posts = [];
   }
