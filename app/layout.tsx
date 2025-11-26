@@ -37,12 +37,23 @@ export const metadata: Metadata = {
     siteName: "Arzu Kirici Portfolio",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Arzu Kirici | Portfolio",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     site: "https://arzukirici.com",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/og-image.png",
   },
   robots: {
     index: true,
