@@ -34,8 +34,8 @@ export default async function BlogPage() {
 
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
-      <div className="mx-auto max-w-4xl space-y-10">
-        <header className="space-y-2">
+      <div className="mx-auto max-w-7xl">
+        <header className="space-y-2 mb-10">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
             Blog
           </h1>
@@ -49,7 +49,7 @@ export default async function BlogPage() {
             <p className="text-neutral-400">No blog posts yet. Check back soon!</p>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <BlogCard
                 key={post._id}

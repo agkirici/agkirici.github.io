@@ -28,32 +28,36 @@ export default function BlogCard({ title, excerpt, date, slug, coverImage }: Blo
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogPostUrl)}`;
 
   return (
-    <div className="rounded-lg border border-neutral-800 bg-neutral-900/60 p-2.5 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
+    <div className="max-w-[380px] mx-auto rounded-xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
       <Link href={`/blog/${slug}`} className="block">
         {coverImage && (
-          <Image
-            src={urlFor(coverImage).width(400).url()}
-            alt={coverImage.alt || title}
-            width={400}
-            height={180}
-            className="w-full h-auto rounded-md mb-1.5 object-cover"
-          />
+          <div className="h-48 w-full overflow-hidden">
+            <Image
+              src={urlFor(coverImage).width(400).height(300).url()}
+              alt={coverImage.alt || title}
+              width={400}
+              height={300}
+              className="object-cover w-full h-full"
+            />
+          </div>
         )}
-        <h3 className="text-sm font-semibold text-neutral-50 mb-0.5">
-          {title}
-        </h3>
-        <p className="text-xs text-neutral-400 mb-1">
-          {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        </p>
-        {excerpt && (
-          <p className="text-xs text-neutral-300 line-clamp-2 leading-snug mb-1.5">
-            {excerpt}
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-neutral-50 mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-neutral-400 mb-2">
+            {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
-        )}
+          {excerpt && (
+            <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed">
+              {excerpt}
+            </p>
+          )}
+        </div>
       </Link>
       
       {/* LinkedIn Share Button */}
-      <div className="mt-1.5 pt-1.5 border-t border-neutral-800">
+      <div className="px-4 pb-4 border-t border-neutral-800 pt-3">
         <a
           href={linkedinShareUrl}
           target="_blank"
