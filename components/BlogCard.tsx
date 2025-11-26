@@ -28,41 +28,41 @@ export default function BlogCard({ title, excerpt, date, slug, coverImage }: Blo
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogPostUrl)}`;
 
   return (
-    <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-4 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
+    <div className="rounded-lg border border-neutral-800 bg-neutral-900/60 p-3 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
       <Link href={`/blog/${slug}`} className="block">
         {coverImage && (
           <Image
             src={urlFor(coverImage).width(600).url()}
             alt={coverImage.alt || title}
             width={600}
-            height={350}
-            className="w-full h-auto rounded-lg mb-3 object-cover"
+            height={250}
+            className="w-full h-auto rounded-md mb-2 object-cover"
           />
         )}
-        <h3 className="text-lg font-semibold text-neutral-50 mb-1.5">
+        <h3 className="text-base font-semibold text-neutral-50 mb-1">
           {title}
         </h3>
-        <p className="text-xs text-neutral-400 mb-2">
+        <p className="text-xs text-neutral-400 mb-1.5">
           {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
         </p>
         {excerpt && (
-          <p className="text-sm text-neutral-300 line-clamp-2 leading-relaxed mb-3">
+          <p className="text-xs text-neutral-300 line-clamp-2 leading-relaxed mb-2">
             {excerpt}
           </p>
         )}
       </Link>
       
       {/* LinkedIn Share Button */}
-      <div className="mt-3 pt-3 border-t border-neutral-800">
+      <div className="mt-2 pt-2 border-t border-neutral-800">
         <a
           href={linkedinShareUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Share on LinkedIn"
-          className="inline-flex items-center gap-1.5 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-3 py-1.5 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
+          className="inline-flex items-center gap-1 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-2 py-1 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
         >
-          <LinkedInIcon className="h-3.5 w-3.5" />
-          <span>Share on LinkedIn</span>
+          <LinkedInIcon className="h-3 w-3" />
+          <span>Share</span>
         </a>
       </div>
     </div>
