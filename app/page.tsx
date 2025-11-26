@@ -176,32 +176,6 @@ export default function HomePage() {
               <li>Research groups and PIs running single-cell or spatial biology projects</li>
             </ul>
           </Accordion>
-        </div>
-
-        {/* Data & tooling */}
-        <section className="space-y-4">
-          <h3 className="text-lg font-semibold">Working with complex research data</h3>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Connecting datasets</h4>
-            <p className="leading-relaxed">
-              Many projects combine assay results, annotations, clinical fields and public
-              resources. I work on structuring these datasets so that they can be joined and
-              queried reliably, sometimes using graph databases such as Neo4j when relationships
-              matter more than individual tables.
-            </p>
-          </div>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Querying data with language models</h4>
-            <p className="leading-relaxed">
-              I also experiment with using large language models as an interface to data.
-              A common pattern is to translate plain English questions into a query language
-              like Cypher or SQL so that biologists can explore their data without writing
-              code, while still keeping the underlying schemas and constraints explicit.
-            </p>
-          </div>
-        </section>
 
           {/* How I help */}
           <Accordion title="How I can help?">
@@ -250,6 +224,31 @@ export default function HomePage() {
             </div>
           </Accordion>
         </div>
+
+        {/* Data & tooling */}
+        <section className="space-y-4">
+          <h3 className="text-lg font-semibold">Working with complex research data</h3>
+
+          <div className="space-y-2 text-neutral-300">
+            <h4 className="font-semibold text-neutral-100">Connecting datasets</h4>
+            <p className="leading-relaxed">
+              Many projects combine assay results, annotations, clinical fields and public
+              resources. I work on structuring these datasets so that they can be joined and
+              queried reliably, sometimes using graph databases such as Neo4j when relationships
+              matter more than individual tables.
+            </p>
+          </div>
+
+          <div className="space-y-2 text-neutral-300">
+            <h4 className="font-semibold text-neutral-100">Querying data with language models</h4>
+            <p className="leading-relaxed">
+              I also experiment with using large language models as an interface to data.
+              A common pattern is to translate plain English questions into a query language
+              like Cypher or SQL so that biologists can explore their data without writing
+              code, while still keeping the underlying schemas and constraints explicit.
+            </p>
+          </div>
+        </section>
 
         {/* CTA */}
         <section className="border-t border-neutral-800 pt-6">
