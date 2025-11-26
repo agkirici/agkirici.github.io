@@ -31,14 +31,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-3xl space-y-12">
         {/* Name Header - Centered */}
         <header className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-neutral-50">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500">
             Arzu Kirici
           </h1>
         </header>
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-4 text-neutral-100">About</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-neutral-100">About</h2>
           
           <div className="flex flex-col md:flex-row gap-8">
             {/* Profile Picture and Social Media - Left Side */}
@@ -113,7 +113,7 @@ export default function HomePage() {
             {/* Text Content - Right Side */}
             <div className="flex-1 space-y-4">
               <p className="text-neutral-300 leading-relaxed">
-                <span className="text-sky-500">Arzu Kirici</span> is a scientist building user-friendly software that supports real 
+                I am a scientist building user-friendly software that supports real 
                 research workflows for the healthcare industry, biotech companies, 
                 and academic research groups. I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
                 I later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations. 
