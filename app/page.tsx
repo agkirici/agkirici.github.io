@@ -127,10 +127,35 @@ export default function HomePage() {
                 research workflows for the healthcare industry, biotech companies, 
                 and academic research groups. I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
                 I later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations. 
-                Today I combine molecular biology, data analysis, and software development to build practical computational tools, pipelines, 
+                Today, I combine molecular biology, data analysis, and software development to build practical computational tools, pipelines, 
                 interfaces, and automation modules that integrate directly into research workflows.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Data & tooling */}
+        <section className="space-y-4">
+          <h3 className="text-lg font-semibold">Working with complex research data</h3>
+
+          <div className="space-y-2 text-neutral-300">
+            <h4 className="font-semibold text-neutral-100">Connecting datasets</h4>
+            <p className="leading-relaxed">
+              Many projects combine assay results, annotations, clinical fields and public
+              resources. I work on structuring these datasets so that they can be joined and
+              queried reliably, sometimes using graph databases such as Neo4j when relationships
+              matter more than individual tables.
+            </p>
+          </div>
+
+          <div className="space-y-2 text-neutral-300">
+            <h4 className="font-semibold text-neutral-100">Querying data with language models</h4>
+            <p className="leading-relaxed">
+              I also experiment with using large language models as an interface to data.
+              A common pattern is to translate plain English questions into a query language
+              like Cypher or SQL so that biologists can explore their data without writing
+              code, while still keeping the underlying schemas and constraints explicit.
+            </p>
           </div>
         </section>
 
@@ -224,31 +249,6 @@ export default function HomePage() {
             </div>
           </Accordion>
         </div>
-
-        {/* Data & tooling */}
-        <section className="space-y-4">
-          <h3 className="text-lg font-semibold">Working with complex research data</h3>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Connecting datasets</h4>
-            <p className="leading-relaxed">
-              Many projects combine assay results, annotations, clinical fields and public
-              resources. I work on structuring these datasets so that they can be joined and
-              queried reliably, sometimes using graph databases such as Neo4j when relationships
-              matter more than individual tables.
-            </p>
-          </div>
-
-          <div className="space-y-2 text-neutral-300">
-            <h4 className="font-semibold text-neutral-100">Querying data with language models</h4>
-            <p className="leading-relaxed">
-              I also experiment with using large language models as an interface to data.
-              A common pattern is to translate plain English questions into a query language
-              like Cypher or SQL so that biologists can explore their data without writing
-              code, while still keeping the underlying schemas and constraints explicit.
-            </p>
-          </div>
-        </section>
 
         {/* CTA */}
         <section className="border-t border-neutral-800 pt-6">
