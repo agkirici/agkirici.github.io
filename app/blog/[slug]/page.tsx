@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import { notFound } from 'next/navigation';
 import { getBlogPostBySlug, getBlogPostSlugs } from '@/lib/sanity/blog';
 import BlogLayout from '@/components/BlogLayout';
@@ -8,11 +10,10 @@ import Image from 'next/image';
 export async function generateStaticParams() {
   try {
     const slugs = await getBlogPostSlugs();
-    return slugs.map((slug) => ({
+    return slugs.map((slug: string) => ({
       slug,
     }));
   } catch (error) {
-    // If Sanity is not configured, return empty array
     return [];
   }
 }
@@ -20,9 +21,10 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
+
   let post;
   try {
     post = await getBlogPostBySlug(slug);
@@ -34,7 +36,6 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  // Use reading time from query or calculate fallback
   const readingTimeMinutes = post.readingTime || 5;
   const readingTimeText = `${readingTimeMinutes} min read`;
 
@@ -57,8 +58,8 @@ export default async function BlogPostPage({
           />
         </div>
       )}
+
       {post.content && <PortableText value={post.content} />}
     </BlogLayout>
   );
 }
-

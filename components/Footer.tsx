@@ -1,11 +1,9 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
-          © 2024
-        </p>
-      </div>
+    <footer className="text-center text-gray-500 text-sm py-6 border-t border-gray-800 mt-10">
+      © 2025 Arzu Kirici. All Rights Reserved.
     </footer>
   );
 }

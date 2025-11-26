@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";

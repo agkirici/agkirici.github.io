@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 // Utility functions
 // This file can be extended with helper functions as needed
 

@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import Link from 'next/link';
 
 interface BlogCardProps {

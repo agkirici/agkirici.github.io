@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import { getAllBlogPosts, BlogPost } from '@/lib/sanity/blog';
 import BlogCard from '@/components/BlogCard';
 

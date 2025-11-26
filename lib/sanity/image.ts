@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import imageUrlBuilder from '@sanity/image-url';
 import { getClient } from './client';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';

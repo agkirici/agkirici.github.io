@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import Navbar from "@/components/Navbar";
 
 import ScrollToTop from "@/components/ScrollToTop";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arzukirici.com"),
@@ -39,9 +42,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://arzukirici.com/og-image.png",
         width: 1200,
         height: 630,
+        alt: "Arzu Kirici Portfolio",
       },
     ],
   },
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     title: "Arzu Kirici | Portfolio",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     site: "https://arzukirici.com",
-    images: ["/og-image.png"],
+    images: ["https://arzukirici.com/og-image.png"],
   },
   icons: {
     icon: "/og-image.png",
@@ -69,6 +73,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://arzukirici.com",
   },
+  other: {
+    copyright: "© 2025 Arzu Kirici. All Rights Reserved.",
+  },
 };
 
 export default function RootLayout({
@@ -79,6 +86,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta property="og:image" content="https://arzukirici.com/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Arzu Kirici Portfolio" />
+        <meta name="twitter:image" content="https://arzukirici.com/og-image.png" />
+        <link rel="icon" href="/og-image.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -127,6 +140,9 @@ export default function RootLayout({
 
         {/* Her sayfada görünen scroll-to-top butonu */}
         <ScrollToTop />
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );

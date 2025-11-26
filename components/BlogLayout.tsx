@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 interface BlogLayoutProps {
   title: string;
   author: string;

@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import { createClient } from '@sanity/client';
 import { apiVersion, dataset, projectId, getSanityConfig } from '@/sanity/env';
 

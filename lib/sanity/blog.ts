@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import { getClient } from './client';
 import { blogPostsQuery, blogPostBySlugQuery, blogPostSlugsQuery } from './queries';
 

@@ -1,3 +1,4 @@
+// © 2025 Arzu Kirici — All Rights Reserved
 // @ts-nocheck
 "use client";
 

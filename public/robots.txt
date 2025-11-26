@@ -3,3 +3,7 @@ Allow: /
 
 Sitemap: https://arzukirici.com/sitemap.xml
 
+# Copyright Protections
+User-agent: *
+Disallow: /og-image.png
+

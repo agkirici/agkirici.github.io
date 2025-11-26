@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import { groq } from 'next-sanity';
 
 export const blogPostsQuery = groq`

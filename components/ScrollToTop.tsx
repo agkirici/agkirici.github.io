@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 'use client';
 
 import { useState, useEffect } from 'react';

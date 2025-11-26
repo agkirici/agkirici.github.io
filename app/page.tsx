@@ -1,3 +1,5 @@
+// © 2025 Arzu Kirici — All Rights Reserved
+
 import Image from 'next/image';
 import type { Metadata } from 'next';
 
