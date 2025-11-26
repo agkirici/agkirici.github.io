@@ -13,12 +13,21 @@ export const metadata: Metadata = {
     siteName: "Arzu Kirici Portfolio",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://arzukirici.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Arzu Kirici Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Arzu Kirici | Portfolio",
     description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
     site: "https://arzukirici.com",
+    images: ["https://arzukirici.com/og-image.png"],
   },
   alternates: {
     canonical: "https://arzukirici.com",
@@ -38,7 +47,7 @@ export default function HomePage() {
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-neutral-100 text-center">About</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-neutral-100">About</h2>
           
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-center">
             {/* Profile Picture and Social Media - Left Side */}

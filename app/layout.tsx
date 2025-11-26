@@ -87,11 +87,15 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta property="og:image" content="https://arzukirici.com/og-image.png" />
+        <meta property="og:image:secure_url" content="https://arzukirici.com/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Arzu Kirici Portfolio" />
         <meta name="twitter:image" content="https://arzukirici.com/og-image.png" />
+        <meta name="twitter:image:src" content="https://arzukirici.com/og-image.png" />
         <link rel="icon" href="/og-image.png" />
+        <link rel="apple-touch-icon" href="/og-image.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
