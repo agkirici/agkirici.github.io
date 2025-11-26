@@ -29,8 +29,8 @@ export default function HomePage() {
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
       <div className="mx-auto max-w-3xl space-y-12">
-        {/* Name Header */}
-        <header>
+        {/* Name Header - Centered */}
+        <header className="text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-neutral-50">
             Arzu Kirici
           </h1>
@@ -38,7 +38,7 @@ export default function HomePage() {
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-neutral-100">About</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-neutral-100">About</h2>
           
           <div className="flex flex-col md:flex-row gap-8">
             {/* Profile Picture and Social Media - Left Side */}
@@ -112,18 +112,10 @@ export default function HomePage() {
 
             {/* Text Content - Right Side */}
             <div className="flex-1 space-y-4">
-              <h3 className="text-2xl font-semibold text-neutral-100">
-                Hi, I&apos;m <span className="text-sky-500">Arzu Kirici</span>
-              </h3>
-
-              <p className="text-lg font-medium text-neutral-200">
-                I&apos;m scientist building user-friendly software that supports real 
-                research workflows for the healthcare industry, biotech companies, 
-                and academic research groups.
-              </p>
-
               <p className="text-neutral-300 leading-relaxed">
-                I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
+                <span className="text-sky-500">Arzu Kirici</span> is a scientist building user-friendly software that supports real 
+                research workflows for the healthcare industry, biotech companies, 
+                and academic research groups. I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. 
                 I later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations. 
                 Today I combine molecular biology, data analysis, and software development to build practical computational tools, pipelines, 
                 interfaces, and automation modules that integrate directly into research workflows.
