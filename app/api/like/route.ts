@@ -1,23 +1,24 @@
 // © 2025 Arzu Kirici — All Rights Reserved
 
-import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@sanity/client';
-
 export const runtime = 'nodejs';
 
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { postId } = body;
+import { NextResponse } from 'next/server';
+import { createClient } from '@sanity/client';
 
-    // Validation
-    if (!postId || typeof postId !== 'string' || postId.trim().length === 0) {
-      console.error('[Like API] Invalid postId:', postId);
+export async function POST(req: Request) {
+  try {
+    const { postId, delta } = await req.json();
+
+    if (!postId) {
       return NextResponse.json(
-        { error: 'postId is required and must be a non-empty string' },
+        { error: 'postId is required' },
         { status: 400 }
       );
     }
+
+    const change = typeof delta === 'number' && (delta === 1 || delta === -1)
+      ? delta
+      : 1; // default +1
 
     // Get environment variables (server-side only)
     const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
@@ -41,56 +42,36 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create client with write token using withConfig
     const client = createClient({
       projectId,
       dataset,
       apiVersion,
       useCdn: false,
-    }).withConfig({ token });
+    });
 
-    console.log('[Like API] Incrementing likes for postId:', postId);
+    const writeClient = client.withConfig({
+      token: process.env.SANITY_WRITE_TOKEN,
+      useCdn: false,
+    });
 
-    // Patch and increment in a single chain
-    try {
-      const updated = await client
-        .patch(postId)
-        .setIfMissing({ likes: 0 })
-        .inc({ likes: 1 })
-        .commit();
+    const updated = await writeClient
+      .patch(postId)
+      .setIfMissing({ likes: 0 })
+      .inc({ likes: change })
+      .commit({ autoGenerateArrayKeys: true });
 
-      // Get the updated likes value
-      const updatedLikes = typeof updated.likes === 'number' ? updated.likes : 0;
-      
-      console.log('[Like API] Successfully incremented likes. Updated likes value:', updatedLikes);
-      
-      return NextResponse.json(
-        { likes: updatedLikes },
-        { status: 200 }
-      );
-    } catch (patchError) {
-      console.error('[Like API] Patch operation failed:', patchError);
-      if (patchError instanceof Error) {
-        console.error('[Like API] Patch error message:', patchError.message);
-        console.error('[Like API] Patch error stack:', patchError.stack);
-      }
-      
-      return NextResponse.json(
-        { 
-          error: 'Failed to update likes',
-          likes: 0
-        },
-        { status: 500 }
-      );
-    }
-  } catch (error) {
-    console.error('[Like API] Error:', error);
-    if (error instanceof Error) {
-      console.error('[Like API] Error message:', error.message);
-      console.error('[Like API] Error stack:', error.stack);
-    }
+    const updatedLikes = updated.likes ?? 0;
+
+    console.log('[Like API] Successfully updated likes. Updated likes value:', updatedLikes);
+
+    return NextResponse.json({ likes: updatedLikes });
+  } catch (err: any) {
+    console.error('LIKE API ERROR', err);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      {
+        error: 'Failed to update likes',
+        details: err?.message || String(err),
+      },
       { status: 500 }
     );
   }

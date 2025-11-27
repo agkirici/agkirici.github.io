@@ -1,93 +1,87 @@
 // © 2025 Arzu Kirici — All Rights Reserved
 
-"use client";
+'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-interface LikeButtonProps {
+type Props = {
   postId: string;
-  initialLikes: number;
-}
+  initialLikes?: number;
+};
 
-export default function LikeButton({ postId, initialLikes }: LikeButtonProps) {
-  // Ensure initialLikes is a number, defaulting to 0
-  const safeInitialLikes = typeof initialLikes === 'number' ? initialLikes : 0;
-  
-  const [likes, setLikes] = useState(safeInitialLikes);
-  const [isLiking, setIsLiking] = useState(false);
-  const [hasLiked, setHasLiked] = useState(false);
+export default function LikeButton({ postId, initialLikes = 0 }: Props) {
+  const [likes, setLikes] = useState(initialLikes);
+  const [liked, setLiked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Kullanıcının daha önce like edip etmediğini localStorage'dan oku
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const stored = window.localStorage.getItem(`liked_${postId}`);
+    setLiked(stored === 'true');
+  }, [postId]);
 
   // Sync with initialLikes prop if it changes
   useEffect(() => {
-    setLikes(safeInitialLikes);
-  }, [safeInitialLikes]);
+    setLikes(initialLikes);
+  }, [initialLikes]);
 
-  const handleLike = async () => {
-    if (hasLiked || isLiking) {
-      console.log('[LikeButton] Already liked or currently processing');
-      return;
-    }
+  const handleClick = async () => {
+    if (loading) return;
+    setLoading(true);
+    setError(null);
 
-    if (!postId) {
-      console.error('[LikeButton] Missing postId');
-      return;
-    }
+    const nextLiked = !liked;
+    const delta = nextLiked ? 1 : -1;
 
-    setIsLiking(true);
-    const previousLikes = likes;
-    
-    // Optimistic update
-    setLikes((prev) => prev + 1);
-    setHasLiked(true);
+    // Optimistik update
+    setLiked(nextLiked);
+    setLikes((prev) => prev + delta);
 
     try {
-      console.log('[LikeButton] Sending like request for postId:', postId);
-      
-      const response = await fetch('/api/like', {
+      const res = await fetch('/api/like', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ postId }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ postId, delta }),
       });
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        console.error('[LikeButton] API error response:', response.status, errorData);
-        throw new Error(`Failed to like post: ${response.status}`);
-      }
+      const data = await res.json();
 
-      const data = await response.json();
-      
-      // Update with server response
-      if (typeof data.likes === 'number') {
-        console.log('[LikeButton] Successfully liked post. New count:', data.likes);
-        setLikes(data.likes);
+      if (!res.ok || typeof data.likes !== 'number') {
+        // geri al
+        setLiked((prev) => !prev);
+        setLikes((prev) => prev - delta);
+        setError(data.error || 'Like failed');
       } else {
-        console.error('[LikeButton] Invalid response format. Expected data.likes to be a number, got:', data);
-        // Revert optimistic update if response is invalid
-        setLikes(previousLikes);
-        setHasLiked(false);
+        setLikes(data.likes);
+        if (typeof window !== 'undefined') {
+          window.localStorage.setItem(
+            `liked_${postId}`,
+            nextLiked ? 'true' : 'false'
+          );
+        }
       }
-    } catch (error) {
-      console.error('[LikeButton] Error liking post:', error);
-      // Revert optimistic update on error
-      setLikes(previousLikes);
-      setHasLiked(false);
+    } catch (e) {
+      // geri al
+      setLiked((prev) => !prev);
+      setLikes((prev) => prev - delta);
+      setError('Network error');
     } finally {
-      setIsLiking(false);
+      setLoading(false);
     }
   };
 
   return (
     <button
-      onClick={handleLike}
-      disabled={hasLiked || isLiking}
-      className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm transition-colors ${
-        hasLiked
-          ? 'border-red-500 bg-red-500/10 text-red-400 cursor-not-allowed'
-          : 'border-neutral-700 bg-neutral-800/50 text-neutral-300 hover:border-neutral-600 hover:bg-neutral-800 cursor-pointer'
-      }`}
+      onClick={handleClick}
+      disabled={loading}
+      className={
+        'inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm transition-colors ' +
+        (liked 
+          ? 'bg-pink-600 text-white border-pink-600' 
+          : 'border-neutral-700 bg-neutral-800/50 text-neutral-300 hover:border-neutral-600 hover:bg-neutral-800')
+      }
       aria-label={`Like this post. Current likes: ${likes}`}
     >
       <span>❤️</span>
