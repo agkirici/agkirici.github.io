@@ -29,20 +29,20 @@ export default function PaperScopePage() {
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Features</h2>
         <ul className="list-disc ml-5 space-y-1 text-slate-200">
-          <li>Multi-database search (NCBI + Crossref)</li>
-          <li>DOI, title, year, journal metadata extraction</li>
-          <li>Corresponding author ve institution çıkarımı</li>
-          <li>Gelişmiş NCBI query syntax desteği</li>
-          <li>Tek tıkla Excel'e export</li>
-          <li>Streamlit tabanlı kullanıcı dostu arayüz</li>
+          <li>Multi-database search (PubMed, PMC, SRA, and NCBI endpoints)</li>
+          <li>Extraction of DOI, title, year, journal, and metadata fields</li>
+          <li>Corresponding author and institution parsing</li>
+          <li>Full support for advanced NCBI query syntax</li>
+          <li>One-click Excel export</li>
+          <li>User-friendly Streamlit interface</li>
         </ul>
       </section>
 
       <section className="space-y-2">
         <h2 className="text-2xl font-semibold">Contact</h2>
         <p className="text-slate-200">
-          Benzer bir aracı kendi laboratuvarınız, ekibiniz veya şirketiniz için
-          özelleştirmek isterseniz benimle iletişime geçebilirsiniz.
+          If you'd like a customized version of this tool for your lab, 
+          research group, or organization, feel free to reach out.
         </p>
         <p className="text-slate-200">
           Email: <strong>arzukirici@gmail.com</strong>
