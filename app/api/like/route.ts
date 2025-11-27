@@ -51,13 +51,30 @@ export async function POST(request: NextRequest) {
 
     console.log('[Like API] Incrementing likes for postId:', postId);
 
+    // First, get the current document to check if it exists
+    const currentDoc = await client.getDocument(postId);
+    if (!currentDoc) {
+      console.error('[Like API] Document not found:', postId);
+      return NextResponse.json(
+        { error: 'Post not found' },
+        { status: 404 }
+      );
+    }
+
+    const currentLikes = typeof currentDoc.likes === 'number' ? currentDoc.likes : 0;
+    console.log('[Like API] Current likes:', currentLikes);
+
     // Increment likes using .patch().inc()
-    const result = await client
+    await client
       .patch(postId)
+      .setIfMissing({ likes: 0 })
       .inc({ likes: 1 })
       .commit();
 
-    const newLikes = result.likes ?? 0;
+    // Fetch the updated document to get the new likes count
+    const updatedDoc = await client.getDocument(postId);
+    const newLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : 0;
+    
     console.log('[Like API] Successfully incremented likes. New count:', newLikes);
 
     // Return the new like count
