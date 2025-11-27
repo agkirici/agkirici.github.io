@@ -20,7 +20,7 @@ export const projects = [
     github: "https://github.com/hackbio-ca/spatioscript-llm-spatial-biology",
   },
   {
-    title: "PhD / Researcher Portfolio Website (Astro + Tailwind)",
+    title: "Researcher Portfolio Website (Astro + Tailwind)",
     slug: "phd-portfolio-astro",
     featured: false,
     description:
