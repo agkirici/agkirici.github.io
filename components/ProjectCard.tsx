@@ -3,6 +3,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface ProjectCardProps {
   tags: string[];
   slug: string;
   featured?: boolean;
+  banner?: string;
   link?: string;
   github?: string;
 }
@@ -25,52 +27,66 @@ function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default function ProjectCard({ title, description, tags, slug, featured, link, github }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags, slug, featured, banner, link, github }: ProjectCardProps) {
   // Compute the LinkedIn share URL - use the project's website URL
   const projectWebsiteUrl = `https://www.arzukirici.com/projects/${slug}`;
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(projectWebsiteUrl)}`;
 
   return (
-    <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-6 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
+    <div className="max-w-[380px] mx-auto rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
       <Link href={`/projects/${slug}`} className="block">
-        <article className="space-y-3">
-          <div className="flex items-center gap-3">
-            <h2 className="text-xl font-semibold text-neutral-50">
+        {/* Banner Image */}
+        {banner && (
+          <div className="relative h-[230px] w-full overflow-hidden">
+            <Image
+              src={banner}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        )}
+
+        {/* Content */}
+        <div className="p-4">
+          <div className="flex items-start gap-2 mb-2">
+            <h2 className="text-lg font-semibold text-neutral-50 flex-1">
               {title}
             </h2>
             {featured && (
-              <span className="rounded-full bg-sky-600/40 px-2 py-0.5 text-[11px] uppercase tracking-wide text-sky-200">
+              <span className="rounded-full bg-sky-600/40 px-2 py-0.5 text-[10px] uppercase tracking-wide text-sky-200 whitespace-nowrap">
                 Featured
               </span>
             )}
           </div>
 
-          <p className="text-neutral-300 text-sm leading-relaxed">
+          <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed mb-3">
             {description}
           </p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2 pt-1">
+          <div className="flex flex-wrap gap-1.5 mb-3">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-md bg-neutral-800 px-3 py-1 text-xs text-neutral-200"
+                className="rounded-full bg-neutral-800 px-2.5 py-0.5 text-xs text-neutral-200"
               >
                 {tag}
               </span>
             ))}
           </div>
-        </article>
+        </div>
       </Link>
 
       {/* Action buttons */}
-      <div className="mt-6 flex flex-wrap gap-3 pt-4 border-t border-neutral-800">
+      <div className="px-4 pb-4 border-t border-neutral-800 pt-3 flex flex-wrap gap-2">
         {link && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             <span>DevPost</span>
@@ -81,7 +97,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             <span>GitHub</span>
@@ -92,11 +108,11 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Share on LinkedIn"
-          className="inline-flex items-center gap-1.5 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-4 py-2 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
+          className="inline-flex items-center gap-1 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-3 py-1.5 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
           onClick={(e) => e.stopPropagation()}
         >
-          <LinkedInIcon className="h-4 w-4" />
-          <span>Share on LinkedIn</span>
+          <LinkedInIcon className="h-3 w-3" />
+          <span>Share</span>
         </a>
       </div>
     </div>
