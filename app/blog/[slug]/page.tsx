@@ -68,26 +68,28 @@ export async function generateMetadata({
   }
 
   // Get OG image URL - ensure it's absolute
-  let ogImage = post.coverImage
-    ? urlFor(post.coverImage).width(1200).height(630).url()
-    : 'https://arzukirici.com/og-image.png';
-  
-  // Ensure the URL is absolute (Sanity CDN URLs should already be absolute, but double-check)
-  if (ogImage && !ogImage.startsWith('http')) {
-    ogImage = `https:${ogImage}`;
+  let ogImage: string;
+  if (post.coverImage) {
+    const imageUrl = urlFor(post.coverImage).width(1200).height(630).url();
+    // Ensure the URL is absolute (Sanity CDN URLs should already be absolute, but double-check)
+    ogImage = imageUrl.startsWith('http') ? imageUrl : `https:${imageUrl}`;
+  } else {
+    // Fallback to default OG image
+    ogImage = 'https://arzukirici.com/og-image.png';
   }
 
   const url = `https://www.arzukirici.com/blog/${slug}`;
+  const fallbackDescription = description || 'Blog post by Arzu Kirici';
 
   return {
-    title: `${post.title} | Arzu Kirici`,
-    description: description || 'Blog post by Arzu Kirici',
+    title: `${post.title} | Arzu Kirici Blog`,
+    description: fallbackDescription,
     metadataBase: new URL('https://arzukirici.com'),
     openGraph: {
       title: post.title,
-      description: description || 'Blog post by Arzu Kirici',
+      description: fallbackDescription,
       url,
-      siteName: 'Arzu Kirici Portfolio',
+      siteName: 'Arzu Kirici',
       type: 'article',
       locale: 'en_US',
       images: [
@@ -104,15 +106,11 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: description || 'Blog post by Arzu Kirici',
+      description: fallbackDescription,
       images: [ogImage],
     },
     alternates: {
       canonical: url,
-    },
-    other: {
-      'og:image:secure_url': ogImage,
-      'og:image:type': 'image/jpeg',
     },
   };
 }
