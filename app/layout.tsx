@@ -11,8 +11,9 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arzukirici.com"),
-  title: "Arzu Kirici | Portfolio",
-  description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+  title: "Arzu Kirici — Computational Biologist & Bioinformatics Developer",
+  description:
+    "Portfolio of Arzu Kirici: computational biology, bioinformatics software development, clinical and multi-omics data analysis, spatial omics, molecular diagnostics, AI-bio integration, research operations, and genomics project management.",
   keywords: [
     "Arzu Kirici",
     "bioinformatics",
@@ -34,10 +35,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Arzu Kirici" }],
   creator: "Arzu Kirici",
   openGraph: {
-    title: "Arzu Kirici | Portfolio",
-    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    title: "Arzu Kirici — Computational Biologist & Bioinformatics Developer",
+    description:
+      "Computational biology, multi-omics analysis, spatial omics, bioinformatics pipelines, AI-bio integration, and software development projects by Arzu Kirici.",
     url: "https://arzukirici.com",
-    siteName: "Arzu Kirici Portfolio",
+    siteName: "Arzu Kirici",
     type: "website",
     locale: "en_US",
     images: [
@@ -51,8 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arzu Kirici | Portfolio",
-    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    title: "Arzu Kirici — Computational Biologist & Bioinformatics Developer",
+    description:
+      "Computational biology, multi-omics analysis, spatial omics, bioinformatics pipelines, AI-bio integration, and software development projects by Arzu Kirici.",
     site: "https://arzukirici.com",
     images: ["https://arzukirici.com/og-image.png"],
   },
@@ -103,7 +106,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Arzu Kirici",
-              description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+              description:
+                "Portfolio of Arzu Kirici: computational biology, bioinformatics software development, clinical and multi-omics data analysis, spatial omics, molecular diagnostics, AI-bio integration, research operations, and genomics project management.",
               url: "https://arzukirici.com",
               sameAs: [
                 "https://www.linkedin.com/in/arzu-kirici",
