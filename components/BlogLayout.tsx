@@ -1,5 +1,6 @@
 // © 2025 Arzu Kirici — All Rights Reserved
 
+import Link from 'next/link';
 import LikeButton from './LikeButton';
 import LinkedInIcon from './LinkedInIcon';
 
@@ -11,6 +12,7 @@ interface BlogLayoutProps {
   slug?: string;
   postId?: string;
   initialLikes?: number;
+  tags?: string[];
   children: React.ReactNode;
 }
 
@@ -22,6 +24,7 @@ export default function BlogLayout({
   slug,
   postId,
   initialLikes,
+  tags,
   children,
 }: BlogLayoutProps) {
   const blogPostUrl = slug ? `https://www.arzukirici.com/blog/${slug}` : '';
@@ -61,6 +64,22 @@ export default function BlogLayout({
       <div className="prose prose-invert prose-neutral max-w-none prose-headings:font-semibold prose-headings:text-neutral-50 prose-p:text-neutral-300 prose-p:leading-relaxed prose-a:text-sky-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-neutral-100 prose-code:text-sky-300 prose-code:bg-neutral-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-neutral-900 prose-pre:border prose-pre:border-neutral-800">
         {children}
       </div>
+
+      {/* Tags */}
+      {tags && tags.length > 0 && (
+        <div className="mt-8 pt-6 border-t border-neutral-800 flex flex-wrap gap-2 items-center">
+          <span className="text-xs text-neutral-400 mr-1">Tags:</span>
+          {tags.map((tag) => (
+            <Link
+              key={tag}
+              href={`/tags/${encodeURIComponent(tag)}`}
+              className="inline-flex items-center rounded-full border border-neutral-700 bg-neutral-800/50 px-2 py-1 text-xs font-medium text-neutral-200 hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-colors"
+            >
+              #{tag}
+            </Link>
+          ))}
+        </div>
+      )}
 
       {/* Like Button and LinkedIn Share Button */}
       {(postId || (slug && linkedinShareUrl)) && (

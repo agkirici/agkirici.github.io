@@ -116,6 +116,16 @@ const blogPost = defineType({
       readOnly: true,
       initialValue: 0,
     }),
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+      description: 'Tags for categorizing blog posts (e.g., "bioinformatics", "python", "research")',
+    }),
   ],
   preview: {
     select: {

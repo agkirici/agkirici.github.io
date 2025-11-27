@@ -136,16 +136,80 @@ export default async function BlogPostPage({
   const readingTimeMinutes = post.readingTime || 5;
   const readingTimeText = `${readingTimeMinutes} min read`;
 
+  // Get description for JSON-LD
+  let description = post.excerpt || '';
+  if (!description && post.content) {
+    const extractText = (content: any): string => {
+      if (typeof content === 'string') return content;
+      if (Array.isArray(content)) {
+        return content
+          .map((block) => {
+            if (block._type === 'block' && block.children) {
+              return block.children
+                .map((child: any) => (child.text || ''))
+                .join('');
+            }
+            return '';
+          })
+          .join(' ')
+          .trim();
+      }
+      return '';
+    };
+    description = extractText(post.content).substring(0, 200);
+  }
+
+  // Get image URL for JSON-LD
+  const imageUrl = post.coverImage
+    ? urlFor(post.coverImage).width(1200).height(630).url()
+    : 'https://arzukirici.com/og-image.png';
+  const absoluteImageUrl = imageUrl.startsWith('http') ? imageUrl : `https:${imageUrl}`;
+
+  // JSON-LD Article Schema
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: description || 'Blog post by Arzu Kirici',
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author || 'Arzu Kirici',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Arzu Kirici',
+    },
+    image: absoluteImageUrl,
+    url: `https://www.arzukirici.com/blog/${slug}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.arzukirici.com/blog/${slug}`,
+    },
+    ...(post.tags && post.tags.length > 0 && {
+      keywords: post.tags.join(', '),
+    }),
+  };
+
   return (
-    <BlogLayout
-      title={post.title}
-      author={post.author}
-      date={post.date}
-      readingTime={readingTimeText}
-      slug={slug}
-      postId={post._id}
-      initialLikes={post.likes ?? 0}
-    >
+    <>
+      {/* JSON-LD Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
+      <BlogLayout
+        title={post.title}
+        author={post.author}
+        date={post.date}
+        readingTime={readingTimeText}
+        slug={slug}
+        postId={post._id}
+        initialLikes={post.likes ?? 0}
+        tags={post.tags}
+      >
       {post.coverImage && (
         <div className="mb-8 -mx-4 md:-mx-0">
           <Image
@@ -160,6 +224,7 @@ export default async function BlogPostPage({
       )}
 
       {post.content && <PortableText value={post.content} />}
-    </BlogLayout>
+      </BlogLayout>
+    </>
   );
 }

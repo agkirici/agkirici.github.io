@@ -1,7 +1,7 @@
 // © 2025 Arzu Kirici — All Rights Reserved
 
 import { getClient } from './client';
-import { blogPostsQuery, blogPostBySlugQuery, blogPostSlugsQuery } from './queries';
+import { blogPostsQuery, blogPostBySlugQuery, blogPostSlugsQuery, blogPostsByTagQuery, allTagsQuery } from './queries';
 
 export interface BlogPost {
   _id: string;
@@ -13,6 +13,7 @@ export interface BlogPost {
   coverImage?: any;
   content?: any;
   likes?: number;
+  tags?: string[];
   readingTime?: number;
 }
 
@@ -58,5 +59,31 @@ export async function getBlogPostSlugs(): Promise<string[]> {
   const client = getClient();
   const posts = await client.fetch<{ slug: string }[]>(blogPostSlugsQuery);
   return posts.map((post) => post.slug);
+}
+
+export async function getBlogPostsByTag(
+  tag: string,
+  preview = false
+): Promise<BlogPost[]> {
+  const sanityClient = getClient(preview);
+  // Use any to bypass TypeScript inference issue with GROQ params
+  const posts = await sanityClient.fetch<BlogPost[]>(blogPostsByTagQuery, { tag } as any);
+  
+  return posts.map((post) => {
+    if (post.readingTime) {
+      return post;
+    }
+    return {
+      ...post,
+      readingTime: 5,
+    };
+  });
+}
+
+export async function getAllTags(preview = false): Promise<string[]> {
+  const client = getClient(preview);
+  const tags = await client.fetch<string[]>(allTagsQuery);
+  // Remove duplicates and sort
+  return Array.from(new Set(tags)).sort();
 }
 
