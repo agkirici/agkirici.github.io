@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get environment variables
+    // Get environment variables (server-side only)
     const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
     const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
     const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-01';
@@ -51,64 +51,21 @@ export async function POST(request: NextRequest) {
 
     console.log('[Like API] Incrementing likes for postId:', postId);
 
-    // First, get the current document to check if it exists
-    const currentDoc = await client.getDocument(postId);
-    if (!currentDoc) {
-      console.error('[Like API] Document not found:', postId);
-      return NextResponse.json(
-        { error: 'Post not found' },
-        { status: 404 }
-      );
-    }
-
-    const currentLikes = typeof currentDoc.likes === 'number' ? currentDoc.likes : 0;
-    const newLikes = currentLikes + 1;
-    
-    console.log('[Like API] Current likes:', currentLikes);
-    console.log('[Like API] Target likes:', newLikes);
-
-    // Increment likes using .patch().inc()
+    // Patch and increment in a single chain
     try {
-      console.log('[Like API] Starting patch operation...');
-      
-      // If likes field doesn't exist or is null, set it to 0 first
-      if (currentDoc.likes === undefined || currentDoc.likes === null) {
-        console.log('[Like API] Setting likes field to 0 first');
-        await client
-          .patch(postId)
-          .set({ likes: 0 })
-          .commit();
-      }
-      
-      // Now increment
-      console.log('[Like API] Incrementing likes...');
-      const patchResult = await client
+      const updated = await client
         .patch(postId)
+        .setIfMissing({ likes: 0 })
         .inc({ likes: 1 })
         .commit();
 
-      console.log('[Like API] Patch commit successful');
-
-      // Wait a moment for Sanity to process
-      await new Promise(resolve => setTimeout(resolve, 200));
-
-      // Fetch the updated document to verify
-      const updatedDoc = await client.getDocument(postId);
+      // Get the updated likes value
+      const updatedLikes = typeof updated.likes === 'number' ? updated.likes : 0;
       
-      if (!updatedDoc) {
-        console.error('[Like API] Failed to fetch updated document after patch');
-        return NextResponse.json(
-          { success: true, likes: newLikes },
-          { status: 200 }
-        );
-      }
-
-      const verifiedLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : newLikes;
-      console.log('[Like API] Verified likes count:', verifiedLikes);
+      console.log('[Like API] Successfully incremented likes. Updated likes value:', updatedLikes);
       
-      // Return the verified like count
       return NextResponse.json(
-        { success: true, likes: verifiedLikes },
+        { likes: updatedLikes },
         { status: 200 }
       );
     } catch (patchError) {
@@ -118,12 +75,10 @@ export async function POST(request: NextRequest) {
         console.error('[Like API] Patch error stack:', patchError.stack);
       }
       
-      // Return error with current likes so UI doesn't break
       return NextResponse.json(
         { 
-          success: false, 
           error: 'Failed to update likes',
-          likes: currentLikes 
+          likes: 0
         },
         { status: 500 }
       );

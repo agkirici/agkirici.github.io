@@ -58,11 +58,16 @@ export default function LikeButton({ postId, initialLikes }: LikeButtonProps) {
       }
 
       const data = await response.json();
-      console.log('[LikeButton] Successfully liked post. New count:', data.likes);
       
       // Update with server response
       if (typeof data.likes === 'number') {
+        console.log('[LikeButton] Successfully liked post. New count:', data.likes);
         setLikes(data.likes);
+      } else {
+        console.error('[LikeButton] Invalid response format. Expected data.likes to be a number, got:', data);
+        // Revert optimistic update if response is invalid
+        setLikes(previousLikes);
+        setHasLiked(false);
       }
     } catch (error) {
       console.error('[LikeButton] Error liking post:', error);
