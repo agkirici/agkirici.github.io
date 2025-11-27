@@ -72,19 +72,23 @@ export default function BlogLayout({
         {children}
       </div>
 
-      {/* LinkedIn Share Button */}
-      {slug && linkedinShareUrl && (
-        <div className="mt-8 pt-6 border-t border-neutral-800">
-          <a
-            href={linkedinShareUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Share on LinkedIn"
-            className="inline-flex items-center gap-2 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-4 py-2 text-sm font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
-          >
-            <LinkedInIcon className="h-4 w-4" />
-            <span>Share on LinkedIn</span>
-          </a>
+      {/* Like Button and LinkedIn Share Icon */}
+      {(postId || (slug && linkedinShareUrl)) && (
+        <div className="mt-8 pt-6 border-t border-neutral-800 flex items-center gap-4">
+          {postId && (
+            <LikeButton postId={postId} initialLikes={initialLikes ?? 0} />
+          )}
+          {slug && linkedinShareUrl && (
+            <a
+              href={linkedinShareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Share on LinkedIn"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+            >
+              <LinkedInIcon className="w-5 h-5 text-neutral-200" />
+            </a>
+          )}
         </div>
       )}
     </article>
