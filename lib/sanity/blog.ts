@@ -12,6 +12,7 @@ export interface BlogPost {
   excerpt?: string;
   coverImage?: any;
   content?: any;
+  likes?: number;
   readingTime?: number;
 }
 

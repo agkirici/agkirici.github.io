@@ -68,7 +68,34 @@ function getPreviewClientInstance() {
   return previewClient;
 }
 
+function getWriteClientInstance() {
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+  const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
+  const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-01';
+  const token = process.env.SANITY_WRITE_TOKEN;
+  
+  if (!projectId) {
+    throw new Error('Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID');
+  }
+  
+  if (!token) {
+    throw new Error('Missing environment variable: SANITY_WRITE_TOKEN');
+  }
+  
+  return createClient({
+    projectId,
+    dataset,
+    apiVersion,
+    useCdn: false,
+    token,
+  });
+}
+
 export const getClient = (preview?: boolean) => {
   return preview ? getPreviewClientInstance() : getClientInstance();
+};
+
+export const getWriteClient = () => {
+  return getWriteClientInstance();
 };
 

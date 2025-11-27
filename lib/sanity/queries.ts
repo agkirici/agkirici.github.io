@@ -16,6 +16,7 @@ export const blogPostsQuery = groq`
     date,
     excerpt,
     coverImage,
+    likes,
     "readingTime": round(length(pt::text(content)) / 5 / 180 )
   }
 `;
@@ -34,6 +35,7 @@ export const blogPostBySlugQuery = groq`
     excerpt,
     coverImage,
     content,
+    likes,
     "readingTime": round(length(pt::text(content)) / 5 / 180 )
   }
 `;

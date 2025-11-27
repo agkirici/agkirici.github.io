@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { getBlogPostBySlug, getBlogPostSlugs } from '@/lib/sanity/blog';
 import BlogLayout from '@/components/BlogLayout';
 import PortableText from '@/components/PortableText';
+import LikeButton from '@/components/LikeButton';
 import { urlFor } from '@/lib/sanity/image';
 import Image from 'next/image';
 
@@ -160,6 +161,11 @@ export default async function BlogPostPage({
       )}
 
       {post.content && <PortableText value={post.content} />}
+
+      {/* Like Button */}
+      <div className="mt-8 pt-6 border-t border-neutral-800">
+        <LikeButton postId={post._id} initialLikes={post.likes ?? 0} />
+      </div>
     </BlogLayout>
   );
 }

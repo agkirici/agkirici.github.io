@@ -109,6 +109,13 @@ const blogPost = defineType({
         },
       ],
     }),
+    defineField({
+      name: 'likes',
+      title: 'Likes',
+      type: 'number',
+      readOnly: true,
+      initialValue: 0,
+    }),
   ],
   preview: {
     select: {
