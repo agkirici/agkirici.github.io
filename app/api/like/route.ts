@@ -67,33 +67,36 @@ export async function POST(request: NextRequest) {
 
     // Increment likes using .patch().inc()
     try {
+      console.log('[Like API] Starting patch operation...');
+      
+      // Perform the patch operation
       const patchResult = await client
         .patch(postId)
         .setIfMissing({ likes: 0 })
         .inc({ likes: 1 })
-        .commit({ returnDocuments: true });
+        .commit();
 
-      console.log('[Like API] Patch result:', JSON.stringify(patchResult, null, 2));
+      console.log('[Like API] Patch commit successful. Result:', patchResult);
 
-      // Try to get likes from patch result first
-      let newLikes: number;
-      if (patchResult && typeof patchResult.likes === 'number') {
-        newLikes = patchResult.likes;
-        console.log('[Like API] Got likes from patch result:', newLikes);
-      } else {
-        // If patch result doesn't have likes, fetch the document
-        console.log('[Like API] Patch result missing likes, fetching document...');
-        const updatedDoc = await client.getDocument(postId);
-        if (!updatedDoc) {
-          console.error('[Like API] Failed to fetch updated document:', postId);
-          // Fallback to current likes + 1
-          newLikes = currentLikes + 1;
-        } else {
-          newLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : currentLikes + 1;
-          console.log('[Like API] Got likes from fetched document:', newLikes);
-        }
+      // Wait a brief moment for Sanity to process the update
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      // Fetch the updated document to get the new likes count
+      const updatedDoc = await client.getDocument(postId);
+      
+      if (!updatedDoc) {
+        console.error('[Like API] Failed to fetch updated document after patch');
+        // Fallback to current likes + 1
+        const newLikes = currentLikes + 1;
+        return NextResponse.json(
+          { success: true, likes: newLikes },
+          { status: 200 }
+        );
       }
 
+      console.log('[Like API] Updated document:', JSON.stringify(updatedDoc, null, 2));
+      
+      const newLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : (currentLikes + 1);
       console.log('[Like API] Successfully incremented likes. New count:', newLikes);
 
     // Return the new like count
