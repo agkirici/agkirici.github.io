@@ -1,11 +1,15 @@
 // © 2025 Arzu Kirici — All Rights Reserved
 
+import LikeButton from './LikeButton';
+
 interface BlogLayoutProps {
   title: string;
   author: string;
   date: string;
   readingTime: string;
   slug?: string;
+  postId?: string;
+  initialLikes?: number;
   children: React.ReactNode;
 }
 
@@ -26,6 +30,8 @@ export default function BlogLayout({
   date,
   readingTime,
   slug,
+  postId,
+  initialLikes,
   children,
 }: BlogLayoutProps) {
   const blogPostUrl = slug ? `https://www.arzukirici.com/blog/${slug}` : '';
@@ -52,6 +58,12 @@ export default function BlogLayout({
           </time>
           <span className="text-neutral-600">•</span>
           <span>{readingTime}</span>
+          {postId && (
+            <>
+              <span className="text-neutral-600">•</span>
+              <LikeButton postId={postId} initialLikes={initialLikes ?? 0} />
+            </>
+          )}
         </div>
       </header>
 
