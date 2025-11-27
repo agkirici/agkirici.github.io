@@ -18,6 +18,16 @@ export default function PaperScopePage() {
         </p>
       </header>
 
+      {/* Video */}
+      <div className="rounded-2xl overflow-hidden border border-slate-700 bg-black/40">
+        <video
+          src="/pumbed-scraper.mp4"
+          controls
+          muted
+          className="w-full h-auto"
+        />
+      </div>
+
       {/* Cover Image */}
       <div className="rounded-2xl overflow-hidden border border-slate-700 bg-black/40">
         <Image
@@ -27,16 +37,6 @@ export default function PaperScopePage() {
           height={675}
           className="w-full h-auto"
           priority
-        />
-      </div>
-
-      {/* Video */}
-      <div className="rounded-2xl overflow-hidden border border-slate-700 bg-black/40">
-        <video
-          src="/pumbed-scraper.mp4"
-          controls
-          muted
-          className="w-full h-auto"
         />
       </div>
 
