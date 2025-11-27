@@ -1,8 +1,11 @@
 // © 2025 Arzu Kirici — All Rights Reserved
 
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Accordion from '@/components/Accordion';
+import { projects } from '@/data/projects';
+import ProjectCard from '@/components/ProjectCard';
 
 export const metadata: Metadata = {
   title: "Arzu Kirici | Portfolio",
@@ -134,6 +137,43 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-semibold text-neutral-100">Projects</h2>
+            <Link
+              href="/projects"
+              className="text-sm text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors"
+            >
+              View all →
+            </Link>
+          </div>
+          
+          {/* Projects Grid - Show featured projects first, limit to 3 on homepage */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects
+              .sort((a, b) => {
+                // Featured first
+                if (a.featured && !b.featured) return -1;
+                if (!a.featured && b.featured) return 1;
+                return 0;
+              })
+              .map((project) => (
+                <ProjectCard
+                  key={project.slug}
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  slug={project.slug}
+                  featured={project.featured}
+                  banner={project.banner}
+                  link={project.link}
+                  github={project.github}
+                />
+              ))}
           </div>
         </section>
 

@@ -1,48 +1,46 @@
-export default function PaperScopePage() {
+// © 2025 Arzu Kirici — All Rights Reserved
+
+import { projects } from "@/data/projects";
+import ProjectCard from "@/components/ProjectCard";
+
+export default function ProjectsPage() {
+  // Sort projects: featured first, then by title
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return a.title.localeCompare(b.title);
+  });
+
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 space-y-8">
-      <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-slate-400">
-          Project
-        </p>
-        <h1 className="text-3xl font-semibold">
-          PaperScope — Multi-Source Scientific Search Tool
-        </h1>
-        <p className="text-slate-300">
-          PaperScope combines PubMed, PMC, SRA, and other NCBI sources into one unified
-          scientific search interface. It extracts metadata, DOI, journal info,
-          corresponding authors, and exports everything to Excel.
-        </p>
-      </header>
+    <main className="min-h-screen px-4 py-12 md:py-16">
+      <div className="mx-auto max-w-6xl space-y-8">
+        {/* Header */}
+        <header className="space-y-4">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-neutral-50">
+            Projects
+          </h1>
+          <p className="text-lg text-neutral-400 max-w-2xl">
+            A collection of bioinformatics tools, scientific software, and research applications I've built.
+          </p>
+        </header>
 
-      <div className="rounded-xl overflow-hidden border border-slate-700 bg-black/40">
-        <video
-          src="/pumbed-scraper.mp4"
-          controls
-          muted
-          className="w-full h-auto"
-        />
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedProjects.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              slug={project.slug}
+              featured={project.featured}
+              banner={project.banner}
+              link={project.link}
+              github={project.github}
+            />
+          ))}
+        </div>
       </div>
-
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">Features</h2>
-        <ul className="list-disc ml-6 space-y-1 text-slate-200">
-          <li>PubMed + PMC + SRA multi-database search</li>
-          <li>Corresponding author extraction</li>
-          <li>Advanced NCBI query syntax</li>
-          <li>Instant Excel export</li>
-          <li>Streamlit-based UI</li>
-        </ul>
-      </section>
-
-      <section className="space-y-2">
-        <h2 className="text-xl font-semibold">Contact</h2>
-        <p>
-          If you'd like a customized version of this tool for your lab or team,
-          feel free to reach out.
-        </p>
-        <p>Email: <strong>arzukirici@gmail.com</strong></p>
-      </section>
     </main>
   );
 }

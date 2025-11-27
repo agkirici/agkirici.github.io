@@ -20,6 +20,24 @@ export const projects = [
     github: "https://github.com/hackbio-ca/spatioscript-llm-spatial-biology",
   },
   {
+    title: "PaperScope — Multi-Source Scientific Search Tool",
+    slug: "paperscope",
+    featured: true,
+    description:
+      "PaperScope combines PubMed, PMC, SRA, and other NCBI sources into one unified scientific search interface. It extracts metadata, DOI, journal info, corresponding authors, and exports everything to Excel.",
+    tags: [
+      "Python",
+      "Streamlit",
+      "NCBI Entrez API",
+      "Crossref API",
+      "Biopython",
+      "Pandas",
+      "Literature Search",
+    ],
+    banner: "/paperscope-cover.png",
+    github: "https://github.com/agkirici/pubmed_scraper",
+  },
+  {
     title: "Researcher Portfolio Website (Astro + Tailwind)",
     slug: "phd-portfolio-astro",
     featured: false,
