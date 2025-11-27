@@ -2,7 +2,7 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface LikeButtonProps {
   postId: string;
@@ -10,19 +10,39 @@ interface LikeButtonProps {
 }
 
 export default function LikeButton({ postId, initialLikes }: LikeButtonProps) {
-  const [likes, setLikes] = useState(initialLikes);
+  // Ensure initialLikes is a number, defaulting to 0
+  const safeInitialLikes = typeof initialLikes === 'number' ? initialLikes : 0;
+  
+  const [likes, setLikes] = useState(safeInitialLikes);
   const [isLiking, setIsLiking] = useState(false);
   const [hasLiked, setHasLiked] = useState(false);
 
+  // Sync with initialLikes prop if it changes
+  useEffect(() => {
+    setLikes(safeInitialLikes);
+  }, [safeInitialLikes]);
+
   const handleLike = async () => {
-    if (hasLiked || isLiking) return;
+    if (hasLiked || isLiking) {
+      console.log('[LikeButton] Already liked or currently processing');
+      return;
+    }
+
+    if (!postId) {
+      console.error('[LikeButton] Missing postId');
+      return;
+    }
 
     setIsLiking(true);
+    const previousLikes = likes;
+    
     // Optimistic update
     setLikes((prev) => prev + 1);
     setHasLiked(true);
 
     try {
+      console.log('[LikeButton] Sending like request for postId:', postId);
+      
       const response = await fetch('/api/like', {
         method: 'POST',
         headers: {
@@ -32,16 +52,22 @@ export default function LikeButton({ postId, initialLikes }: LikeButtonProps) {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to like post');
+        const errorData = await response.json().catch(() => ({}));
+        console.error('[LikeButton] API error response:', response.status, errorData);
+        throw new Error(`Failed to like post: ${response.status}`);
       }
 
       const data = await response.json();
+      console.log('[LikeButton] Successfully liked post. New count:', data.likes);
+      
       // Update with server response
-      setLikes(data.likes);
+      if (typeof data.likes === 'number') {
+        setLikes(data.likes);
+      }
     } catch (error) {
-      console.error('Error liking post:', error);
+      console.error('[LikeButton] Error liking post:', error);
       // Revert optimistic update on error
-      setLikes((prev) => prev - 1);
+      setLikes(previousLikes);
       setHasLiked(false);
     } finally {
       setIsLiking(false);
