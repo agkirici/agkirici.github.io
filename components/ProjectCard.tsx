@@ -108,7 +108,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Share on LinkedIn"
-          className="inline-flex items-center gap-1 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-3 py-1.5 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
+          className="inline-flex items-center gap-1 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-2 py-0.5 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
           onClick={(e) => e.stopPropagation()}
         >
           <LinkedInIcon className="h-3 w-3" />

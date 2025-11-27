@@ -72,7 +72,7 @@ export default function BlogLayout({
         {children}
       </div>
 
-      {/* Like Button and LinkedIn Share Icon */}
+      {/* Like Button and LinkedIn Share Button */}
       {(postId || (slug && linkedinShareUrl)) && (
         <div className="mt-8 pt-6 border-t border-neutral-800 flex items-center gap-4">
           {postId && (
@@ -84,9 +84,10 @@ export default function BlogLayout({
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Share on LinkedIn"
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+              className="inline-flex items-center gap-1 rounded-md border border-[#0a66c2] bg-[#0a66c2]/10 px-2 py-0.5 text-xs font-medium text-[#0a66c2] hover:bg-[#0a66c2]/20 hover:border-[#0a66c2] transition-colors"
             >
-              <LinkedInIcon className="w-5 h-5 text-neutral-200" />
+              <LinkedInIcon className="h-3 w-3" />
+              <span>Share</span>
             </a>
           )}
         </div>
