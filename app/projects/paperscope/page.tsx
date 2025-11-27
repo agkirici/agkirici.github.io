@@ -9,10 +9,10 @@ export default function PaperScopePage() {
           PaperScope — Multi-Source Scientific Search Tool
         </h1>
         <p className="text-slate-300">
-          PaperScope, PubMed, PMC, SRA ve diğer NCBI kaynaklarını tek bir
-          arayüzde birleştiren bilimsel arama ve metadata çıkarma aracıdır.
-          Araştırmacıların hızlı, tekrarlanabilir ve esnek şekilde literatür
-          taraması yapmasını sağlar.
+          PaperScope is a scientific search and metadata extraction tool that 
+          combines PubMed, PMC, SRA, and other NCBI databases into a unified interface. 
+          It enables fast, repeatable, and flexible literature discovery for 
+          researchers, analysts, and biotech teams.
         </p>
       </header>
 
@@ -51,4 +51,3 @@ export default function PaperScopePage() {
     </main>
   );
 }
-
