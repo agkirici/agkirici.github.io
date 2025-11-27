@@ -71,18 +71,19 @@ export async function POST(request: NextRequest) {
     try {
       console.log('[Like API] Starting patch operation...');
       
-      // First ensure the field exists, then increment
-      const patch = client.patch(postId);
-      
       // If likes field doesn't exist or is null, set it to 0 first
       if (currentDoc.likes === undefined || currentDoc.likes === null) {
         console.log('[Like API] Setting likes field to 0 first');
-        await patch.set({ likes: 0 }).commit();
+        await client
+          .patch(postId)
+          .set({ likes: 0 })
+          .commit();
       }
       
       // Now increment
       console.log('[Like API] Incrementing likes...');
-      const patchResult = await patch
+      const patchResult = await client
+        .patch(postId)
         .inc({ likes: 1 })
         .commit();
 
