@@ -20,13 +20,13 @@ export const projects = [
     github: "https://github.com/hackbio-ca/spatioscript-llm-spatial-biology",
   },
   {
-    title: "PhD / Researcher Portfolio Website (Astro + Tailwind)",
+    title: "Researcher Portfolio Website (Astro + Tailwind)",
     slug: "phd-portfolio",
     featured: false,
     description:
       "A modern academic portfolio template for researchers. It presents research projects, publications, technical skills, and a downloadable CV in a clear structure, offering a better alternative to traditional static PDF resumes.",
     tags: ["Astro", "Tailwind CSS", "Portfolio", "Academic Website"],
-    banner: "/projects/phd-portfolio.png",
+    banner: "/phd-portfolio-banner.png",
     link: "https://phd-portfolio-astro.vercel.app",
     github: "https://github.com/agkirici/phd-portfolio-astro",
   },
