@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function PaperScopePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12 space-y-8">
@@ -15,6 +17,18 @@ export default function PaperScopePage() {
           researchers, analysts, and biotech teams.
         </p>
       </header>
+
+      {/* Cover Image */}
+      <div className="rounded-2xl overflow-hidden border border-slate-700 bg-black/40">
+        <Image
+          src="/paperscope-cover.png"
+          alt="PaperScope Application Interface"
+          width={1200}
+          height={675}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
 
       {/* Video */}
       <div className="rounded-2xl overflow-hidden border border-slate-700 bg-black/40">
