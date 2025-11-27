@@ -73,8 +73,17 @@ export async function POST(request: NextRequest) {
 
     // Fetch the updated document to get the new likes count
     const updatedDoc = await client.getDocument(postId);
-    const newLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : 0;
+    if (!updatedDoc) {
+      console.error('[Like API] Failed to fetch updated document:', postId);
+      // Fallback to current likes + 1 if we can't fetch the updated doc
+      const newLikes = currentLikes + 1;
+      return NextResponse.json(
+        { success: true, likes: newLikes },
+        { status: 200 }
+      );
+    }
     
+    const newLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : 0;
     console.log('[Like API] Successfully incremented likes. New count:', newLikes);
 
     // Return the new like count
