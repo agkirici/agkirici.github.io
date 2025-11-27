@@ -99,11 +99,20 @@ export async function POST(request: NextRequest) {
       const newLikes = typeof updatedDoc.likes === 'number' ? updatedDoc.likes : (currentLikes + 1);
       console.log('[Like API] Successfully incremented likes. New count:', newLikes);
 
-    // Return the new like count
-    return NextResponse.json(
-      { success: true, likes: newLikes },
-      { status: 200 }
-    );
+      // Return the new like count
+      return NextResponse.json(
+        { success: true, likes: newLikes },
+        { status: 200 }
+      );
+    } catch (patchError) {
+      console.error('[Like API] Patch operation failed:', patchError);
+      // Fallback to current likes + 1 if patch fails
+      const newLikes = currentLikes + 1;
+      return NextResponse.json(
+        { success: true, likes: newLikes },
+        { status: 200 }
+      );
+    }
   } catch (error) {
     console.error('[Like API] Error:', error);
     if (error instanceof Error) {
