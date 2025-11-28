@@ -129,12 +129,12 @@ export default function PaperScopePage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-neutral-100">Technologies</h2>
             <div className="flex flex-wrap gap-2">
-              {(project.tech || project.tags).map((tech) => (
+              {project.tags.map((tag) => (
                 <span
-                  key={tech}
+                  key={tag}
                   className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200"
                 >
-                  {tech}
+                  {tag}
                 </span>
               ))}
             </div>
