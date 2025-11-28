@@ -7,7 +7,7 @@ import { PortableText as SanityPortableText } from "@portabletext/react";
 const customComponents = {
   block: {
     // Normal paragraph
-    normal: ({ children }: any) => <p className="mb-4 leading-relaxed">{children}</p>,
+    normal: ({ children }: any) => <p className="mb-4 leading-relaxed text-neutral-300">{children}</p>,
     // Headings
     h1: ({ children }: any) => <h1 className="text-3xl font-bold mb-4 mt-8 text-neutral-50">{children}</h1>,
     h2: ({ children }: any) => <h2 className="text-2xl font-semibold mb-4 mt-8 text-neutral-50">{children}</h2>,
@@ -73,6 +73,27 @@ const customComponents = {
           {value.caption && (
             <p className="text-sm text-neutral-400 mt-2 text-center italic">{value.caption}</p>
           )}
+        </div>
+      );
+    },
+    // Code blocks
+    code: ({ value }: any) => {
+      const code = value?.code || '';
+      const language = value?.language || 'text';
+      const filename = value?.filename;
+      
+      return (
+        <div className="my-6">
+          {filename && (
+            <div className="bg-neutral-800 px-4 py-2 rounded-t-lg border-b border-neutral-700">
+              <span className="text-xs text-neutral-400 font-mono">{filename}</span>
+            </div>
+          )}
+          <pre className="bg-neutral-900 border border-neutral-800 rounded-lg p-4 overflow-x-auto">
+            <code className={`language-${language} text-sm text-neutral-100 font-mono leading-relaxed`}>
+              {code}
+            </code>
+          </pre>
         </div>
       );
     },

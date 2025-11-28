@@ -8,9 +8,7 @@ import { projects } from "@/data/projects";
 export default function PaperScopePage() {
   const project = projects.find((p) => p.slug === "paperscope");
 
-  if (!project) {
-    return null;
-  }
+  if (!project) return null;
 
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
@@ -36,22 +34,27 @@ export default function PaperScopePage() {
               </span>
             )}
           </div>
+
           <p className="text-sm text-neutral-400">
-            Scientific Literature Search Tool · Multi-Database Search
+            Multi-Database Scientific Search Tool · PubMed · PMC · GEO/SRA
           </p>
         </header>
 
         {/* Main content */}
-        <div className="space-y-6">
-          {/* Description */}
+        <div className="space-y-8">
+          {/* Overview */}
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-neutral-100">Overview</h2>
             <p className="text-neutral-300 leading-relaxed">
-              PaperScope is a scientific search and metadata extraction tool that combines PubMed, PMC, SRA, and other NCBI databases into a unified interface. It enables fast, repeatable, and flexible literature discovery for researchers, analysts, and biotech teams who need fast literature intelligence.
+              PaperScope is a unified interface for searching PubMed, PMC, GEO/SRA,
+              and other NCBI endpoints. It extracts structured metadata such as DOI,
+              title, year, journal, author affiliations, and institutional details.
+              Researchers can run advanced queries, preview results interactively,
+              and export everything to Excel for downstream analysis.
             </p>
           </section>
 
-          {/* Video */}
+          {/* Promo Video */}
           <div className="rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900/50">
             <video
               src="/pumbed-scraper.mp4"
@@ -73,33 +76,51 @@ export default function PaperScopePage() {
             />
           </div>
 
-          {/* Highlights */}
+          {/* Features */}
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-neutral-100">Key Features</h2>
+
             <ul className="space-y-2 text-neutral-300">
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
-                <span>Multi-database search across PubMed, PMC, SRA, and other NCBI endpoints with unified query interface.</span>
+                <span>
+                  Unified multi-database search across PubMed, PMC, GEO/SRA, and NCBI endpoints.
+                </span>
               </li>
+
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
-                <span>Automatic extraction of DOI, title, year, journal, and comprehensive metadata fields from search results.</span>
+                <span>
+                  Structured extraction of DOI, title, year, journal, citations, and metadata fields.
+                </span>
               </li>
+
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
-                <span>Intelligent parsing of corresponding author information and institution details from article affiliations.</span>
+                <span>
+                  Intelligent parsing of corresponding authors, affiliations, and institutional metadata.
+                </span>
               </li>
+
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
-                <span>Full support for advanced NCBI query syntax, enabling complex and precise literature searches.</span>
+                <span>
+                  Full support for advanced NCBI query syntax, Boolean logic, and field-specific filters.
+                </span>
               </li>
+
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
-                <span>One-click Excel export functionality for easy data analysis and sharing with research teams.</span>
+                <span>
+                  One-click Excel export for easy organization, sharing, or downstream analysis.
+                </span>
               </li>
+
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
-                <span>User-friendly Streamlit-based interface that requires no coding knowledge to operate.</span>
+                <span>
+                  Clean and intuitive Streamlit UI requiring no programming experience.
+                </span>
               </li>
             </ul>
           </section>
@@ -108,22 +129,23 @@ export default function PaperScopePage() {
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-neutral-100">Technologies</h2>
             <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
+              {(project.tech || project.tags).map((tech) => (
                 <span
-                  key={tag}
+                  key={tech}
                   className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200"
                 >
-                  {tag}
+                  {tech}
                 </span>
               ))}
             </div>
           </section>
 
-          {/* Links */}
+          {/* Contact */}
           <section className="space-y-3">
             <h2 className="text-lg font-semibold text-neutral-100">Contact</h2>
             <p className="text-neutral-300 leading-relaxed">
-              If you'd like a customized version of this tool for your lab, research group, or organization, feel free to reach out.
+              If you'd like a customized version of PaperScope for your research group,
+              lab, or organization, feel free to reach out.
             </p>
             <p className="text-neutral-300">
               Email: <strong className="text-neutral-100">arzukirici@gmail.com</strong>
