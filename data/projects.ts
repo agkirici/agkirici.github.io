@@ -65,4 +65,28 @@ export const projects = [
     link: "https://gene-expression-atlas.vercel.app/",
     github: "https://github.com/agkirici/gene-expression-atlas",
   },
+  {
+    title: "GCP Serverless Bioinformatics Pipeline",
+    slug: "gcp-fastq-pipeline",
+    featured: true,
+    description:
+      "A production-ready serverless bioinformatics pipeline on Google Cloud Platform that automates FASTQ quality control analysis with real-time visualization and scalable infrastructure.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Google Cloud Platform",
+      "Cloud Functions",
+      "BigQuery",
+      "Terraform",
+      "Docker",
+      "Recharts",
+      "TailwindCSS",
+      "Serverless",
+      "Bioinformatics",
+    ],
+    banner: "/gcp-fastq-pipeline.png",
+    github: "https://github.com/agkirici/gcp-bioinformatics-pipeline",
+  },
 ];
