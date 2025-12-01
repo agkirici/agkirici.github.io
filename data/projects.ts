@@ -46,4 +46,22 @@ export const projects = [
     ],
     banner: "/paperscope-cover.png",
   },
+  {
+    title: "Gene Expression Atlas Explorer",
+    slug: "gene-expression-atlas",
+    featured: true,
+    description:
+      "An interactive web application for visualizing single-cell RNA-seq gene expression patterns across immune cell types and cancer-related genes. Provides instant gene expression lookup without requiring programming knowledge.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Recharts",
+      "Single-Cell RNA-seq",
+      "Data Visualization",
+      "Bioinformatics",
+    ],
+    banner: "/gene-expression-atlas.png",
+    github: "https://github.com/agkirici/gene-expression-atlas",
+  },
 ];
