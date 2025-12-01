@@ -89,7 +89,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
             className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
-            <span>DevPost</span>
+            <span>Live</span>
           </a>
         )}
         {github && (

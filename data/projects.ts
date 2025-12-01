@@ -62,6 +62,7 @@ export const projects = [
       "Bioinformatics",
     ],
     banner: "/gene-expression-atlas.png",
+    link: "https://gene-expression-atlas.vercel.app/",
     github: "https://github.com/agkirici/gene-expression-atlas",
   },
 ];
