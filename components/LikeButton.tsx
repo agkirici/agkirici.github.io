@@ -79,8 +79,8 @@ export default function LikeButton({ postId, initialLikes = 0 }: Props) {
       className={
         'inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm transition-colors ' +
         (liked 
-          ? 'bg-pink-600 text-white border-pink-600' 
-          : 'border-neutral-700 bg-neutral-800/50 text-neutral-300 hover:border-neutral-600 hover:bg-neutral-800')
+          ? 'bg-pink-600 text-white dark:text-white border-pink-600' 
+          : 'border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50 text-gray-700 dark:text-neutral-300 hover:border-neutral-400 dark:hover:border-neutral-600 hover:bg-neutral-200 dark:hover:bg-neutral-800')
       }
       aria-label={`Like this post. Current likes: ${likes}`}
     >

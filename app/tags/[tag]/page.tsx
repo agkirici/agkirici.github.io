@@ -71,10 +71,10 @@ export default async function TagPage({
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <header className="space-y-2 mb-10">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-neutral-50">
             Posts tagged &quot;{decodedTag}&quot;
           </h1>
-          <p className="text-neutral-300 text-sm md:text-base">
+          <p className="text-gray-700 dark:text-neutral-300 text-sm md:text-base">
             {posts.length} {posts.length === 1 ? 'post' : 'posts'} found
           </p>
         </header>

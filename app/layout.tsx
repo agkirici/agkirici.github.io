@@ -137,7 +137,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-neutral-100 antialiased">
+      <body className="min-h-screen bg-white dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-gray-900 dark:text-neutral-100 antialiased">
         {/* Üstte sabit navbar */}
         <Navbar />
 

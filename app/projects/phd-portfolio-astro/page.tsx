@@ -26,7 +26,7 @@ export default function PhdPortfolioPage() {
         {/* Header */}
         <header className="space-y-4">
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-neutral-50">
               {project.title}
             </h1>
             {project.featured && (
@@ -35,7 +35,7 @@ export default function PhdPortfolioPage() {
               </span>
             )}
           </div>
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-gray-600 dark:text-neutral-400">
             Academic Portfolio Template · Open Source
           </p>
         </header>
@@ -44,16 +44,16 @@ export default function PhdPortfolioPage() {
         <div className="space-y-6">
           {/* Description */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Overview</h2>
-            <p className="text-neutral-300 leading-relaxed">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Overview</h2>
+            <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
               This project is a modern academic portfolio template built using Astro and Tailwind. It provides researchers with a clean, structured, and responsive way to present their projects, publications, skills, and CV online. Offering a clearer and more functional alternative to static PDF résumés, which are increasingly limiting in a digital environment where scientific work benefits from interactive and accessible formats.
             </p>
           </section>
 
           {/* Highlights */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Key Features</h2>
-            <ul className="space-y-2 text-neutral-300">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Key Features</h2>
+            <ul className="space-y-2 text-gray-700 dark:text-neutral-300">
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
                 <span>Built with Astro and Tailwind for fast performance and clean architecture.</span>
@@ -75,18 +75,18 @@ export default function PhdPortfolioPage() {
 
           {/* Technologies */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Technologies</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Technologies</h2>
             <div className="flex flex-wrap gap-2">
-              <span className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200">
+              <span className="rounded-md bg-gray-100 dark:bg-neutral-800 px-3 py-1 text-sm text-gray-700 dark:text-neutral-200">
                 Astro
               </span>
-              <span className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200">
+              <span className="rounded-md bg-gray-100 dark:bg-neutral-800 px-3 py-1 text-sm text-gray-700 dark:text-neutral-200">
                 Tailwind CSS
               </span>
-              <span className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200">
+              <span className="rounded-md bg-gray-100 dark:bg-neutral-800 px-3 py-1 text-sm text-gray-700 dark:text-neutral-200">
                 TypeScript
               </span>
-              <span className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200">
+              <span className="rounded-md bg-gray-100 dark:bg-neutral-800 px-3 py-1 text-sm text-gray-700 dark:text-neutral-200">
                 Vercel
               </span>
             </div>
@@ -94,7 +94,7 @@ export default function PhdPortfolioPage() {
 
           {/* Links */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Links</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Links</h2>
             <div className="flex flex-wrap gap-4">
               {project.github && (
                 <a

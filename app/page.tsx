@@ -48,7 +48,7 @@ export default function HomePage() {
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-neutral-100">About</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100">About</h2>
           
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-center">
             {/* Profile Picture and Social Media - Left Side */}
@@ -58,7 +58,7 @@ export default function HomePage() {
                 alt="Arzu Kirici"
                 width={200}
                 height={200}
-                className="rounded-full object-cover border-2 border-neutral-700"
+                className="rounded-full object-cover border-2 border-gray-300 dark:border-neutral-700"
                 priority
               />
               
@@ -69,11 +69,11 @@ export default function HomePage() {
                   href="https://www.linkedin.com/in/arzu-kirici"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <svg
-                    className="w-6 h-6 text-neutral-200"
+                    className="w-6 h-6 text-gray-700 dark:text-neutral-200"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -87,11 +87,11 @@ export default function HomePage() {
                   href="https://github.com/agkirici"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
                   aria-label="GitHub"
                 >
                   <svg
-                    className="w-6 h-6 text-neutral-200"
+                    className="w-6 h-6 text-gray-700 dark:text-neutral-200"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -105,11 +105,11 @@ export default function HomePage() {
                   href="https://www.upwork.com/freelancers/~0135d7c36f12a8eba8?mp_source=share"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
                   aria-label="Upwork"
                 >
                   <svg
-                    className="w-6 h-6 text-neutral-200"
+                    className="w-6 h-6 text-gray-700 dark:text-neutral-200"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ export default function HomePage() {
 
             {/* Text Content - Right Side */}
             <div className="flex-1 space-y-4">
-              <div className="space-y-4 text-neutral-300 leading-relaxed">
+              <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed">
                 <p>
                   I am a scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and academic research groups. I have nearly a decade of experience in biological sciences and four years of experience in software development.
                 </p>
@@ -210,7 +210,7 @@ export default function HomePage() {
           {/* How I help */}
           <Accordion title="How I can help?">
             <div className="space-y-2">
-              <h4 className="font-semibold text-neutral-100">End-to-end development</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">End-to-end development</h4>
               <p className="leading-relaxed">
                 You explain the biological or clinical problem and I design and build the
                 application from start to finish. This includes data handling, backend
@@ -219,7 +219,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-neutral-100">
+              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">
                 Tool development and handover
               </h4>
               <p className="leading-relaxed">
@@ -229,7 +229,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-neutral-100">Done for you</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Done for you</h4>
               <p className="leading-relaxed">
                 I take responsibility for a clearly defined project and deliver a working
                 product that is ready to use.
@@ -237,7 +237,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-neutral-100">Done with you</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Done with you</h4>
               <p className="leading-relaxed">
                 We work together on your systems. I help implement the core parts of your
                 infrastructure and make sure it runs smoothly in your environment.
@@ -245,7 +245,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-semibold text-neutral-100">Advisory</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Advisory</h4>
               <p className="leading-relaxed">
                 I review your workflows and help you make better decisions about tools,
                 pipelines and architecture for projects in healthcare, spatial biology and
@@ -256,8 +256,8 @@ export default function HomePage() {
         </div>
 
         {/* CTA */}
-        <section className="border-t border-neutral-800 pt-6">
-          <p className="text-neutral-300 leading-relaxed">
+        <section className="border-t border-gray-200 dark:border-neutral-800 pt-6">
+          <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
             If you work in healthcare, pharma or biotech and you need a tool that doesn&apos;t
             exist yet, you can reach me through the{" "}
             <a

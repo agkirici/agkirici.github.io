@@ -18,7 +18,7 @@ export default function BlogCard({ title, excerpt, date, slug, coverImage }: Blo
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogPostUrl)}`;
 
   return (
-    <div className="max-w-[380px] mx-auto rounded-xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
+    <div className="max-w-[380px] mx-auto rounded-xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
       <Link href={`/blog/${slug}`} className="block">
         {coverImage && (
           <div className="h-48 w-full overflow-hidden">
@@ -32,14 +32,14 @@ export default function BlogCard({ title, excerpt, date, slug, coverImage }: Blo
           </div>
         )}
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-neutral-50 mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-neutral-50 mb-2">
             {title}
           </h3>
-          <p className="text-sm text-neutral-400 mb-2">
+          <p className="text-sm text-gray-600 dark:text-neutral-400 mb-2">
             {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
           {excerpt && (
-            <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed">
+            <p className="text-sm text-gray-700 dark:text-neutral-300 line-clamp-3 leading-relaxed">
               {excerpt}
             </p>
           )}
@@ -47,7 +47,7 @@ export default function BlogCard({ title, excerpt, date, slug, coverImage }: Blo
       </Link>
       
       {/* LinkedIn Share Button */}
-      <div className="px-4 pb-4 border-t border-neutral-800 pt-3">
+      <div className="px-4 pb-4 border-t border-gray-200 dark:border-neutral-800 pt-3">
         <a
           href={linkedinShareUrl}
           target="_blank"

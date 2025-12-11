@@ -33,7 +33,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
   const linkedinShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(projectWebsiteUrl)}`;
 
   return (
-    <div className="max-w-[380px] mx-auto rounded-3xl overflow-hidden bg-neutral-900 border border-neutral-800 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
+    <div className="max-w-[380px] mx-auto rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-sm transition duration-200 hover:border-sky-500 hover:shadow-sky-500/20">
       <Link href={`/projects/${slug}`} className="block">
         {/* Banner Image */}
         {banner && (
@@ -51,7 +51,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
         {/* Content */}
         <div className="p-4">
           <div className="flex items-start gap-2 mb-2">
-            <h2 className="text-lg font-semibold text-neutral-50 flex-1">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-50 flex-1">
               {title}
             </h2>
             {featured && (
@@ -61,7 +61,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
             )}
           </div>
 
-          <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed mb-3">
+          <p className="text-sm text-gray-700 dark:text-neutral-300 line-clamp-3 leading-relaxed mb-3">
             {description}
           </p>
 
@@ -70,7 +70,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-neutral-800 px-2.5 py-0.5 text-xs text-neutral-200"
+                className="rounded-full bg-gray-100 dark:bg-neutral-800 px-2.5 py-0.5 text-xs text-gray-700 dark:text-neutral-200"
               >
                 {tag}
               </span>
@@ -80,13 +80,13 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
       </Link>
 
       {/* Action buttons */}
-      <div className="px-4 pb-4 border-t border-neutral-800 pt-3 flex flex-wrap gap-2">
+      <div className="px-4 pb-4 border-t border-gray-200 dark:border-neutral-800 pt-3 flex flex-wrap gap-2">
         {link && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-md border border-gray-300 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-neutral-200 hover:bg-gray-200 dark:hover:bg-neutral-800 hover:border-gray-400 dark:hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             <span>Live</span>
@@ -97,7 +97,7 @@ export default function ProjectCard({ title, description, tags, slug, featured, 
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-neutral-700 bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-neutral-200 hover:bg-neutral-800 hover:border-neutral-600 transition-colors"
+            className="inline-flex items-center gap-1.5 rounded-md border border-gray-300 dark:border-neutral-700 bg-gray-100 dark:bg-neutral-800/50 px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-neutral-200 hover:bg-gray-200 dark:hover:bg-neutral-800 hover:border-gray-400 dark:hover:border-neutral-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             <span>GitHub</span>

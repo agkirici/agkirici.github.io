@@ -36,17 +36,17 @@ export default async function BlogPage() {
     <main className="min-h-screen px-4 py-12 md:py-16">
       <div className="mx-auto max-w-7xl">
         <header className="space-y-2 mb-10">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-neutral-50">
             Blog
           </h1>
-          <p className="text-neutral-300 text-sm md:text-base">
+          <p className="text-gray-700 dark:text-neutral-300 text-sm md:text-base">
             Research notes, technical insights, and reflections on bioinformatics software development.
           </p>
         </header>
 
         {posts.length === 0 ? (
-          <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-8 text-center">
-            <p className="text-neutral-400">No blog posts yet. Check back soon!</p>
+          <div className="rounded-xl border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900/60 p-8 text-center">
+            <p className="text-gray-600 dark:text-neutral-400">No blog posts yet. Check back soon!</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

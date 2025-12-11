@@ -27,7 +27,7 @@ export default function GeneExpressionAtlasPage() {
         {/* Header */}
         <header className="space-y-4">
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-neutral-50">
               {project.title}
             </h1>
             {project.featured && (
@@ -36,7 +36,7 @@ export default function GeneExpressionAtlasPage() {
               </span>
             )}
           </div>
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-gray-600 dark:text-neutral-400">
             Interactive Single-Cell RNA-seq Visualization Tool · Web Application
           </p>
         </header>
@@ -45,14 +45,14 @@ export default function GeneExpressionAtlasPage() {
         <div className="space-y-6">
           {/* Description */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Overview</h2>
-            <p className="text-neutral-300 leading-relaxed">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Overview</h2>
+            <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
               Gene Expression Atlas Explorer is an interactive web application for visualizing single-cell RNA-seq gene expression patterns across immune cell types and cancer-related genes. It provides instant gene expression lookup without requiring programming knowledge, making single-cell analysis accessible to wet-lab scientists, clinicians, and researchers who don't write code.
             </p>
           </section>
 
           {/* Cover Image */}
-          <div className="rounded-xl overflow-hidden border border-neutral-800 bg-neutral-900/50">
+          <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-neutral-800 bg-gray-50 dark:bg-neutral-900/50">
             <Image
               src="/gene-expression-atlas.png"
               alt="Gene Expression Atlas Explorer Interface"
@@ -65,8 +65,8 @@ export default function GeneExpressionAtlasPage() {
 
           {/* Highlights */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Key Features</h2>
-            <ul className="space-y-2 text-neutral-300">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Key Features</h2>
+            <ul className="space-y-2 text-gray-700 dark:text-neutral-300">
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
                 <span>Real-time gene search across 45+ curated genes including immune cell markers and cancer genes with auto-suggest functionality.</span>
@@ -96,12 +96,12 @@ export default function GeneExpressionAtlasPage() {
 
           {/* Technologies */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Technologies</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Technologies</h2>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200"
+                  className="rounded-md bg-gray-100 dark:bg-neutral-800 px-3 py-1 text-sm text-gray-700 dark:text-neutral-200"
                 >
                   {tag}
                 </span>
@@ -111,7 +111,7 @@ export default function GeneExpressionAtlasPage() {
 
           {/* Links */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Links</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Links</h2>
             <div className="flex flex-wrap gap-4">
               {project.github && (
                 <a

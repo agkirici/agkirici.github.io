@@ -46,7 +46,7 @@ export default function ContactPage() {
             </h1>
           </header>
 
-          <p className="text-sm leading-relaxed text-neutral-300 md:text-base">
+          <p className="text-sm leading-relaxed text-gray-700 dark:text-neutral-300 md:text-base">
             I work at the intersection of biology, data analysis and software
             development. If you&apos;re working in healthcare, pharma, or
             spatial biology and want to discuss a project, collaboration, or
@@ -59,11 +59,11 @@ export default function ContactPage() {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
               aria-label="LinkedIn"
             >
               <svg
-                className="w-6 h-6 text-neutral-200"
+                className="w-6 h-6 text-gray-700 dark:text-neutral-200"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,11 +77,11 @@ export default function ContactPage() {
               href={GITHUB_URL}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
               aria-label="GitHub"
             >
               <svg
-                className="w-6 h-6 text-neutral-200"
+                className="w-6 h-6 text-gray-700 dark:text-neutral-200"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,11 +95,11 @@ export default function ContactPage() {
               href={UPWORK_URL}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-neutral-800 hover:bg-sky-600 transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
               aria-label="Upwork"
             >
               <svg
-                className="w-6 h-6 text-neutral-200"
+                className="w-6 h-6 text-gray-700 dark:text-neutral-200"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="space-y-2 text-xs text-neutral-400">
+          <div className="space-y-2 text-xs text-gray-600 dark:text-neutral-400">
             <p className="font-semibold uppercase tracking-wide">
               How I usually collaborate
             </p>
@@ -123,11 +123,11 @@ export default function ContactPage() {
 
         {/* Right: contact form */}
         <section className="md:w-1/2">
-          <div className="rounded-xl border border-neutral-800 bg-neutral-900/70 p-6 shadow-sm">
-            <h2 className="text-lg font-semibold text-neutral-50">
+          <div className="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/70 p-6 shadow-sm">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-50">
               Send a message
             </h2>
-            <p className="mt-1 text-xs text-neutral-400">
+            <p className="mt-1 text-xs text-gray-600 dark:text-neutral-400">
               This form opens an email draft to {EMAIL}. No data is stored on
               the server.
             </p>
@@ -136,7 +136,7 @@ export default function ContactPage() {
               <div className="space-y-1">
                 <label
                   htmlFor="name"
-                  className="block text-xs font-medium text-neutral-300"
+                  className="block text-xs font-medium text-gray-700 dark:text-neutral-300"
                 >
                   Name
                 </label>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   type="text"
-                  className="w-full rounded-md border border-neutral-700 bg-neutral-900 px-3 py-2 text-sm text-neutral-50 outline-none focus:border-sky-500"
+                  className="w-full rounded-md border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-3 py-2 text-sm text-gray-900 dark:text-neutral-50 outline-none focus:border-sky-500"
                   placeholder="Your name"
                 />
               </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
               <div className="space-y-1">
                 <label
                   htmlFor="email"
-                  className="block text-xs font-medium text-neutral-300"
+                  className="block text-xs font-medium text-gray-700 dark:text-neutral-300"
                 >
                   Email
                 </label>
@@ -161,7 +161,7 @@ export default function ContactPage() {
                   name="email"
                   type="email"
                   required
-                  className="w-full rounded-md border border-neutral-700 bg-neutral-900 px-3 py-2 text-sm text-neutral-50 outline-none focus:border-sky-500"
+                  className="w-full rounded-md border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-3 py-2 text-sm text-gray-900 dark:text-neutral-50 outline-none focus:border-sky-500"
                   placeholder="you@example.com"
                 />
               </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
               <div className="space-y-1">
                 <label
                   htmlFor="message"
-                  className="block text-xs font-medium text-neutral-300"
+                  className="block text-xs font-medium text-gray-700 dark:text-neutral-300"
                 >
                   Message
                 </label>
@@ -186,7 +186,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="inline-flex items-center justify-center rounded-md bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-500 disabled:cursor-not-allowed disabled:opacity-70"
+                className="inline-flex items-center justify-center rounded-md bg-sky-600 px-4 py-2 text-sm font-medium text-white dark:text-white hover:bg-sky-500 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status === "sent" ? "Email draft opened" : "Compose email"}
               </button>

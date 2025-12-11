@@ -22,7 +22,7 @@ export default function SpatioScriptPage() {
         {/* Header */}
         <header className="space-y-4">
           <div className="flex items-center gap-3">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-neutral-50">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-gray-900 dark:text-neutral-50">
               {project.title}
             </h1>
             {project.featured && (
@@ -31,7 +31,7 @@ export default function SpatioScriptPage() {
               </span>
             )}
           </div>
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-gray-600 dark:text-neutral-400">
             Sep 2025 – Present · PANORAMICS – A Vision · Toronto Bioinformatics Hackathon 2025
           </p>
         </header>
@@ -40,16 +40,16 @@ export default function SpatioScriptPage() {
         <div className="space-y-6">
           {/* Description */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Overview</h2>
-            <p className="text-neutral-300 leading-relaxed">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Overview</h2>
+            <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
               SpatioScript is an LLM-powered spatial biology query tool that lets users ask natural language questions about spatial and single-cell datasets. The system connects preprocessed data, cell type annotations, spatial graphs and image views to answer biologically meaningful questions.
             </p>
           </section>
 
           {/* Highlights */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Key Features</h2>
-            <ul className="space-y-2 text-neutral-300">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Key Features</h2>
+            <ul className="space-y-2 text-gray-700 dark:text-neutral-300">
               <li className="flex items-start gap-2">
                 <span className="text-sky-400 mt-1">•</span>
                 <span>Built an end-to-end prototype that turns English questions into queries over spatial biology data.</span>
@@ -71,12 +71,12 @@ export default function SpatioScriptPage() {
 
           {/* Technologies */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Technologies</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Technologies</h2>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md bg-neutral-800 px-3 py-1 text-sm text-neutral-200"
+                  className="rounded-md bg-gray-100 dark:bg-neutral-800 px-3 py-1 text-sm text-gray-700 dark:text-neutral-200"
                 >
                   {tag}
                 </span>
@@ -86,7 +86,7 @@ export default function SpatioScriptPage() {
 
           {/* Links */}
           <section className="space-y-3">
-            <h2 className="text-lg font-semibold text-neutral-100">Links</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100">Links</h2>
             <div className="flex flex-wrap gap-4">
               {project.github && (
                 <a

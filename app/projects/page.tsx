@@ -16,10 +16,10 @@ export default function ProjectsPage() {
       <div className="mx-auto max-w-6xl space-y-8">
         {/* Header */}
         <header className="space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-neutral-50">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-gray-900 dark:text-neutral-50">
             Projects
           </h1>
-          <p className="text-lg text-neutral-400 max-w-2xl">
+          <p className="text-lg text-gray-600 dark:text-neutral-400 max-w-2xl">
             A collection of bioinformatics tools, scientific software, and research applications I've built.
           </p>
         </header>
