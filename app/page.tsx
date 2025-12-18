@@ -124,13 +124,16 @@ export default function HomePage() {
             <div className="flex-1 space-y-4">
               <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed">
                 <p>
-                  I am a scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and academic research groups. I have nearly a decade of experience in biological sciences and four years of experience in software development.
+                  I am a scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and academic research groups. My career spans 15 years in biological sciences and software development, creating a unique perspective that bridges wet lab and code.
                 </p>
                 <p>
-                  I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows, and later moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations.
+                  I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. After completing my master&apos;s in biotechnology, I moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations.
                 </p>
                 <p>
-                  Today, I combine my biology background with software development to build tools, pipelines, and interfaces that make complex research tasks easier for scientists who don&apos;t write code.
+                  Somewhere along that journey, I realized that understanding biology wasn&apos;t enough—I needed to build the tools that could make sense of the data we were generating. So I taught myself software development, then dove into bioinformatics, learning to create solutions that work in real research settings.
+                </p>
+                <p>
+                  Today, I combine my biology background with software development to build tools, pipelines, and interfaces that make complex research tasks easier for scientists who don&apos;t write code. I also coordinate projects where biologists, software engineers, and data scientists need to collaborate—bridging teams that often struggle to speak the same language.
                 </p>
               </div>
             </div>
@@ -142,43 +145,34 @@ export default function HomePage() {
           {/* Where I'm heading */}
           <Accordion title="Where I'm heading?">
             <p className="leading-relaxed">
-              I&apos;m focusing on bioinformatics software development building tools that sit between experimental biology and practical computation. My goal is to bridge the gap between scientists who understand biological problems and the software that needs to support their workflows.
+              I&apos;m focusing on bioinformatics software development and research coordination—building tools that sit between experimental biology and practical computation, and facilitating collaboration between teams that span multiple disciplines.
             </p>
 
             <p className="leading-relaxed">
-              Most researchers are not programmers, and they shouldn&apos;t need to be.
+              My goal is to bridge the gap between scientists who understand biological problems and the software that needs to support their workflows. Most researchers are not programmers, and they shouldn&apos;t need to be.
             </p>
 
             <p className="leading-relaxed">
-              I help by translating biological or clinical questions into tools, pipelines, and interfaces that actually work in real research settings without requiring scientists to write code, debug scripts, or manage complex data formats.
-            </p>
-
-            <p className="leading-relaxed">
-              I design solutions that allow researchers to:
+              I help by:
             </p>
 
             <ul className="list-disc pl-5 space-y-1">
-              <li>organize and clean messy datasets</li>
-              <li>automate repetitive tasks</li>
-              <li>run reproducible single-cell, spatial-omics, or clinical analyses</li>
-              <li>interact with their data through simple, intuitive interfaces</li>
-              <li>offload the computational layer and focus on the science</li>
+              <li>Translating biological or clinical questions into tools, pipelines, and interfaces that actually work</li>
+              <li>Coordinating cross-functional teams where wet lab scientists, software engineers, and data analysts need to collaborate</li>
+              <li>Building solutions that allow researchers to organize data, automate tasks, run reproducible analyses, and interact with their data through simple interfaces</li>
+              <li>Managing projects that require both deep biological understanding and technical implementation</li>
             </ul>
+
+            <p className="leading-relaxed mt-4">
+              When you&apos;ve worked in both the lab and in code, you know what questions to ask. You know when engineers are proposing something that won&apos;t work in a real research setting. You know when scientists are requesting features that are technically impossible. You can facilitate the conversation that moves the project forward.
+            </p>
 
             <p className="leading-relaxed mt-4">
               <strong>Technically, here is what I work with:</strong>
             </p>
 
             <p className="leading-relaxed">
-              I work on bioinformatics software development, building tools that sit between data analysis and practical research workflows.
-            </p>
-
-            <p className="leading-relaxed">
-              I use Python for data processing and TypeScript/React for full-stack applications, using frameworks that let me develop clean, reliable interfaces.
-            </p>
-
-            <p className="leading-relaxed">
-              I work with tools like Scanpy for single-cell and spatial data, and I write both backend and frontend logic depending on what a project requires.
+              I use Python for data processing and TypeScript/React for full-stack applications, using frameworks that let me develop clean, reliable interfaces. I work with tools like Scanpy for single-cell and spatial data, and I write both backend and frontend logic depending on what a project requires. I also coordinate technical projects, translating requirements between scientific stakeholders and development teams.
             </p>
           </Accordion>
 
@@ -204,6 +198,8 @@ export default function HomePage() {
               <li>Companies developing single-cell or spatial technologies</li>
               <li>Biotech and pharma teams working with single-cell or spatial data</li>
               <li>Research groups and PIs running single-cell or spatial biology projects</li>
+              <li>Cross-functional teams that need coordination between biology, software engineering, and data science</li>
+              <li>Organizations building research infrastructure where multiple disciplines must collaborate</li>
             </ul>
           </Accordion>
 
@@ -250,6 +246,13 @@ export default function HomePage() {
                 I review your workflows and help you make better decisions about tools,
                 pipelines and architecture for projects in healthcare, spatial biology and
                 biotech.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Research & Project Coordination</h4>
+              <p className="leading-relaxed">
+                I coordinate cross-functional research projects where biologists, software engineers, and data scientists need to work together. Having worked in both wet lab and software development, I can translate between teams, manage timelines, and ensure that technical solutions actually address the biological questions.
               </p>
             </div>
           </Accordion>
