@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main className="min-h-screen px-4 py-12 md:py-16">
-      <div className="mx-auto max-w-3xl space-y-12">
+      <div className="mx-auto max-w-3xl md:max-w-6xl space-y-12">
         {/* Name Header */}
         <header>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500 text-center">
@@ -48,11 +48,13 @@ export default function HomePage() {
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 text-center">About</h2>
+          {/* Mobile: Centered heading */}
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 text-center md:hidden">About</h2>
           
-          <div className="flex flex-col md:flex-row gap-8 items-center md:items-center">
-            {/* Profile Picture and Social Media - Left Side */}
-            <div className="flex-shrink-0 flex flex-col items-center space-y-4">
+          {/* Desktop: Two-column grid layout */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-12">
+            {/* Profile Picture and Social Media - Left Column (Desktop) / Centered (Mobile) */}
+            <div className="flex flex-col items-center space-y-4">
               <Image
                 src="/profile.jpg"
                 alt="Arzu Kirici"
@@ -120,8 +122,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Text Content - Right Side */}
-            <div className="flex-1 space-y-4">
+            {/* Text Content - Right Column (Desktop) / Full Width (Mobile) */}
+            <div className="space-y-4 max-w-3xl">
+              {/* Desktop: Left-aligned heading */}
+              <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 hidden md:block text-left">About</h2>
+              
               <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed">
                 <p>
                   I am a scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and academic research groups. My career spans 15 years in biological sciences and software development, creating a unique perspective that bridges wet lab and code.
