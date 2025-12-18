@@ -130,10 +130,10 @@ export default function HomePage() {
                   I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. After completing my master&apos;s in biotechnology, I moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations.
                 </p>
                 <p>
-                  Somewhere along that journey, I realized that understanding biology wasn&apos;t enough—I needed to build the tools that could make sense of the data we were generating. So I taught myself software development, then dove into bioinformatics, learning to create solutions that work in real research settings.
+                  Somewhere along that journey, I realized that understanding biology wasn&apos;t enough I needed to build the tools that could make sense of the data we were generating. So I taught myself software development, then dove into bioinformatics, learning to create solutions that work in real research settings.
                 </p>
                 <p>
-                  Today, I combine my biology background with software development to build tools, pipelines, and interfaces that make complex research tasks easier for scientists who don&apos;t write code. I also coordinate projects where biologists, software engineers, and data scientists need to collaborate—bridging teams that often struggle to speak the same language.
+                  Today, I combine my biology background with software development to build tools, pipelines, and interfaces that make complex research tasks easier for scientists who don&apos;t write code. I also coordinate projects where biologists, software engineers, and data scientists need to collaborate bridging teams that often struggle to speak the same language.
                 </p>
               </div>
             </div>
