@@ -41,14 +41,14 @@ export default function HomePage() {
       <div className="mx-auto max-w-3xl space-y-12">
         {/* Name Header */}
         <header>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500 text-center">
             Arzu Kirici
           </h1>
         </header>
 
         {/* About Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100">About</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 text-center">About</h2>
           
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-center">
             {/* Profile Picture and Social Media - Left Side */}
