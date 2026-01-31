@@ -1,15 +1,14 @@
 // © 2025 Arzu Kirici — All Rights Reserved
-
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import Accordion from '@/components/Accordion';
 
 export const metadata: Metadata = {
-  title: "Arzu Kirici | Portfolio",
-  description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+  title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
+  description: "Bridge technical and non-technical teams in healthcare, AI, and biotechnology. Project Manager, Business Analyst, and Strategic Leader with 10+ years in healthcare and 5+ years in project management and software development.",
   openGraph: {
-    title: "Arzu Kirici | Portfolio",
-    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
+    description: "Bridge technical and non-technical teams in healthcare, AI, and biotechnology. Project Manager, Business Analyst, and Strategic Leader with 10+ years in healthcare and 5+ years in project management and software development.",
     url: "https://arzukirici.com",
     siteName: "Arzu Kirici Portfolio",
     type: "website",
@@ -25,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arzu Kirici | Portfolio",
-    description: "Portfolio of Arzu Kirici — bioinformatics tools, scientific software, and multi-omics data workflows.",
+    title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
+    description: "Bridge technical and non-technical teams in healthcare, AI, and biotechnology. Project Manager, Business Analyst, and Strategic Leader with 10+ years in healthcare and 5+ years in project management and software development.",
     site: "https://arzukirici.com",
     images: ["https://arzukirici.com/og-image.png"],
   },
@@ -42,15 +41,20 @@ export default function HomePage() {
         {/* Name Header */}
         <header>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500 text-center">
-            Arzu Kirici
+            Arzu Kirici, MSc
           </h1>
+          <p className="text-lg text-gray-600 dark:text-neutral-400 text-center mt-4 max-w-2xl mx-auto leading-relaxed">
+            I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.
+          </p>
         </header>
 
         {/* About Section */}
         <section>
           {/* Mobile: Centered heading */}
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 text-center md:hidden">About</h2>
-          
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 text-center md:hidden">
+            About
+          </h2>
+
           {/* Desktop: Two-column grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-12">
             {/* Profile Picture and Social Media - Left Column (Desktop) / Centered (Mobile) */}
@@ -63,7 +67,7 @@ export default function HomePage() {
                 className="rounded-full object-cover border-2 border-gray-300 dark:border-neutral-700"
                 priority
               />
-              
+
               {/* Social Media Icons */}
               <div className="flex gap-4">
                 {/* LinkedIn */}
@@ -125,20 +129,29 @@ export default function HomePage() {
             {/* Text Content - Right Column (Desktop) / Full Width (Mobile) */}
             <div className="space-y-4 max-w-3xl">
               {/* Desktop: Left-aligned heading */}
-              <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 hidden md:block text-left">About</h2>
-              
-              <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed">
+              <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 hidden md:block text-left">
+                About
+              </h2>
+
+              <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
                 <p>
-                  I am a scientist building user-friendly software that supports real research workflows for the healthcare industry, biotech companies, and academic research groups. My career spans 15 years in biological sciences and software development, creating a unique perspective that bridges wet lab and code.
+                  I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years of healthcare experience, 5+ years in project management, and 5+ years in software development, I bring a unique perspective as both a project manager and business analyst, leading cross-functional initiatives across the full project lifecycle.
                 </p>
+
                 <p>
-                  I began my career in a genetic disease diagnostic laboratory, working on molecular assays and next-generation sequencing workflows. After completing my master&apos;s in biotechnology, I moved into cancer research, where I supported multi-omics projects as a data analyst and contributed to data curation, workflow optimization, and research operations.
+                  My unique strength is translating complex requirements between researchers, data scientists, and software developers on one side, and business stakeholders, executive leadership, and operational teams on the other. I gather requirements from both technical and business perspectives, manage stakeholder engagement across all levels, and ensure alignment across wet-lab operations, software development, and AI deployment initiatives.
                 </p>
+
                 <p>
-                  Somewhere along that journey, I realized that understanding biology wasn&apos;t enough I needed to build the tools that could make sense of the data we were generating. So I taught myself software development, then dove into bioinformatics, learning to create solutions that work in real research settings.
+                  I develop tracking systems and dashboards to monitor project KPIs, enabling data-driven decision-making and strategic planning for executive teams. Working with Agile and Scrum methodologies, I leverage project management platforms and tools to facilitate communication between research teams and business stakeholders, conducting gap analyses and identifying opportunities for process improvement.
                 </p>
+
                 <p>
-                  Today, I combine my biology background with software development to build tools, pipelines, and interfaces that make complex research tasks easier for scientists who don&apos;t write code. I also coordinate projects where biologists, software engineers, and data scientists need to collaborate bridging teams that often struggle to speak the same language.
+                  With a background spanning molecular biology, data science, and software development, I serve as the critical link ensuring technical teams understand business objectives while helping business leaders make informed decisions about technical investments.
+                </p>
+
+                <p className="italic">
+                  Open to Business Analyst, Project Manager, Senior Project Analyst, Senior Research Analyst, opportunities at the intersection of healthcare, IT, AI and business.
                 </p>
               </div>
             </div>
@@ -147,118 +160,79 @@ export default function HomePage() {
 
         {/* Accordion Sections */}
         <div className="space-y-4">
-          {/* Where I'm heading */}
-          <Accordion title="Where I'm heading?">
-            <p className="leading-relaxed">
-              I&apos;m focusing on bioinformatics software development and research coordination—building tools that sit between experimental biology and practical computation, and facilitating collaboration between teams that span multiple disciplines.
-            </p>
+          {/* Where I'm Heading */}
+          <Accordion title="Where I'm Heading">
+            <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
+              <p>
+                I'm seeking Project Manager, Project Development Manager, Research Manager, Project Analyst, and Business Analyst roles where I can leverage my unique blend of 10+ years healthcare expertise, 5+ years project management experience, and 5+ years software development capabilities in forward-thinking healthcare and technology organizations.
+              </p>
 
-            <p className="leading-relaxed">
-              My goal is to bridge the gap between scientists who understand biological problems and the software that needs to support their workflows. Most researchers are not programmers, and they shouldn&apos;t need to be.
-            </p>
+              <p>
+                My goal is to drive innovation at the intersection of life sciences and technology, leading projects that improve patient outcomes and advance scientific understanding. Currently pursuing CAPM certification and actively expanding my business analysis capabilities to deliver even greater value to complex, cross-functional initiatives.
+              </p>
 
-            <p className="leading-relaxed">
-              I help by:
-            </p>
-
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Translating biological or clinical questions into tools, pipelines, and interfaces that actually work</li>
-              <li>Coordinating cross-functional teams where wet lab scientists, software engineers, and data analysts need to collaborate</li>
-              <li>Building solutions that allow researchers to organize data, automate tasks, run reproducible analyses, and interact with their data through simple interfaces</li>
-              <li>Managing projects that require both deep biological understanding and technical implementation</li>
-            </ul>
-
-            <p className="leading-relaxed mt-4">
-              When you&apos;ve worked in both the lab and in code, you know what questions to ask. You know when engineers are proposing something that won&apos;t work in a real research setting. You know when scientists are requesting features that are technically impossible. You can facilitate the conversation that moves the project forward.
-            </p>
-
-            <p className="leading-relaxed mt-4">
-              <strong>Technically, here is what I work with:</strong>
-            </p>
-
-            <p className="leading-relaxed">
-              I use Python for data processing and TypeScript/React for full-stack applications, using frameworks that let me develop clean, reliable interfaces. I work with tools like Scanpy for single-cell and spatial data, and I write both backend and frontend logic depending on what a project requires. I also coordinate technical projects, translating requirements between scientific stakeholders and development teams.
-            </p>
+              <p>
+                I thrive in environments where strategic thinking meets execution excellence, and where bridging technical and business perspectives creates measurable impact.
+              </p>
+            </div>
           </Accordion>
 
-          {/* What this website is for */}
-          <Accordion title="What this website is for?">
-            <p className="leading-relaxed">
-              This website collects the projects I&apos;m building at the intersection of
-              biology, data analysis and software. My goal is to create simple, focused
-              applications that make everyday research workflows easier.
-            </p>
+          {/* What This Website Is For */}
+          <Accordion title="What This Website Is For">
+            <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
+              <p>
+                This platform showcases my professional journey and capabilities in project management, business analysis, and strategic leadership within healthcare and biotechnology sectors. Here you'll find examples of my work, insights into my approach, and ways to connect.
+              </p>
 
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Internal tools and dashboards for biotech and pharma teams</li>
-              <li>Applications for spatial biology and multi-omics data exploration</li>
-              <li>Small applications that simplify lab or analytics tasks</li>
-              <li>Prototypes that test ideas in healthcare and research software</li>
-            </ul>
+              <p>
+                Whether you're looking for a project manager who understands both the science and the business, need a business analyst who can translate technical requirements into strategic initiatives, or you're interested in collaboration opportunities, this is your starting point.
+              </p>
+
+              <p>
+                I believe the most impactful innovations happen when technical excellence meets business acumen, and this site demonstrates how I bridge that gap.
+              </p>
+            </div>
           </Accordion>
 
-          {/* Who I help */}
-          <Accordion title="Who I work with?">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Companies developing single-cell or spatial technologies</li>
-              <li>Biotech and pharma teams working with single-cell or spatial data</li>
-              <li>Research groups and PIs running single-cell or spatial biology projects</li>
-              <li>Cross-functional teams that need coordination between biology, software engineering, and data science</li>
-              <li>Organizations building research infrastructure where multiple disciplines must collaborate</li>
-            </ul>
+          {/* Who I Work With */}
+          <Accordion title="Who I Work With">
+            <div className="space-y-3 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
+              <p className="font-semibold text-gray-900 dark:text-neutral-100">
+                I serve as the bridge between diverse teams and stakeholders, facilitating communication and alignment across:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Executive leadership and C-suite stakeholders requiring strategic insights and business outcomes</li>
+                <li>Biologists and researchers developing cutting-edge therapeutic approaches and spatial biology solutions</li>
+                <li>AI engineers and data scientists building healthcare and bioinformatics applications</li>
+                <li>Software developers creating tools for life sciences and clinical research applications</li>
+                <li>Marketing teams translating scientific innovations into compelling value propositions</li>
+                <li>Communication teams ensuring clear messaging across technical and non-technical audiences</li>
+                <li>Clinical research teams advancing patient care through innovative diagnostic technologies</li>
+                <li>Healthcare organizations implementing digital transformation and process optimization initiatives</li>
+                <li>Operations teams managing day-to-day execution and resource allocation</li>
+                <li>Cross-functional teams in biotech startups navigating rapid growth and scaling challenges</li>
+              </ul>
+              <p>
+                My role is to ensure seamless collaboration by translating requirements, managing expectations, and aligning objectives across all these diverse groups.
+              </p>
+            </div>
           </Accordion>
 
-          {/* How I help */}
-          <Accordion title="How I can help?">
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">End-to-end development</h4>
-              <p className="leading-relaxed">
-                You explain the biological or clinical problem and I design and build the
-                application from start to finish. This includes data handling, backend
-                logic and the full interface.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">
-                Tool development and handover
-              </h4>
-              <p className="leading-relaxed">
-                I build the pipelines or dashboards you need and I provide clean, documented
-                code that your team can maintain or extend.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Done for you</h4>
-              <p className="leading-relaxed">
-                I take responsibility for a clearly defined project and deliver a working
-                product that is ready to use.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Done with you</h4>
-              <p className="leading-relaxed">
-                We work together on your systems. I help implement the core parts of your
-                infrastructure and make sure it runs smoothly in your environment.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Advisory</h4>
-              <p className="leading-relaxed">
-                I review your workflows and help you make better decisions about tools,
-                pipelines and architecture for projects in healthcare, spatial biology and
-                biotech.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="font-semibold text-gray-900 dark:text-neutral-100">Research & Project Coordination</h4>
-              <p className="leading-relaxed">
-                I coordinate cross-functional research projects where biologists, software engineers, and data scientists need to work together. Having worked in both wet lab and software development, I can translate between teams, manage timelines, and ensure that technical solutions actually address the biological questions.
-              </p>
+          {/* How I Can Help */}
+          <Accordion title="How I Can Help">
+            <div className="space-y-4 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Bridging communication gaps between technical and non-technical stakeholders across all organizational levels</li>
+                <li>Translating complex scientific requirements into executable project plans and actionable business strategies</li>
+                <li>Coordinating cross-functional teams across biology, engineering, software development, and business domains</li>
+                <li>Facilitating alignment between research teams, marketing teams, communication teams, and executive leadership</li>
+                <li>Optimizing laboratory and research workflows through comprehensive process analysis and improvement initiatives</li>
+                <li>Implementing Agile/Scrum methodologies and project management best practices in scientific organizations</li>
+                <li>Developing data pipelines, automation tools, and reporting systems to support research and business objectives</li>
+                <li>Managing stakeholder engagement, conducting gap analyses, and ensuring alignment between technical execution and business goals</li>
+                <li>Creating tracking systems and dashboards for monitoring project KPIs and enabling data-driven decision-making</li>
+                <li>Ensuring all teams—from wet lab scientists to marketing professionals—work in sync toward common objectives</li>
+              </ul>
             </div>
           </Accordion>
         </div>
@@ -266,8 +240,7 @@ export default function HomePage() {
         {/* CTA */}
         <section className="border-t border-gray-200 dark:border-neutral-800 pt-6">
           <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
-            If you work in healthcare, pharma or biotech and you need a tool that doesn&apos;t
-            exist yet, you can reach me through the{" "}
+            If you work in healthcare, pharma, biotech, or technology and you're looking to collaborate with a strategic leader who bridges technical and business perspectives, you can reach me through the{" "}
             <a
               href="/contact"
               className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
