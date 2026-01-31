@@ -5,10 +5,10 @@ import Accordion from '@/components/Accordion';
 
 export const metadata: Metadata = {
   title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-  description: "Bridge technical and non-technical teams in healthcare, AI, and biotechnology. Project Manager, Business Analyst, and Strategic Leader with 10+ years in healthcare and 5+ years in project management and software development.",
+  description: "I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
   openGraph: {
     title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-    description: "Bridge technical and non-technical teams in healthcare, AI, and biotechnology. Project Manager, Business Analyst, and Strategic Leader with 10+ years in healthcare and 5+ years in project management and software development.",
+    description: "I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
     url: "https://arzukirici.com",
     siteName: "Arzu Kirici Portfolio",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-    description: "Bridge technical and non-technical teams in healthcare, AI, and biotechnology. Project Manager, Business Analyst, and Strategic Leader with 10+ years in healthcare and 5+ years in project management and software development.",
+    description: "I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
     site: "https://arzukirici.com",
     images: ["https://arzukirici.com/og-image.png"],
   },
@@ -134,21 +134,16 @@ export default function HomePage() {
               </h2>
 
               <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
-          
                 <p>
-                  My unique strength is translating complex requirements between researchers, data scientists, and software developers on one side, and business stakeholders, executive leadership, and operational teams on the other. I gather requirements from both technical and business perspectives, manage stakeholder engagement across all levels, and ensure alignment across wet-lab operations, software development, and AI deployment initiatives.
+                  I translate complex requirements between technical teams—researchers, data scientists, software engineers—and business stakeholders. My background in molecular biology, data science, and software development enables me to bridge these worlds seamlessly.
                 </p>
 
                 <p>
-                  I develop tracking systems and dashboards to monitor project KPIs, enabling data-driven decision-making and strategic planning for executive teams. Working with Agile and Scrum methodologies, I leverage project management platforms and tools to facilitate communication between research teams and business stakeholders, conducting gap analyses and identifying opportunities for process improvement.
-                </p>
-
-                <p>
-                  With a background spanning molecular biology, data science, and software development, I serve as the critical link ensuring technical teams understand business objectives while helping business leaders make informed decisions about technical investments.
+                  I develop tracking systems and dashboards for executive decision-making, implement Agile methodologies in scientific organizations, and facilitate communication between wet-lab operations, software development, and business objectives. My strength is ensuring alignment across all levels while managing stakeholder expectations with clarity and precision.
                 </p>
 
                 <p className="italic">
-                  Open to Business Analyst, Project Manager, Senior Project Analyst, Senior Research Analyst, opportunities at the intersection of healthcare, IT, AI and business.
+                  Open to Project Manager, Business Analyst, Senior Project Analyst, and Senior Research Analyst roles at the intersection of healthcare, technology, and business.
                 </p>
               </div>
             </div>
@@ -194,41 +189,25 @@ export default function HomePage() {
           {/* Who I Work With */}
           <Accordion title="Who I Work With">
             <div className="space-y-3 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
-              <p className="font-semibold text-gray-900 dark:text-neutral-100">
-                I serve as the bridge between diverse teams and stakeholders, facilitating communication and alignment across:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Executive leadership and C-suite stakeholders requiring strategic insights and business outcomes</li>
-                <li>Biologists and researchers developing cutting-edge therapeutic approaches and spatial biology solutions</li>
-                <li>AI engineers and data scientists building healthcare and bioinformatics applications</li>
-                <li>Software developers creating tools for life sciences and clinical research applications</li>
-                <li>Marketing teams translating scientific innovations into compelling value propositions</li>
-                <li>Communication teams ensuring clear messaging across technical and non-technical audiences</li>
-                <li>Clinical research teams advancing patient care through innovative diagnostic technologies</li>
-                <li>Healthcare organizations implementing digital transformation and process optimization initiatives</li>
-                <li>Operations teams managing day-to-day execution and resource allocation</li>
-                <li>Cross-functional teams in biotech startups navigating rapid growth and scaling challenges</li>
-              </ul>
               <p>
-                My role is to ensure seamless collaboration by translating requirements, managing expectations, and aligning objectives across all these diverse groups.
+                I bridge communication between executive leadership, researchers, data scientists, software developers, and operational teams. I work with biotech and healthcare organizations implementing digital transformation, managing cross-functional research initiatives, and ensuring seamless collaboration across disciplines.
+              </p>
+              <p>
+                Whether you're a startup scaling rapidly or an established organization optimizing processes, I translate requirements, manage stakeholder expectations, and align technical execution with business goals.
               </p>
             </div>
           </Accordion>
 
           {/* How I Can Help */}
           <Accordion title="How I Can Help">
-            <div className="space-y-4 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
+            <div className="space-y-3 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
               <ul className="list-disc pl-6 space-y-2">
-                <li>Bridging communication gaps between technical and non-technical stakeholders across all organizational levels</li>
-                <li>Translating complex scientific requirements into executable project plans and actionable business strategies</li>
-                <li>Coordinating cross-functional teams across biology, engineering, software development, and business domains</li>
-                <li>Facilitating alignment between research teams, marketing teams, communication teams, and executive leadership</li>
-                <li>Optimizing laboratory and research workflows through comprehensive process analysis and improvement initiatives</li>
-                <li>Implementing Agile/Scrum methodologies and project management best practices in scientific organizations</li>
-                <li>Developing data pipelines, automation tools, and reporting systems to support research and business objectives</li>
-                <li>Managing stakeholder engagement, conducting gap analyses, and ensuring alignment between technical execution and business goals</li>
-                <li>Creating tracking systems and dashboards for monitoring project KPIs and enabling data-driven decision-making</li>
-                <li>Ensuring all teams from wet lab scientists to marketing professionals work in sync toward common objectives</li>
+                <li>Translating complex scientific and technical requirements into executable project plans</li>
+                <li>Coordinating cross-functional teams across biology, engineering, and business domains</li>
+                <li>Implementing Agile/Scrum methodologies and PM best practices in scientific organizations</li>
+                <li>Developing dashboards and tracking systems for KPI monitoring and data-driven decision-making</li>
+                <li>Optimizing workflows through gap analysis and process improvement initiatives</li>
+                <li>Managing stakeholder engagement and ensuring alignment between technical execution and business goals</li>
               </ul>
             </div>
           </Accordion>
@@ -237,7 +216,7 @@ export default function HomePage() {
         {/* CTA */}
         <section className="border-t border-gray-200 dark:border-neutral-800 pt-6">
           <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
-            If you work in healthcare, pharma, biotech, or IT and you're looking to collaborate with a strategic leader who bridges technical and business perspectives, you can reach me through the{" "}
+            If you work in healthcare, pharma, biotech, or technology and you're looking to collaborate with a strategic leader who bridges technical and business perspectives, you can reach me through the{" "}
             <a
               href="/contact"
               className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
