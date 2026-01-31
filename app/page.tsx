@@ -135,11 +135,11 @@ export default function HomePage() {
 
               <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
                 <p>
-                  I translate complex requirements between technical teams—researchers, data scientists, software engineers—and business stakeholders. My background in molecular biology, data science, and software development enables me to bridge these worlds seamlessly.
+                  I translate complex requirements between technical teams, researchers, data scientists, software engineers and business stakeholders. My background in molecular biology, data science, and software development enables me to bridge these worlds seamlessly.
                 </p>
 
                 <p>
-                  I develop tracking systems and dashboards for executive decision-making, implement Agile methodologies in scientific organizations, and facilitate communication between wet-lab operations, software development, and business objectives. My strength is ensuring alignment across all levels while managing stakeholder expectations with clarity and precision.
+                  I develop tracking systems and dashboards for executive decision making, implement Agile methodologies in scientific organizations, and facilitate communication between wet-lab operations, software development, and business objectives. My strength is ensuring alignment across all levels while managing stakeholder expectations with clarity and precision.
                 </p>
 
                 <p className="italic">
