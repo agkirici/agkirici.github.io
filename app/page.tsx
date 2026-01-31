@@ -134,10 +134,7 @@ export default function HomePage() {
               </h2>
 
               <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
-                <p>
-                  I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years of healthcare experience, 5+ years in project management, and 5+ years in software development, I bring a unique perspective as both a project manager and business analyst, leading cross-functional initiatives across the full project lifecycle.
-                </p>
-
+          
                 <p>
                   My unique strength is translating complex requirements between researchers, data scientists, and software developers on one side, and business stakeholders, executive leadership, and operational teams on the other. I gather requirements from both technical and business perspectives, manage stakeholder engagement across all levels, and ensure alignment across wet-lab operations, software development, and AI deployment initiatives.
                 </p>
@@ -231,7 +228,7 @@ export default function HomePage() {
                 <li>Developing data pipelines, automation tools, and reporting systems to support research and business objectives</li>
                 <li>Managing stakeholder engagement, conducting gap analyses, and ensuring alignment between technical execution and business goals</li>
                 <li>Creating tracking systems and dashboards for monitoring project KPIs and enabling data-driven decision-making</li>
-                <li>Ensuring all teams—from wet lab scientists to marketing professionals—work in sync toward common objectives</li>
+                <li>Ensuring all teams from wet lab scientists to marketing professionals work in sync toward common objectives</li>
               </ul>
             </div>
           </Accordion>
@@ -240,7 +237,7 @@ export default function HomePage() {
         {/* CTA */}
         <section className="border-t border-gray-200 dark:border-neutral-800 pt-6">
           <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
-            If you work in healthcare, pharma, biotech, or technology and you're looking to collaborate with a strategic leader who bridges technical and business perspectives, you can reach me through the{" "}
+            If you work in healthcare, pharma, biotech, or IT and you're looking to collaborate with a strategic leader who bridges technical and business perspectives, you can reach me through the{" "}
             <a
               href="/contact"
               className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
