@@ -5,10 +5,10 @@ import Accordion from '@/components/Accordion';
 
 export const metadata: Metadata = {
   title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-  description: "I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
+  description: "I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
   openGraph: {
     title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-    description: "I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
+    description: "I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
     url: "https://arzukirici.com",
     siteName: "Arzu Kirici Portfolio",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-    description: "I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
+    description: "I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
     site: "https://arzukirici.com",
     images: ["https://arzukirici.com/og-image.png"],
   },
@@ -44,7 +44,7 @@ export default function HomePage() {
             Arzu Kirici, MSc
           </h1>
           <p className="text-lg text-gray-600 dark:text-neutral-400 text-center mt-4 max-w-2xl mx-auto leading-relaxed">
-            I bridge technical and non-technical teams in healthcare, AI, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.
+            I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.
           </p>
         </header>
 
