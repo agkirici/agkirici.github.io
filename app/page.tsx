@@ -1,232 +1,532 @@
-// © 2025 Arzu Kirici — All Rights Reserved
-import Image from 'next/image';
-import type { Metadata } from 'next';
-import Accordion from '@/components/Accordion';
+'use client';
 
-export const metadata: Metadata = {
-  title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-  description: "I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
-  openGraph: {
-    title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-    description: "I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
-    url: "https://arzukirici.com",
-    siteName: "Arzu Kirici Portfolio",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://arzukirici.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Arzu Kirici Portfolio",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Arzu Kirici, MSc | Project Manager & Business Analyst",
-    description: "I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.",
-    site: "https://arzukirici.com",
-    images: ["https://arzukirici.com/og-image.png"],
-  },
-  alternates: {
-    canonical: "https://arzukirici.com",
-  },
-};
+import { useState } from 'react';
 
-export default function HomePage() {
+export default function Home() {
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const toggleSection = (sectionId: string) => {
+    setActiveSection(activeSection === sectionId ? null : sectionId);
+  };
+
   return (
-    <main className="min-h-screen px-4 py-12 md:py-16">
-      <div className="mx-auto max-w-3xl md:max-w-6xl space-y-12">
-        {/* Name Header */}
-        <header>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-sky-500 text-center">
-            Arzu Kirici, MSc
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-neutral-400 text-center mt-4 max-w-2xl mx-auto leading-relaxed">
-            I bridge technical and non-technical teams in healthcare, IT, and biotechnology, translating complex technical requirements into actionable business strategies. With 10+ years in healthcare, 5+ years in project management, and 5+ years in software development, I lead cross-functional initiatives across the full project lifecycle, delivering strategic projects on time and within scope.
-          </p>
-        </header>
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          overflow-x: hidden;
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 80px 40px;
+          background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+          color: #e0e0e0;
+          line-height: 1.6;
+          min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+          min-height: 65vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 60px;
+        }
+
+        .heroTitle {
+          font-size: 3.8rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+          background: linear-gradient(135deg, #00d4ff 0%, #7b2cbf 50%, #ff006e 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          letter-spacing: -1px;
+        }
+
+        .tagline {
+          font-size: 1.9rem;
+          color: #b0b0b0;
+          margin-bottom: 15px;
+          font-weight: 400;
+        }
+
+        .subtitle {
+          font-size: 1.3rem;
+          color: #888;
+          margin-bottom: 35px;
+          font-weight: 300;
+        }
+
+        .description {
+          font-size: 1.15rem;
+          color: #999;
+          max-width: 850px;
+          line-height: 1.8;
+        }
+
+        /* About Section */
+        .aboutSection {
+          margin-bottom: 80px;
+        }
+
+        .sectionTitle {
+          font-size: 2.5rem;
+          margin-bottom: 40px;
+          color: #fff;
+          position: relative;
+          padding-bottom: 15px;
+          font-weight: 600;
+        }
+
+        .sectionTitle::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+          border-radius: 2px;
+        }
+
+        .aboutContent {
+          font-size: 1.1rem;
+          color: #b5b5b5;
+          line-height: 1.9;
+          max-width: 950px;
+        }
+
+        .aboutContent p {
+          margin-bottom: 24px;
+        }
+
+        .aboutContent strong {
+          color: #00d4ff;
+          font-weight: 600;
+        }
+
+        .openToWork {
+          margin-top: 25px;
+          color: #00d4ff !important;
+          font-weight: 500;
+        }
+
+        /* Expertise Cards */
+        .expertiseSection {
+          margin-bottom: 80px;
+        }
+
+        .expertiseGrid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
+        }
+
+        .expertiseCard {
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+          padding: 35px;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .expertiseCard::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, rgba(0, 212, 255, 0.12) 0%, rgba(123, 44, 191, 0.12) 100%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .expertiseCard:hover {
+          transform: translateY(-8px);
+          border-color: rgba(0, 212, 255, 0.4);
+          box-shadow: 0 12px 45px rgba(0, 212, 255, 0.25);
+        }
+
+        .expertiseCard:hover::before {
+          opacity: 1;
+        }
+
+        .cardIcon {
+          font-size: 2.8rem;
+          margin-bottom: 20px;
+          display: block;
+          filter: grayscale(0.3);
+        }
+
+        .cardTitle {
+          font-size: 1.4rem;
+          color: #fff;
+          margin-bottom: 15px;
+          font-weight: 600;
+          position: relative;
+          z-index: 1;
+        }
+
+        .cardDescription {
+          color: #999;
+          font-size: 1.02rem;
+          line-height: 1.7;
+          position: relative;
+          z-index: 1;
+        }
+
+        /* Expandable Sections */
+        .detailsSection {
+          margin-top: 80px;
+        }
+
+        .expandableSection {
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 14px;
+          margin-bottom: 20px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .expandableSection:hover {
+          border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .expandableHeader {
+          padding: 28px 35px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1.35rem;
+          font-weight: 600;
+          color: #fff;
+          transition: background 0.3s ease;
+        }
+
+        .expandableHeader:hover {
+          background: rgba(255, 255, 255, 0.05);
+        }
+
+        .expandableIcon {
+          font-size: 1.6rem;
+          transition: transform 0.3s ease;
+          color: #00d4ff;
+        }
+
+        .expandableSection.active .expandableIcon {
+          transform: rotate(45deg);
+        }
+
+        .expandableContent {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease;
+          padding: 0 35px;
+        }
+
+        .expandableSection.active .expandableContent {
+          max-height: 1500px;
+          padding: 0 35px 30px;
+        }
+
+        .expandableContent p {
+          color: #b0b0b0;
+          line-height: 1.85;
+          margin-bottom: 18px;
+          font-size: 1.05rem;
+        }
+
+        .expandableContent ul {
+          list-style: none;
+          margin-top: 18px;
+        }
+
+        .expandableContent li {
+          color: #999;
+          padding-left: 28px;
+          position: relative;
+          margin-bottom: 12px;
+          line-height: 1.7;
+          font-size: 1.02rem;
+        }
+
+        .expandableContent li::before {
+          content: '→';
+          position: absolute;
+          left: 0;
+          color: #00d4ff;
+          font-weight: bold;
+        }
+
+        /* CTA Section */
+        .ctaSection {
+          text-align: center;
+          padding: 65px 40px;
+          background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(123, 44, 191, 0.05) 100%);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 18px;
+          margin-top: 80px;
+        }
+
+        .ctaText {
+          font-size: 1.35rem;
+          color: #b5b5b5;
+          margin-bottom: 35px;
+          line-height: 1.7;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .contactLink {
+          display: inline-block;
+          padding: 16px 45px;
+          background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+          color: #fff;
+          text-decoration: none;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 1.15rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 5px 20px rgba(0, 212, 255, 0.35);
+        }
+
+        .contactLink:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .container {
+            padding: 40px 20px;
+          }
+
+          .heroTitle {
+            font-size: 2.5rem;
+          }
+
+          .tagline {
+            font-size: 1.4rem;
+          }
+
+          .subtitle {
+            font-size: 1.1rem;
+          }
+
+          .description {
+            font-size: 1rem;
+          }
+
+          .sectionTitle {
+            font-size: 2rem;
+          }
+
+          .expertiseGrid {
+            grid-template-columns: 1fr;
+          }
+
+          .expandableHeader {
+            font-size: 1.15rem;
+            padding: 22px 25px;
+          }
+
+          .expandableContent {
+            padding: 0 25px;
+          }
+
+          .expandableSection.active .expandableContent {
+            padding: 0 25px 25px;
+          }
+        }
+      `}} />
+
+      <div className="container">
+        {/* Hero Section */}
+        <section className="hero">
+          <h1 className="heroTitle">Arzu Kirici, MSc</h1>
+          <div className="tagline">Project Manager | Software Developer</div>
+          <div className="subtitle">Healthcare, Biotech & Software | Agile | Cross-Functional Team Leadership</div>
+          <div className="description">
+            I bridge technical and non-technical teams in healthcare, biotechnology, and software, translating 
+            complex requirements into working solutions. With a background in molecular biology, 5+ years of project 
+            management experience, and hands-on development in TypeScript, React, and Node.js, I work across the 
+            full project lifecycle, from the first conversation to the finished product.
+          </div>
+        </section>
 
         {/* About Section */}
-        <section>
-          {/* Mobile: Centered heading */}
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 text-center md:hidden">
-            About
-          </h2>
+        <section className="aboutSection">
+          <h2 className="sectionTitle">About</h2>
+          <div className="aboutContent">
+            <p>
+              My background started in molecular biology, and it shaped how I approach every problem since. In the lab, 
+              catching an error early meant catching it before it became a wrong diagnosis. That same instinct now drives 
+              how I build software and manage projects: verify everything, and don&apos;t trust a system until you understand 
+              exactly how it fails.
+            </p>
+            <p>
+              As a project manager, most of my requirements never arrived in writing. They came from a conversation, changed 
+              halfway through, or came from someone with no technical background who just needed a problem solved. I&apos;ve 
+              learned to ask the right questions early, scope work honestly, and explain a plan clearly enough that both a 
+              scientist and an engineer would trust it.
+            </p>
+            <p>
+              Over the past few years I&apos;ve added hands-on development to that, building with <strong>TypeScript, React, and Node.js</strong>. 
+              I develop tracking systems and dashboards for executive decision-making, and I&apos;m as comfortable writing the 
+              code as I am managing the team that ships it.
+            </p>
+            <p>
+              With a background spanning <strong>molecular biology, project management, and software development</strong>, I bridge 
+              the gap between researchers, engineers, and business stakeholders, translating between all three so that 
+              nothing gets lost in the handoff.
+            </p>
+            <p className="openToWork">
+              Open to Software Engineer, Project Manager, and Business Analyst opportunities at the intersection of healthcare, technology, and business.
+            </p>
+          </div>
+        </section>
 
-          {/* Desktop: Two-column grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 md:gap-12">
-            {/* Profile Picture and Social Media - Left Column (Desktop) / Centered (Mobile) */}
-            <div className="flex flex-col items-center space-y-4">
-              <Image
-                src="/profile.jpg"
-                alt="Arzu Kirici"
-                width={200}
-                height={200}
-                className="rounded-full object-cover border-2 border-gray-300 dark:border-neutral-700"
-                priority
-              />
-
-              {/* Social Media Icons */}
-              <div className="flex gap-4">
-                {/* LinkedIn */}
-                <a
-                  href="https://www.linkedin.com/in/arzu-kirici"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <svg
-                    className="w-6 h-6 text-gray-700 dark:text-neutral-200"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </a>
-
-                {/* GitHub */}
-                <a
-                  href="https://github.com/agkirici"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
-                  aria-label="GitHub"
-                >
-                  <svg
-                    className="w-6 h-6 text-gray-700 dark:text-neutral-200"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                  </svg>
-                </a>
-
-                {/* Upwork */}
-                <a
-                  href="https://www.upwork.com/freelancers/~0135d7c36f12a8eba8?mp_source=share"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-sky-600 transition-colors"
-                  aria-label="Upwork"
-                >
-                  <svg
-                    className="w-6 h-6 text-gray-700 dark:text-neutral-200"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.545-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z" />
-                  </svg>
-                </a>
-              </div>
+        {/* Expertise Cards */}
+        <section className="expertiseSection">
+          <h2 className="sectionTitle">Core Expertise</h2>
+          <div className="expertiseGrid">
+            <div className="expertiseCard">
+              <span className="cardIcon">🎯</span>
+              <h3 className="cardTitle">Strategic Project Management</h3>
+              <p className="cardDescription">
+                Leading complex spatial biology projects, managing timelines, dependencies, and resource allocation 
+                across interdisciplinary teams. Expertise in Agile ceremonies, sprint planning, retrospectives, and 
+                cross-functional stakeholder communication to deliver research milestones and software development sprints.
+              </p>
             </div>
-
-            {/* Text Content - Right Column (Desktop) / Full Width (Mobile) */}
-            <div className="space-y-4 max-w-3xl">
-              {/* Desktop: Left-aligned heading */}
-              <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-neutral-100 hidden md:block text-left">
-                About
-              </h2>
-
-              <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
-                <p>
-                  I translate complex requirements between technical teams, researchers, data scientists, software engineers and business stakeholders. My background in molecular biology, data science, and software development enables me to bridge these worlds seamlessly.
-                </p>
-
-                <p>
-                  I develop tracking systems and dashboards for executive decision making, implement Agile methodologies in scientific organizations, and facilitate communication between wet-lab operations, software development, and business objectives. My strength is ensuring alignment across all levels while managing stakeholder expectations with clarity and precision.
-                </p>
-
-                <p className="italic">
-                  Open to Project Manager, Business Analyst, Senior Project Analyst, and Senior Research Analyst roles at the intersection of healthcare, technology, and business.
-                </p>
-              </div>
+            <div className="expertiseCard">
+              <span className="cardIcon">📊</span>
+              <h3 className="cardTitle">Business Analysis & Process Optimization</h3>
+              <p className="cardDescription">
+                Developing tracking systems and dashboards for monitoring project KPIs, enabling data-driven decision-making. 
+                Conducting gap analyses, identifying process improvements to reduce bottlenecks, and optimizing cross-functional 
+                workflows to reduce project delivery timelines.
+              </p>
+            </div>
+            <div className="expertiseCard">
+              <span className="cardIcon">🧬</span>
+              <h3 className="cardTitle">Scientific & Technical Translation</h3>
+              <p className="cardDescription">
+                Acting as primary liaison between software developers and executive leadership, translating technical requirements 
+                across disciplines. Deep understanding of molecular biology, spatial transcriptomics, NGS workflows, and bioinformatics 
+                enables effective communication across scientific and business domains.
+              </p>
+            </div>
+            <div className="expertiseCard">
+              <span className="cardIcon">💻</span>
+              <h3 className="cardTitle">Technical Implementation & Automation</h3>
+              <p className="cardDescription">
+                Developing Python automation pipelines for spatial biology data processing, implementing quality control workflows, 
+                and creating automated reporting systems. Experience with GitHub version control, standardized documentation workflows, 
+                and metadata management protocols for improved data traceability.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Accordion Sections */}
-        <div className="space-y-4">
-          {/* Where I'm Heading */}
-          <Accordion title="Where I'm Heading">
-            <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
+        {/* Expandable Sections */}
+        <section className="detailsSection">
+          <div className={`expandableSection ${activeSection === 'heading' ? 'active' : ''}`}>
+            <div className="expandableHeader" onClick={() => toggleSection('heading')}>
+              <span>Where I&apos;m Heading</span>
+              <span className="expandableIcon">+</span>
+            </div>
+            <div className="expandableContent">
               <p>
-                I'm seeking Project Manager, Project Development Manager, Research Manager, Project Analyst, and Business Analyst roles where I can leverage my unique blend of 10+ years healthcare expertise, 5+ years project management experience, and 5+ years software development capabilities in forward-thinking healthcare and technology organizations.
+                I&apos;m looking for <strong>Software Engineer, Project Manager</strong> roles where I can put my background in biology, project management, and software development to use together.
               </p>
-
               <p>
-                My goal is to drive innovation at the intersection of life sciences and technology, leading projects that improve patient outcomes and advance scientific understanding. Currently pursuing CAPM certification and actively expanding my business analysis capabilities to deliver even greater value to complex, cross-functional initiatives.
+                My goal is to work at the intersection of supply chain, healthcare, data, and technology, building software and leading projects that actually solve the problem in front of people, not just the one written in a spec. I&apos;ve spent the last few years adding hands-on development with <strong>TypeScript, React, and Node.js</strong> to a background that started in the lab and grew through years of managing cross-functional teams.
               </p>
-
               <p>
-                I thrive in environments where strategic thinking meets execution excellence, and where bridging technical and business perspectives creates measurable impact.
+                I do my best work where technical depth and business context both matter, and where someone has to be the person who understands both sides well enough to translate between them.
               </p>
             </div>
-          </Accordion>
+          </div>
 
-          {/* What This Website Is For */}
-          <Accordion title="What This Website Is For">
-            <div className="space-y-4 text-gray-700 dark:text-neutral-300 leading-relaxed text-sm md:text-base">
+          <div className={`expandableSection ${activeSection === 'website' ? 'active' : ''}`}>
+            <div className="expandableHeader" onClick={() => toggleSection('website')}>
+              <span>What This Website Is For</span>
+              <span className="expandableIcon">+</span>
+            </div>
+            <div className="expandableContent">
               <p>
-                This platform showcases my professional journey and capabilities in project management, business analysis, and strategic leadership within healthcare and biotechnology sectors. Here you'll find examples of my work, insights into my approach, and ways to connect.
+                This site shows my work and how I think, across software development, project management, and the science background that shaped both.
               </p>
-
               <p>
-                Whether you're looking for a project manager who understands both the science and the business, need a business analyst who can translate technical requirements into strategic initiatives, or you're interested in collaboration opportunities, this is your starting point.
+                Whether you&apos;re looking for an engineer who understands the business side without needing everything spelled out or a project manager who can also read and write code or someone who&apos;s spent years verifying data before trusting it, this is where you&apos;d start.
               </p>
-
               <p>
-                I believe the most impactful innovations happen when technical excellence meets business acumen, and this site demonstrates how I bridge that gap.
+                I built this site the way I approach most things: figure out what&apos;s actually needed, then build it.
               </p>
             </div>
-          </Accordion>
+          </div>
 
-          {/* Who I Work With */}
-          <Accordion title="Who I Work With">
-            <div className="space-y-3 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
+          <div className={`expandableSection ${activeSection === 'work-with' ? 'active' : ''}`}>
+            <div className="expandableHeader" onClick={() => toggleSection('work-with')}>
+              <span>Who I Work With</span>
+              <span className="expandableIcon">+</span>
+            </div>
+            <div className="expandableContent">
               <p>
-                I bridge communication between executive leadership, researchers, data scientists, software developers, and operational teams. I work with biotech and healthcare organizations implementing digital transformation, managing cross-functional research initiatives, and ensuring seamless collaboration across disciplines.
+                I work between engineers, researchers, and the people running the business side, whether that&apos;s leadership, operations, or clients who don&apos;t care how the code works as long as it does. I&apos;ve done this in supply chain, healthcare and biotech, and I&apos;m applying the same skill set to software teams now.
               </p>
               <p>
-                Whether you're a startup scaling rapidly or an established organization optimizing processes, I translate requirements, manage stakeholder expectations, and align technical execution with business goals.
+                Whether it&apos;s a fast-moving team that needs someone who can pick up context quickly, or an organization that needs project work and technical work handled by the same person, I translate requirements, manage expectations, and make sure what gets built is actually what was needed.
               </p>
             </div>
-          </Accordion>
+          </div>
 
-          {/* How I Can Help */}
-          <Accordion title="How I Can Help">
-            <div className="space-y-3 text-gray-700 dark:text-neutral-300 text-sm md:text-base">
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Translating complex scientific and technical requirements into executable project plans</li>
-                <li>Coordinating cross-functional teams across biology, engineering, and business domains</li>
-                <li>Implementing Agile/Scrum methodologies and PM best practices in scientific organizations</li>
-                <li>Developing dashboards and tracking systems for KPI monitoring and data-driven decision-making</li>
-                <li>Optimizing workflows through gap analysis and process improvement initiatives</li>
-                <li>Managing stakeholder engagement and ensuring alignment between technical execution and business goals</li>
+          <div className={`expandableSection ${activeSection === 'help' ? 'active' : ''}`}>
+            <div className="expandableHeader" onClick={() => toggleSection('help')}>
+              <span>How I Can Help</span>
+              <span className="expandableIcon">+</span>
+            </div>
+            <div className="expandableContent">
+              <ul>
+                <li>Building and shipping software, mainly with TypeScript, React, and Node.js</li>
+                <li>Translating technical requirements into project plans people can actually execute</li>
+                <li>Coordinating cross-functional teams across engineering, science, and business</li>
+                <li>Running Agile/Scrum practices in teams that don&apos;t already have them figured out</li>
+                <li>Building dashboards and tracking tools for decision-making</li>
+                <li>Managing stakeholders and keeping technical work and business goals aligned</li>
               </ul>
             </div>
-          </Accordion>
-        </div>
+          </div>
+        </section>
 
-        {/* CTA */}
-        <section className="border-t border-gray-200 dark:border-neutral-800 pt-6">
-          <p className="text-gray-700 dark:text-neutral-300 leading-relaxed">
-            If you work in healthcare, pharma, biotech, or technology and you're looking to collaborate with a strategic leader who bridges technical and business perspectives, you can reach me through the{" "}
-            <a
-              href="/contact"
-              className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
-            >
-              contact page
-            </a>
-            .
+        {/* CTA Section */}
+        <section className="ctaSection">
+          <p className="ctaText">
+            If you work in healthcare, pharma or biotech and need a tool that doesn&apos;t exist yet, you can reach me through the 
+            <a href="/contact" style={{ color: '#00d4ff', textDecoration: 'none', fontWeight: 600 }}> contact page</a>.
           </p>
+          <a href="/contact" className="contactLink">Get in Touch</a>
         </section>
       </div>
-    </main>
+    </>
   );
 }
